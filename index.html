@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#C8102E">
+<title>VIETSAFE E&C — Tư vấn & Thiết kế An toàn Cháy nổ | Fire Safety Engineering & Consulting</title>
+<meta name="description" content="Công ty Cổ Phần VIETSAFE E&C — Tư vấn, thiết kế hệ thống PCCC, chiến lược an toàn sinh mạng (FLS), thẩm định và nghiệm thu. Kế thừa năng lực thiết kế của VIETSAFE.">
+<link rel="canonical" href="https://www.vnsec.com.vn/">
+
+<!-- Favicon: logo V đỏ (SVG inline, không cần file riêng) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23C8102E'/%3E%3Ctext x='32' y='46' font-family='Arial,sans-serif' font-size='42' font-weight='900' text-anchor='middle' fill='%23fff'%3EV%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph (hiển thị khi chia sẻ Zalo/Facebook/LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="VIETSAFE E&C">
+<meta property="og:title" content="VIETSAFE E&C — Tư vấn & Thiết kế An toàn Cháy nổ">
+<meta property="og:description" content="Công ty Cổ Phần VIETSAFE E&C — tư vấn, thiết kế PCCC, chiến lược An toàn Sinh mạng (FLS), áp dụng tiêu chuẩn NFPA/QCVN. Kế thừa năng lực thiết kế của VIETSAFE.">
+<meta property="og:url" content="https://www.vnsec.com.vn/">
+<meta property="og:image" content="https://www.vnsec.com.vn/01-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ANALYTICS: dán mã Google Analytics hoặc Vercel Analytics vào đây sau khi go-live -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#C8102E;
+    --red-dark:#9e0c24;
+    --white:#FFFFFF;
+    --ink:#333333;
+    --ink-strong:#1A1A1A;
+    --grey:#F0F0F0;
+    --grey-line:#e2e2e2;
+    --caption:#666666;
+    --maxw:1200px;
+    --bar:4px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Montserrat',Arial,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    font-size:15px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .mono{font-family:'IBM Plex Mono',monospace}
+
+  /* ---------- bilingual helpers ---------- */
+  .vi{display:block}
+  .en{display:block}
+  .en-sub{
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:400;
+    color:var(--caption);
+    text-transform:none;
+    letter-spacing:.02em;
+  }
+
+  /* ---------- eyebrow (drawing-sheet annotation) ---------- */
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;font-weight:500;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--red);
+    margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--red)}
+  .eyebrow .num{color:var(--ink-strong);opacity:.45}
+
+  /* ---------- section title ---------- */
+  .sec-title{
+    font-weight:800;text-transform:uppercase;
+    font-size:clamp(26px,3.4vw,40px);
+    line-height:1.08;color:var(--ink-strong);
+    letter-spacing:-.01em;
+  }
+  .sec-title .en-sub{font-size:15px;font-weight:500;margin-top:6px;letter-spacing:.04em}
+
+  section{padding:92px 0}
+  .section-grey{background:var(--grey)}
+
+  /* =========================================================
+     TOP BAR
+  ==========================================================*/
+  .topbar{
+    position:sticky;top:0;z-index:100;
+    background:var(--white);
+    border-bottom:1px solid var(--grey-line);
+    transition:box-shadow .3s var(--ease);
+  }
+  .topbar.scrolled{box-shadow:0 6px 26px rgba(0,0,0,.08)}
+  .topbar .accent{height:var(--bar);background:var(--red)}
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    height:74px;
+  }
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand .mark{
+    width:42px;height:42px;flex:none;position:relative;
+    background:var(--red);border-radius:3px;
+    display:grid;place-items:center;
+  }
+  .brand .mark span{
+    color:#fff;font-weight:900;font-size:20px;line-height:1;
+    font-family:'Montserrat',sans-serif;
+  }
+  .brand .mark::after{
+    content:"";position:absolute;right:-1px;bottom:-1px;
+    width:13px;height:13px;background:var(--ink-strong);
+    clip-path:polygon(100% 0,100% 100%,0 100%);
+  }
+  .brand .txt b{
+    display:block;font-weight:800;font-size:18px;color:var(--ink-strong);
+    letter-spacing:.02em;line-height:1;
+  }
+  .brand .txt b em{color:var(--red);font-style:normal}
+  .brand .txt small{
+    display:block;font-family:'IBM Plex Mono',monospace;
+    font-size:9.5px;letter-spacing:.16em;color:var(--caption);
+    text-transform:uppercase;margin-top:4px;
+  }
+  .menu{display:flex;align-items:center;gap:30px;list-style:none}
+  .menu a{
+    font-weight:600;font-size:13.5px;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--ink-strong);
+    position:relative;padding:6px 0;transition:color .2s;
+  }
+  .menu a::after{
+    content:"";position:absolute;left:0;bottom:0;height:2px;width:0;
+    background:var(--red);transition:width .25s var(--ease);
+  }
+  .menu a:hover{color:var(--red)}
+  .menu a:hover::after{width:100%}
+  .nav-right{display:flex;align-items:center;gap:18px}
+  .lang{
+    display:flex;border:1px solid var(--grey-line);border-radius:3px;overflow:hidden;
+    font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;
+  }
+  .lang button{
+    border:0;background:none;padding:6px 11px;cursor:pointer;color:var(--caption);
+    transition:.2s;
+  }
+  .lang button.on{background:var(--red);color:#fff}
+  .cta-btn{
+    background:var(--red);color:#fff;font-weight:700;font-size:13px;
+    text-transform:uppercase;letter-spacing:.04em;
+    padding:11px 20px;border-radius:3px;border:0;cursor:pointer;
+    transition:background .2s;
+  }
+  .cta-btn:hover{background:var(--red-dark)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+  .burger span{width:24px;height:2px;background:var(--ink-strong);transition:.3s}
+
+  /* =========================================================
+     HERO  — engineering title block
+  ==========================================================*/
+  .hero{
+    background:linear-gradient(rgba(26,26,26,.82),rgba(26,26,26,.93)),url('01-hero.jpg') center/cover no-repeat,var(--ink-strong);
+    color:#fff;position:relative;overflow:hidden;
+    padding:96px 0 0;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+    background-size:54px 54px;
+    mask-image:linear-gradient(180deg,#000 0%,transparent 78%);
+    -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 78%);
+  }
+  .hero .wrap{position:relative;z-index:2}
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:12px;
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:#fff;
+    border:1px solid rgba(255,255,255,.22);border-radius:40px;
+    padding:8px 18px;margin-bottom:34px;
+  }
+  .hero-tag b{color:var(--red);font-weight:700;background:#fff;border-radius:30px;padding:2px 9px;font-size:11px}
+  .hero h1{
+    font-weight:900;text-transform:uppercase;
+    font-size:clamp(34px,5.6vw,68px);line-height:1.02;letter-spacing:-.02em;
+    max-width:14ch;
+  }
+  .hero h1 .accent{color:var(--red)}
+  .hero .lead{
+    font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:16px;
+    color:rgba(255,255,255,.62);margin-top:22px;max-width:50ch;line-height:1.7;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+  .btn-ghost{
+    border:1px solid rgba(255,255,255,.3);color:#fff;background:none;
+    font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;
+    padding:13px 24px;border-radius:3px;cursor:pointer;transition:.2s;
+  }
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+  /* hero title-block footer strip */
+  .hero-block{
+    position:relative;z-index:2;margin-top:64px;
+    border-top:1px solid rgba(255,255,255,.14);
+    display:grid;grid-template-columns:repeat(4,1fr);
+  }
+  .hero-block .cell{
+    padding:26px 24px;border-right:1px solid rgba(255,255,255,.14);
+  }
+  .hero-block .cell:last-child{border-right:0}
+  .hero-block .k{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:8px;
+  }
+  .hero-block .v{font-weight:800;font-size:30px;color:#fff;line-height:1}
+  .hero-block .v small{font-size:13px;font-weight:600;color:var(--red);margin-left:3px}
+  .hero-block .d{font-size:12px;color:rgba(255,255,255,.55);margin-top:6px}
+
+  /* =========================================================
+     INHERITANCE / ABOUT
+  ==========================================================*/
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+  .about-body p{margin-bottom:18px;color:var(--ink);font-size:15.5px}
+  .about-body p strong{color:var(--ink-strong)}
+  .lineage{
+    background:var(--ink-strong);color:#fff;border-radius:6px;overflow:hidden;
+  }
+  .lineage .head{background:var(--red);padding:16px 22px;display:flex;align-items:center;justify-content:space-between}
+  .lineage .head b{font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:14px}
+  .lineage .head .mono{font-size:11px;opacity:.8}
+  .lineage .step{padding:20px 22px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;gap:16px;align-items:flex-start}
+  .lineage .step:last-child{border-bottom:0}
+  .lineage .step .yr{
+    font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;color:var(--red);
+    background:rgba(255,255,255,.06);padding:5px 9px;border-radius:3px;flex:none;
+  }
+  .lineage .step .t{font-weight:700;font-size:14px;margin-bottom:3px}
+  .lineage .step .s{font-size:12.5px;color:rgba(255,255,255,.6);line-height:1.5}
+
+  /* =========================================================
+     SERVICES
+  ==========================================================*/
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;border-top:1px solid var(--grey-line);border-left:1px solid var(--grey-line)}
+  .svc{
+    padding:34px 30px;border-right:1px solid var(--grey-line);border-bottom:1px solid var(--grey-line);
+    background:var(--white);position:relative;transition:background .25s;
+  }
+  .svc:hover{background:#fff}
+  .svc::before{content:"";position:absolute;left:0;top:0;height:0;width:3px;background:var(--red);transition:height .3s var(--ease)}
+  .svc:hover::before{height:100%}
+  .svc .ic{width:46px;height:46px;border-radius:4px;background:var(--grey);display:grid;place-items:center;margin-bottom:20px;color:var(--red)}
+  .svc:hover .ic{background:var(--red);color:#fff}
+  .svc .ic svg{width:24px;height:24px}
+  .svc .no{position:absolute;top:28px;right:28px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--grey-line);font-weight:600}
+  .svc h3{font-weight:800;font-size:17px;color:var(--ink-strong);text-transform:uppercase;letter-spacing:.01em;margin-bottom:4px;line-height:1.2}
+  .svc h3 + .en-sub{font-size:12px;margin-bottom:12px}
+  .svc p{font-size:13.5px;color:var(--ink);line-height:1.6}
+
+  /* =========================================================
+     SECTORS
+  ==========================================================*/
+  .sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+  .sector{
+    position:relative;border-radius:6px;overflow:hidden;min-height:260px;
+    background:var(--ink-strong);display:flex;flex-direction:column;justify-content:flex-end;
+    padding:26px;color:#fff;isolation:isolate;
+  }
+  .sector .bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;transition:transform .6s var(--ease);filter:grayscale(.3)}
+  .sector::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(26,26,26,.15) 0%,rgba(26,26,26,.9) 100%)}
+  .sector:hover .bg{transform:scale(1.07)}
+  .sector .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--red);background:#fff;display:inline-block;padding:3px 8px;border-radius:2px;margin-bottom:10px;width:max-content;font-weight:600}
+  .sector h4{font-weight:800;font-size:18px;text-transform:uppercase;line-height:1.15}
+  .sector .en-sub{color:rgba(255,255,255,.65);font-size:12px;margin-top:3px}
+  .sector .scope-txt{
+    font-size:12.5px;line-height:1.55;color:rgba(255,255,255,.82);
+    margin-top:12px;max-height:0;opacity:0;overflow:hidden;
+    transition:max-height .45s var(--ease),opacity .35s var(--ease),margin .45s var(--ease);
+  }
+  .sector:hover .scope-txt,.sector:focus-within .scope-txt{max-height:320px;opacity:1}
+  .sector .scope-txt b{color:#fff;font-weight:700}
+  .sector .svc-lab{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:7px}
+  .sector .svc-list{list-style:none;margin:0;padding:0}
+  .sector .svc-list li{position:relative;padding-left:14px;margin-bottom:5px;font-size:12px;line-height:1.4;color:rgba(255,255,255,.9)}
+  .sector .svc-list li::before{content:"";position:absolute;left:0;top:6px;width:5px;height:5px;background:var(--red);border-radius:1px}
+
+  /* =========================================================
+     PROCESS (real sequence -> numbered)
+  ==========================================================*/
+  .process{position:relative;margin-top:54px}
+  .process-line{position:absolute;top:34px;left:6%;right:6%;height:2px;background:var(--grey-line);z-index:0}
+  .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative;z-index:1}
+  .pstep{text-align:center}
+  .pstep .dot{
+    width:70px;height:70px;margin:0 auto 22px;border-radius:50%;
+    background:var(--white);border:2px solid var(--red);color:var(--red);
+    display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:20px;
+    transition:.3s;
+  }
+  .pstep:hover .dot{background:var(--red);color:#fff}
+  .pstep h4{font-weight:800;font-size:15px;text-transform:uppercase;color:var(--ink-strong);margin-bottom:4px}
+  .pstep .en-sub{font-size:11.5px}
+  .pstep p{font-size:13px;color:var(--ink);margin-top:10px;line-height:1.55}
+
+  /* =========================================================
+     PROJECTS
+  ==========================================================*/
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+  .proj{
+    position:relative;border-radius:6px;overflow:hidden;min-height:300px;
+    display:flex;flex-direction:column;justify-content:flex-end;padding:24px;color:#fff;
+    background:#222;isolation:isolate;
+  }
+  .proj .bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;transition:transform .6s var(--ease)}
+  .proj::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(26,26,26,0) 30%,rgba(26,26,26,.92) 100%)}
+  .proj:hover .bg{transform:scale(1.06)}
+  .proj .scope{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--red);display:inline-block;padding:4px 9px;border-radius:2px;width:max-content;margin-bottom:12px}
+  .proj h4{font-weight:800;font-size:18px;text-transform:uppercase;line-height:1.15}
+  .proj .meta{font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(255,255,255,.7);margin-top:8px}
+  .proj .scope-txt{
+    font-size:12.5px;line-height:1.55;color:rgba(255,255,255,.85);margin-top:10px;
+    max-height:0;opacity:0;overflow:hidden;
+    transition:max-height .45s var(--ease),opacity .35s var(--ease),margin .45s var(--ease);
+  }
+  .proj:hover .scope-txt,.proj:focus-within .scope-txt{max-height:160px;opacity:1}
+  .proj-more{text-align:center;margin-top:44px}
+
+  /* =========================================================
+     STANDARDS / PARTNERS
+  ==========================================================*/
+  .std-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px}
+  .std{background:var(--white);border:1px solid var(--grey-line);border-radius:6px;padding:26px 22px}
+  .std .code{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:22px;color:var(--red);margin-bottom:8px}
+  .std .nm{font-weight:700;font-size:13.5px;color:var(--ink-strong);text-transform:uppercase;line-height:1.25}
+  .std .ds{font-size:12.5px;color:var(--caption);margin-top:6px;line-height:1.5}
+  .partners{margin-top:54px;border-top:1px solid var(--grey-line);padding-top:36px}
+  .partners .lab{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--caption);text-align:center;margin-bottom:26px}
+  .partner-row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 30px}
+  .partner-row span{font-weight:700;font-size:15px;color:#b8b8b8;letter-spacing:.02em;transition:color .2s}
+  .partner-row span:hover{color:var(--ink-strong)}
+
+  /* =========================================================
+     CTA STRIP
+  ==========================================================*/
+  .ctaband{background:var(--red);color:#fff;padding:64px 0}
+  .ctaband .inner{display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap}
+  .ctaband h3{font-weight:900;text-transform:uppercase;font-size:clamp(22px,3vw,34px);line-height:1.08;max-width:20ch}
+  .ctaband .en-sub{color:rgba(255,255,255,.8);font-size:14px;margin-top:8px}
+  .ctaband .btn-white{background:#fff;color:var(--red);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:14px;padding:16px 30px;border-radius:4px;border:0;cursor:pointer;transition:.2s;white-space:nowrap}
+  .ctaband .btn-white:hover{background:var(--ink-strong);color:#fff}
+
+  /* =========================================================
+     CONTACT
+  ==========================================================*/
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:48px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--caption);margin-bottom:7px}
+  .field input,.field textarea{
+    width:100%;border:1px solid var(--grey-line);border-radius:4px;padding:12px 14px;
+    font-family:'Montserrat',sans-serif;font-size:14px;color:var(--ink);background:var(--white);transition:border .2s;
+  }
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--red)}
+  .field textarea{resize:vertical;min-height:120px}
+  .office{border-left:3px solid var(--red);padding:4px 0 4px 20px;margin-bottom:26px}
+  .office b{display:block;font-weight:800;text-transform:uppercase;font-size:14px;color:var(--ink-strong);letter-spacing:.02em}
+  .office p{font-size:13.5px;color:var(--ink);margin-top:5px}
+  .office .mono{font-size:13px;color:var(--red);margin-top:5px}
+
+  /* =========================================================
+     FOOTER
+  ==========================================================*/
+  footer{background:var(--ink-strong);color:#fff}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;padding:64px 0 44px}
+  .foot-brand .brand .txt b{color:#fff}
+  .foot-brand p{color:rgba(255,255,255,.6);font-size:13.5px;margin-top:18px;max-width:42ch;line-height:1.7}
+  .foot-slogan{font-family:'IBM Plex Mono',monospace;color:var(--red);font-weight:600;font-size:13px;letter-spacing:.06em;margin-top:20px;text-transform:uppercase}
+  .foot-col h5{font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.06em;margin-bottom:18px;color:#fff}
+  .foot-col ul{list-style:none}
+  .foot-col li{margin-bottom:11px}
+  .foot-col a{color:rgba(255,255,255,.62);font-size:13.5px;transition:color .2s}
+  .foot-col a:hover{color:#fff}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:20px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .foot-bottom .mono{font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(255,255,255,.45)}
+  .foot-bottom .mono b{color:var(--red)}
+
+  /* ---------- reveal animation ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* =========================================================
+     RESPONSIVE
+  ==========================================================*/
+  @media(max-width:980px){
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .svc-grid{grid-template-columns:repeat(2,1fr)}
+    .sectors{grid-template-columns:repeat(2,1fr)}
+    .proj-grid{grid-template-columns:repeat(2,1fr)}
+    .std-grid{grid-template-columns:repeat(2,1fr)}
+    .process-steps{grid-template-columns:repeat(2,1fr);gap:40px 24px}
+    .process-line{display:none}
+    .contact-grid{grid-template-columns:1fr}
+    .hero-block{grid-template-columns:repeat(2,1fr)}
+    .hero-block .cell:nth-child(2){border-right:0}
+    .hero-block .cell:nth-child(1),.hero-block .cell:nth-child(2){border-bottom:1px solid rgba(255,255,255,.14)}
+    .foot-top{grid-template-columns:1fr 1fr;gap:34px}
+  }
+  @media(max-width:720px){
+    .menu,.nav-right .lang,.nav-right .cta-btn{display:none}
+    .burger{display:flex}
+    .menu.open{
+      display:flex;flex-direction:column;position:absolute;top:78px;left:0;right:0;
+      background:#fff;padding:18px 28px;gap:8px;border-bottom:1px solid var(--grey-line);
+      box-shadow:0 18px 30px rgba(0,0,0,.1);
+    }
+    .menu.open a{padding:12px 0;border-bottom:1px solid var(--grey)}
+    section{padding:64px 0}
+    .svc-grid,.sectors,.proj-grid,.std-grid{grid-template-columns:1fr}
+    .sector .scope-txt{max-height:340px;opacity:1}
+    .hero-block{grid-template-columns:1fr}
+    .hero-block .cell{border-right:0;border-bottom:1px solid rgba(255,255,255,.14)}
+    .foot-top{grid-template-columns:1fr}
+    .ctaband .inner{flex-direction:column;align-items:flex-start}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== TOP BAR ===================== -->
+<header class="topbar" id="top">
+  <div class="accent"></div>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Vietsafe E&C">
+      <span class="mark"><span>V</span></span>
+      <span class="txt">
+        <b>VIETSAFE <em>E&amp;C</em></b>
+        <small>Fire Safety Engineering &amp; Consulting</small>
+      </span>
+    </a>
+
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="#about" data-vi="Giới thiệu" data-en="About">Giới thiệu</a></li>
+        <li><a href="#services" data-vi="Dịch vụ" data-en="Services">Dịch vụ</a></li>
+        <li><a href="#sectors" data-vi="Lĩnh vực" data-en="Sectors">Lĩnh vực</a></li>
+        <li><a href="#projects" data-vi="Dự án" data-en="Projects">Dự án</a></li>
+        <li><a href="#contact" data-vi="Liên hệ" data-en="Contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button class="on" data-lang="vi">VI</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView()" data-vi="Yêu cầu tư vấn" data-en="Get a quote">Yêu cầu tư vấn</button>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <span class="hero-tag" data-vi="Thành lập 2025 · Kế thừa năng lực thiết kế VIETSAFE" data-en="Established 2025 · Inheriting VIETSAFE design legacy">
+      <b>Est. 2025</b> Kế thừa năng lực thiết kế VIETSAFE
+    </span>
+    <h1 data-vi-html='Tư vấn thiết kế, <span class="accent">an toàn PCCC</span> cho dự án'
+        data-en-html='Design consulting & <span class="accent">fire safety</span> for your project'>
+      Tư vấn thiết kế, <span class="accent">an toàn PCCC</span> cho dự án
+    </h1>
+    <p class="lead" data-vi="Công ty Cổ Phần VIETSAFE E&C — tư vấn, thiết kế hệ thống PCCC, chiến lược An toàn Sinh mạng (FLS), áp dụng tiêu chuẩn NFPA/QCVN và hỗ trợ tự nghiệm thu cho nhà cao tầng, hóa dầu, đường sắt đô thị và hạ tầng công nghiệp."
+       data-en="Vietsafe E&C JSC — fire protection design, Fire & Life Safety (FLS) strategy, NFPA/QCVN standard application and self-acceptance support for high-rise, petrochemical, metro and industrial infrastructure.">
+      Công ty Cổ Phần VIETSAFE E&amp;C — tư vấn, thiết kế hệ thống PCCC, chiến lược An toàn Sinh mạng (FLS), áp dụng tiêu chuẩn NFPA/QCVN và hỗ trợ tự nghiệm thu cho nhà cao tầng, hóa dầu, đường sắt đô thị và hạ tầng công nghiệp.
+    </p>
+    <div class="hero-cta">
+      <button class="cta-btn" onclick="document.getElementById('projects').scrollIntoView()" data-vi="Xem năng lực dự án" data-en="View project record">Xem năng lực dự án</button>
+      <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView()" data-vi="Dịch vụ kỹ thuật" data-en="Engineering services">Dịch vụ kỹ thuật</button>
+    </div>
+
+    <div class="hero-block">
+      <div class="cell">
+        <div class="k" data-vi="Kinh nghiệm thiết kế" data-en="Design experience">Kinh nghiệm thiết kế</div>
+        <div class="v">17<small>+</small></div>
+        <div class="d" data-vi="năm kinh nghiệm kế thừa" data-en="years of inherited expertise">năm kinh nghiệm kế thừa</div>
+      </div>
+      <div class="cell">
+        <div class="k" data-vi="Dự án tư vấn – thiết kế" data-en="Consulted / designed">Dự án tư vấn – thiết kế</div>
+        <div class="v">80<small>+</small></div>
+        <div class="d" data-vi="công trình PCCC" data-en="fire protection projects">công trình PCCC</div>
+      </div>
+      <div class="cell">
+        <div class="k" data-vi="Tiêu chuẩn áp dụng" data-en="Standards applied">Tiêu chuẩn áp dụng</div>
+        <div class="v">NFPA</div>
+        <div class="d" data-vi="QCVN · TCVN · EN" data-en="QCVN · TCVN · EN">QCVN · TCVN · EN</div>
+      </div>
+      <div class="cell">
+        <div class="k" data-vi="Hội viên" data-en="Membership">Hội viên</div>
+        <div class="v">NFPA</div>
+        <div class="d" data-vi="National Fire Protection Assoc." data-en="National Fire Protection Assoc.">National Fire Protection Assoc.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT / INHERITANCE ===================== -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="eyebrow"><span class="num">01</span> <span data-vi="Giới thiệu" data-en="About us">Giới thiệu</span></span>
+        <h2 class="sec-title" data-vi="Bộ phận thiết kế của VIETSAFE, nay là một pháp nhân kỹ thuật độc lập"
+            data-en="VIETSAFE's design division, now an independent engineering entity">
+          Bộ phận thiết kế của VIETSAFE, nay là một pháp nhân kỹ thuật độc lập
+          <span class="en-sub">VIETSAFE's design division — now an independent engineering entity</span>
+        </h2>
+        <div class="about-body" style="margin-top:26px">
+          <p data-vi-html='<strong>Công ty Cổ Phần VIETSAFE E&C</strong> được thành lập năm 2025 trên cơ sở tách ra từ Khối Tư vấn – Thiết kế của Công ty Cổ Phần Công Nghệ An Toàn Việt Nam (VIETSAFE., JSC).'
+             data-en-html='<strong>Vietsafe E&C JSC</strong> was established in 2025 as a spin-off of the Consulting & Design division of Vietnam Safety Technology Joint Stock Company (VIETSAFE., JSC).'>
+             <strong>Công ty Cổ Phần VIETSAFE E&amp;C</strong> được thành lập năm 2025 trên cơ sở tách ra từ Khối Tư vấn – Thiết kế của Công ty Cổ Phần Công Nghệ An Toàn Việt Nam (VIETSAFE., JSC).
+          </p>
+          <p data-vi="Chúng tôi kế thừa trọn vẹn đội ngũ kỹ sư thiết kế, hệ phương pháp luận và hồ sơ năng lực đã được kiểm chứng qua hơn 17 năm: từ nhà cao tầng vượt 150m, tổ hợp hóa dầu, đường sắt đô thị đến cảng hàng không quốc tế."
+             data-en="We inherit the full design engineering team, the methodology and the proven track record built over 17+ years — from 150m+ high-rises and petrochemical complexes to metro lines and international airports.">
+             Chúng tôi kế thừa trọn vẹn đội ngũ kỹ sư thiết kế, hệ phương pháp luận và hồ sơ năng lực đã được kiểm chứng qua hơn 17 năm: từ nhà cao tầng vượt 150m, tổ hợp hóa dầu, đường sắt đô thị đến cảng hàng không quốc tế.
+          </p>
+          <p data-vi="Là một pháp nhân E&C độc lập, Vietsafe E&C tập trung chuyên sâu vào tư vấn và thiết kế — không phân tán sang phân phối thiết bị — để cung cấp giải pháp kỹ thuật trung lập, dựa trên hiệu năng và tuân thủ pháp luật PCCC hiện hành."
+             data-en="As an independent E&C entity, Vietsafe E&C focuses purely on consulting and design — vendor-neutral, performance-based, and fully compliant with current Vietnamese fire safety law.">
+             Là một pháp nhân E&amp;C độc lập, Vietsafe E&amp;C tập trung chuyên sâu vào tư vấn và thiết kế — không phân tán sang phân phối thiết bị — để cung cấp giải pháp kỹ thuật trung lập, dựa trên hiệu năng và tuân thủ pháp luật PCCC hiện hành.
+          </p>
+        </div>
+      </div>
+
+      <div class="lineage reveal">
+        <div class="head">
+          <b data-vi="Dòng chảy năng lực" data-en="Capability lineage">Dòng chảy năng lực</b>
+          <span class="mono">LINEAGE</span>
+        </div>
+        <div class="step">
+          <span class="yr">2008</span>
+          <div><div class="t" data-vi="VIETSAFE., JSC thành lập" data-en="VIETSAFE., JSC founded">VIETSAFE., JSC thành lập</div>
+          <div class="s" data-vi="Tư vấn, thiết kế & tích hợp hệ thống an toàn cháy nổ." data-en="Fire safety consulting, design & system integration.">Tư vấn, thiết kế & tích hợp hệ thống an toàn cháy nổ.</div></div>
+        </div>
+        <div class="step">
+          <span class="yr">2015+</span>
+          <div><div class="t" data-vi="Hội viên NFPA · dự án quy mô lớn" data-en="NFPA member · large-scale projects">Hội viên NFPA · dự án quy mô lớn</div>
+          <div class="s" data-vi="Hóa dầu Nghi Sơn, LSP, nhà ga T2 Nội Bài, đường sắt Cát Linh – Hà Đông." data-en="Nghi Son refinery, LSP, Noi Bai T2, Cat Linh – Ha Dong metro.">Hóa dầu Nghi Sơn, LSP, nhà ga T2 Nội Bài, đường sắt Cát Linh – Hà Đông.</div></div>
+        </div>
+        <div class="step">
+          <span class="yr">2020+</span>
+          <div><div class="t" data-vi="Công trình landmark & siêu cao tầng" data-en="Landmark & super high-rise">Công trình landmark & siêu cao tầng</div>
+          <div class="s" data-vi="Cảng HKQT Long Thành, nhà ga T3 Tân Sơn Nhất, nhà cao tầng > 150m." data-en="Long Thanh airport, T3 Tan Son Nhat, 150m+ towers.">Cảng HKQT Long Thành, nhà ga T3 Tân Sơn Nhất, nhà cao tầng > 150m.</div></div>
+        </div>
+        <div class="step">
+          <span class="yr">2025</span>
+          <div><div class="t" style="color:#fff" data-vi="Vietsafe E&C ra đời" data-en="Vietsafe E&C is born">Vietsafe E&amp;C ra đời</div>
+          <div class="s" data-vi="Pháp nhân E&C chuyên trách tư vấn – thiết kế PCCC." data-en="A dedicated E&C entity for fire protection consulting & design.">Pháp nhân E&amp;C chuyên trách tư vấn – thiết kế PCCC.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="section-grey">
+  <div class="wrap">
+    <span class="eyebrow"><span class="num">02</span> <span data-vi="Dịch vụ kỹ thuật" data-en="Engineering services">Dịch vụ kỹ thuật</span></span>
+    <h2 class="sec-title" data-vi="Năng lực tư vấn – thiết kế chuyên sâu"
+        data-en="Specialised consulting & design capabilities">
+      Năng lực tư vấn – thiết kế chuyên sâu
+      <span class="en-sub">Specialised consulting & design capabilities</span>
+    </h2>
+
+    <div class="svc-grid reveal">
+      <article class="svc">
+        <span class="no">S-01</span>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span>
+        <h3 data-vi="Thiết kế hệ thống PCCC" data-en="Fire protection design">Thiết kế hệ thống PCCC</h3>
+        <span class="en-sub">Fire protection system design</span>
+        <p data-vi="Thiết kế cơ sở & kỹ thuật hệ thống báo cháy, chữa cháy nước/khí/bọt, hút khói, cấp nước chữa cháy theo QCVN 06 và TCVN." data-en="Basic & detailed design of detection, water/gas/foam suppression, smoke control and fire-water supply per QCVN 06 and TCVN.">Thiết kế cơ sở & kỹ thuật hệ thống báo cháy, chữa cháy nước/khí/bọt, hút khói, cấp nước chữa cháy theo QCVN 06 và TCVN.</p>
+      </article>
+
+      <article class="svc">
+        <span class="no">S-02</span>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 21V8a2 2 0 0 1 2-2h2V3h6v3h2a2 2 0 0 1 2 2v13M5 21h14M9 11h6M9 15h6"/></svg></span>
+        <h3 data-vi="Tư vấn thiết kế công trình công nghiệp" data-en="Industrial facility design">Tư vấn thiết kế công trình công nghiệp</h3>
+        <span class="en-sub">Industrial facility consulting & design</span>
+        <p data-vi="Tư vấn thiết kế PCCC cho công trình công nghiệp: kho – cảng xăng dầu, LPG, LNG, hóa chất và nhựa đường — theo NFPA, EN và QCVN/TCVN chuyên ngành." data-en="Fire protection design for industrial facilities: petroleum, LPG, LNG, chemical and bitumen/asphalt depots and terminals — per NFPA, EN and specialised QCVN/TCVN.">Tư vấn thiết kế PCCC cho công trình công nghiệp: kho – cảng xăng dầu, LPG, LNG, hóa chất và nhựa đường — theo NFPA, EN và QCVN/TCVN chuyên ngành.</p>
+      </article>
+
+      <article class="svc">
+        <span class="no">S-03</span>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M5 8l7-5 7 5M5 8v8l7 5 7-5V8"/></svg></span>
+        <h3 data-vi="Chiến lược An toàn Sinh mạng (FLS)" data-en="Fire & Life Safety strategy">Chiến lược An toàn Sinh mạng</h3>
+        <span class="en-sub">Fire & Life Safety (FLS) strategy</span>
+        <p data-vi="Báo cáo chiến lược FLS cho nhà siêu cao tầng & công trình đặc thù (sân bay, metro, dầu khí…): thoát nạn, ngăn cháy, chống tụ khói, an toàn kết cấu khi cháy." data-en="FLS strategy reports for super high-rise & special facilities (airports, metro, oil & gas…): egress, compartmentation, smoke management, structural fire safety.">Báo cáo chiến lược FLS cho nhà siêu cao tầng & công trình đặc thù (sân bay, metro, dầu khí…): thoát nạn, ngăn cháy, chống tụ khói, an toàn kết cấu khi cháy.</p>
+      </article>
+
+      <article class="svc">
+        <span class="no">S-04</span>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg></span>
+        <h3 data-vi="Áp dụng tiêu chuẩn nước ngoài" data-en="Foreign standard application">Áp dụng tiêu chuẩn nước ngoài</h3>
+        <span class="en-sub">NFPA standard substitution</span>
+        <p data-vi="Lập hồ sơ so sánh tiêu chuẩn (NFPA – QCVN), thuyết minh và xin chấp thuận áp dụng tiêu chuẩn nước ngoài về PCCC." data-en="Standard comparison dossiers (NFPA vs QCVN), justification and approval for applying foreign fire codes.">Lập hồ sơ so sánh tiêu chuẩn (NFPA – QCVN), thuyết minh và xin chấp thuận áp dụng tiêu chuẩn nước ngoài về PCCC.</p>
+      </article>
+
+      <article class="svc">
+        <span class="no">S-05</span>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3 8-8M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+        <h3 data-vi="Thẩm định & nghiệm thu" data-en="Design review & acceptance">Thẩm định & nghiệm thu</h3>
+        <span class="en-sub">Design review & acceptance</span>
+        <p data-vi="Thay mặt chủ đầu tư rà soát thiết kế; sắp xếp, tổ chức hồ sơ tự nghiệm thu về PCCC phù hợp với các quy định của pháp luật." data-en="Reviewing design on behalf of the owner; organising the fire safety self-acceptance dossier in line with current regulations.">Thay mặt chủ đầu tư rà soát thiết kế; sắp xếp, tổ chức hồ sơ tự nghiệm thu về PCCC phù hợp với các quy định của pháp luật.</p>
+      </article>
+
+      <article class="svc">
+        <span class="no">S-06</span>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span>
+        <h3 data-vi="Thiết kế cơ điện & BMS" data-en="MEP & BMS design">Thiết kế cơ điện & BMS</h3>
+        <span class="en-sub">MEP & building automation design</span>
+        <p data-vi="Thiết kế hệ cơ điện, hệ thống tự động hóa tòa nhà (BMS), tích hợp liên động với hệ thống PCCC cho công trình quy mô lớn." data-en="MEP and building management system (BMS) design, interlocked with fire protection systems for large-scale projects.">Thiết kế hệ cơ điện, hệ thống tự động hóa tòa nhà (BMS), tích hợp liên động với hệ thống PCCC cho công trình quy mô lớn.</p>
+      </article>
+
+      <article class="svc">
+        <span class="no">S-07</span>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6l2 4-3 2a14 14 0 0 0 6 6l2-3 4 2v6a2 2 0 0 1-2 2A18 18 0 0 1 2 5a2 2 0 0 1 0-2z"/></svg></span>
+        <h3 data-vi="Lập phương án PCCC & CNCH" data-en="Emergency planning">Phương án PCCC & CNCH</h3>
+        <span class="en-sub">Fire & rescue contingency plans</span>
+        <p data-vi="Lập phương án chữa cháy, cứu nạn cứu hộ và phương án ứng cứu khẩn cấp cho nhà máy, kho, hạ tầng công nghiệp." data-en="Firefighting, search-and-rescue and emergency response plans for plants, depots and industrial infrastructure.">Lập phương án chữa cháy, cứu nạn cứu hộ và phương án ứng cứu khẩn cấp cho nhà máy, kho, hạ tầng công nghiệp.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECTORS ===================== -->
+<section id="sectors">
+  <div class="wrap">
+    <span class="eyebrow"><span class="num">03</span> <span data-vi="Lĩnh vực trọng tâm" data-en="Focus sectors">Lĩnh vực trọng tâm</span></span>
+    <h2 class="sec-title" data-vi="Sản phẩm dịch vụ theo loại hình công trình"
+        data-en="Service deliverables by project typology">
+      Sản phẩm dịch vụ theo loại hình công trình
+      <span class="en-sub">Service deliverables by project typology</span>
+    </h2>
+
+    <div class="sectors reveal">
+      <div class="sector"><div class="bg" style="background-image:url('02-sector-high-rise.jpg')"></div>
+        <span class="tag">HIGH-RISE</span><h4 data-vi="Nhà cao tầng & TTTM lớn" data-en="High-rise & large malls">Nhà cao tầng & TTTM lớn</h4><span class="en-sub">High-rise & large malls</span>
+        <div class="scope-txt" data-vi-html="<span class='svc-lab'>Sản phẩm dịch vụ</span><ul class='svc-list'><li>Báo cáo chiến lược An toàn Sinh mạng (FLS)</li><li>Hồ sơ áp dụng tiêu chuẩn nước ngoài (NFPA)</li><li>Thiết kế hút khói, tăng áp, sprinkler, atrium</li><li>Sổ quyết định thiết kế (Decision Register)</li></ul>" data-en-html="<span class='svc-lab'>Service deliverables</span><ul class='svc-list'><li>Fire & Life Safety (FLS) strategy report</li><li>Foreign-standard application dossier (NFPA)</li><li>Smoke control, pressurisation, sprinkler & atrium</li><li>Strategic Design Decision Register</li></ul>"><span class='svc-lab'>Sản phẩm dịch vụ</span><ul class='svc-list'><li>Báo cáo chiến lược An toàn Sinh mạng (FLS)</li><li>Hồ sơ áp dụng tiêu chuẩn nước ngoài (NFPA)</li><li>Thiết kế hút khói, tăng áp, sprinkler, atrium</li><li>Sổ quyết định thiết kế (Decision Register)</li></ul></div></div>
+      <div class="sector"><div class="bg" style="background-image:url('03-sector-metro.jpg')"></div>
+        <span class="tag">METRO</span><h4 data-vi="Đường sắt đô thị" data-en="Urban metro & railway">Đường sắt đô thị</h4><span class="en-sub">Urban metro & railway</span>
+        <div class="scope-txt" data-vi-html="<span class='svc-lab'>Sản phẩm dịch vụ</span><ul class='svc-list'><li>Thiết kế hệ báo cháy toàn tuyến</li><li>Tư vấn PCCC ga ngầm, ga trên cao & depot</li><li>Hệ chữa cháy khí phòng điện – kỹ thuật</li><li>Mô phỏng thoát nạn theo NFPA 130</li></ul>" data-en-html="<span class='svc-lab'>Service deliverables</span><ul class='svc-list'><li>Line-wide fire alarm system design</li><li>Fire consulting for stations & depots</li><li>Gas suppression for electrical/technical rooms</li><li>Egress modelling per NFPA 130</li></ul>"><span class='svc-lab'>Sản phẩm dịch vụ</span><ul class='svc-list'><li>Thiết kế hệ báo cháy toàn tuyến</li><li>Tư vấn PCCC ga ngầm, ga trên cao & depot</li><li>Hệ chữa cháy khí phòng điện – kỹ thuật</li><li>Mô phỏng thoát nạn theo NFPA 130</li></ul></div></div>
+      <div class="sector"><div class="bg" style="background-image:url('04-sector-lng.jpg')"></div>
+        <span class="tag">LNG POWER</span><h4 data-vi="Nhiệt điện LNG" data-en="LNG thermal power">Nhiệt điện LNG</h4><span class="en-sub">LNG thermal power</span>
+        <div class="scope-txt" data-vi-html="<span class='svc-lab'>Sản phẩm dịch vụ</span><ul class='svc-list'><li>Thiết kế – cung cấp – thi công (EPC) báo cháy, FM200, CO₂</li><li>Phân vùng nguy hiểm khí (Zone 0/1/2)</li><li>Chữa cháy foam & đầu dò lửa khu turbine, kho LNG</li><li>Áp dụng NFPA 850 / 59A, EN 1473</li></ul>" data-en-html="<span class='svc-lab'>Service deliverables</span><ul class='svc-list'><li>Fire alarm, FM200 & CO₂ design–supply–install (EPC)</li><li>Hazardous-area zoning (Zone 0/1/2)</li><li>Foam & flame detection for turbine hall, LNG store</li><li>NFPA 850/59A, EN 1473 application</li></ul>"><span class='svc-lab'>Sản phẩm dịch vụ</span><ul class='svc-list'><li>Thiết kế – cung cấp – thi công (EPC) báo cháy, FM200, CO₂</li><li>Phân vùng nguy hiểm khí (Zone 0/1/2)</li><li>Chữa cháy foam & đầu dò lửa khu turbine, kho LNG</li><li>Áp dụng NFPA 850 / 59A, EN 1473</li></ul></div></div>
+      <div class="sector"><div class="bg" style="background-image:url('05-sector-aviation.jpg')"></div>
+        <span class="tag">AVIATION</span><h4 data-vi="Cảng hàng không" data-en="Airports">Cảng hàng không</h4><span class="en-sub">Airports</span>
+        <div class="scope-txt" data-vi-html="<span class='svc-lab'>Sản phẩm dịch vụ</span><ul class='svc-list'><li>Tư vấn thiết kế & rà soát hồ sơ PCCC nhà ga</li><li>Hệ hút khói không gian lớn & atrium</li><li>Chữa cháy foam khu cấp nhiên liệu</li><li>Hồ sơ xin áp dụng tiêu chuẩn nước ngoài</li></ul>" data-en-html="<span class='svc-lab'>Service deliverables</span><ul class='svc-list'><li>Terminal fire design & design review</li><li>Large-volume & atrium smoke control</li><li>Foam protection for fuelling areas</li><li>Foreign-standard application dossier</li></ul>"><span class='svc-lab'>Sản phẩm dịch vụ</span><ul class='svc-list'><li>Tư vấn thiết kế & rà soát hồ sơ PCCC nhà ga</li><li>Hệ hút khói không gian lớn & atrium</li><li>Chữa cháy foam khu cấp nhiên liệu</li><li>Hồ sơ xin áp dụng tiêu chuẩn nước ngoài</li></ul></div></div>
+      <div class="sector"><div class="bg" style="background-image:url('06-sector-industrial.jpg')"></div>
+        <span class="tag">INDUSTRIAL</span><h4 data-vi="Nhà máy công nghiệp & năng lượng" data-en="Industrial & energy">Nhà máy công nghiệp & năng lượng</h4><span class="en-sub">Industrial & energy</span>
+        <div class="scope-txt" data-vi-html="<span class='svc-lab'>Sản phẩm dịch vụ</span><ul class='svc-list'><li>Thiết kế PCCC nhà xưởng, kho, dây chuyền sản xuất</li><li>Hệ chữa cháy khí FM200/CO₂ phòng điện – server</li><li>PCCC điện mặt trời & hệ lưu trữ pin (BESS)</li><li>Phân khoang cháy, sprinkler theo NFPA 13/855</li></ul>" data-en-html="<span class='svc-lab'>Service deliverables</span><ul class='svc-list'><li>Fire design for workshops, warehouses & lines</li><li>FM200/CO₂ for electrical & server rooms</li><li>Solar PV & battery storage (BESS) protection</li><li>Compartmentation & sprinkler per NFPA 13/855</li></ul>"><span class='svc-lab'>Sản phẩm dịch vụ</span><ul class='svc-list'><li>Thiết kế PCCC nhà xưởng, kho, dây chuyền sản xuất</li><li>Hệ chữa cháy khí FM200/CO₂ phòng điện – server</li><li>PCCC điện mặt trời & hệ lưu trữ pin (BESS)</li><li>Phân khoang cháy, sprinkler theo NFPA 13/855</li></ul></div></div>
+      <div class="sector"><div class="bg" style="background-image:url('07-sector-oil-gas.jpg')"></div>
+        <span class="tag">OIL & GAS · FEED</span><h4 data-vi="Xăng dầu · LPG · LNG · Hóa chất · Nhựa đường" data-en="Oil, gas, chemical & bitumen — FEED">Xăng dầu · LPG · LNG · Hóa chất · Nhựa đường</h4><span class="en-sub">Oil, gas, chemical & bitumen — FEED</span>
+        <div class="scope-txt" data-vi-html="<span class='svc-lab'>Sản phẩm dịch vụ</span><ul class='svc-list'><li>Tư vấn thiết kế kỹ thuật tổng thể (FEED)</li><li>Thiết kế cơ sở & kỹ thuật PCCC; hệ khí IG541, foam</li><li>Phương án PCCC, CNCH & ứng cứu khẩn cấp</li><li>Hồ sơ áp dụng tiêu chuẩn nước ngoài (NFPA/EN)</li></ul>" data-en-html="<span class='svc-lab'>Service deliverables</span><ul class='svc-list'><li>Overall front-end engineering design (FEED)</li><li>Basic & detailed fire design; IG541 gas & foam</li><li>Fire, rescue & emergency response plans</li><li>Foreign-standard application (NFPA/EN)</li></ul>"><span class='svc-lab'>Sản phẩm dịch vụ</span><ul class='svc-list'><li>Tư vấn thiết kế kỹ thuật tổng thể (FEED)</li><li>Thiết kế cơ sở & kỹ thuật PCCC; hệ khí IG541, foam</li><li>Phương án PCCC, CNCH & ứng cứu khẩn cấp</li><li>Hồ sơ áp dụng tiêu chuẩn nước ngoài (NFPA/EN)</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects">
+  <div class="wrap">
+    <span class="eyebrow"><span class="num">04</span> <span data-vi="Dự án tiêu biểu" data-en="Featured projects">Dự án tiêu biểu</span></span>
+    <h2 class="sec-title" data-vi="Hồ sơ năng lực kế thừa từ VIETSAFE"
+        data-en="Track record inherited from VIETSAFE">
+      Hồ sơ năng lực kế thừa từ VIETSAFE
+      <span class="en-sub">Track record inherited from VIETSAFE</span>
+    </h2>
+
+    <div class="proj-grid reveal">
+      <article class="proj" tabindex="0"><div class="bg" style="background-image:url('08-project-long-thanh.jpg')"></div>
+        <span class="scope" data-vi="Tư vấn PCCC" data-en="Fire safety consulting">Tư vấn PCCC</span>
+        <h4 data-vi="Cảng HKQT Long Thành – GĐ1" data-en="Long Thanh Int'l Airport – Ph.1">Cảng HKQT Long Thành – GĐ1</h4>
+        <div class="meta">ĐỒNG NAI · GÓI 5.2 / 7.1</div>
+        <p class="scope-txt" data-vi="Phạm vi: tư vấn PCCC và rà soát hồ sơ thiết kế kỹ thuật nhà ga hành khách & công trình phụ trợ; xin áp dụng tiêu chuẩn nước ngoài về PCCC." data-en="Scope: fire safety consulting and design review for the passenger terminal & ancillary works; foreign fire-standard application.">Phạm vi: tư vấn PCCC và rà soát hồ sơ thiết kế kỹ thuật nhà ga hành khách & công trình phụ trợ; xin áp dụng tiêu chuẩn nước ngoài về PCCC.</p></article>
+
+      <article class="proj" tabindex="0"><div class="bg" style="background-image:url('09-project-t3-tsn.jpg')"></div>
+        <span class="scope" data-vi="Tư vấn thiết kế PCCC" data-en="Fire protection design">Tư vấn thiết kế PCCC</span>
+        <h4 data-vi="Nhà ga T3 – Tân Sơn Nhất" data-en="T3 Terminal – Tan Son Nhat">Nhà ga T3 – Tân Sơn Nhất</h4>
+        <div class="meta">TP.HCM · AVIATION</div>
+        <p class="scope-txt" data-vi="Phạm vi: tư vấn thiết kế hệ thống PCCC cho nhà ga; giải pháp không gian lớn, hút khói và thoát nạn hành khách." data-en="Scope: fire protection design for the terminal; large-volume solutions, smoke control and passenger egress.">Phạm vi: tư vấn thiết kế hệ thống PCCC cho nhà ga; giải pháp không gian lớn, hút khói và thoát nạn hành khách.</p></article>
+
+      <article class="proj" tabindex="0"><div class="bg" style="background-image:url('10-project-lsp.jpg')"></div>
+        <span class="scope" data-vi="TKCS · TKKT" data-en="Basic & detailed design">TKCS · TKKT</span>
+        <h4 data-vi="Tổ hợp Hóa dầu miền Nam (LSP)" data-en="Long Son Petrochemicals (LSP)">Tổ hợp Hóa dầu miền Nam (LSP)</h4>
+        <div class="meta">BÀ RỊA – VŨNG TÀU · IG541</div>
+        <p class="scope-txt" data-vi="Phạm vi: thiết kế cơ sở & kỹ thuật PCCC; cung cấp hệ khí IG541, báo cháy, CCTV, access control cho một số khu vực dự án." data-en="Scope: basic & detailed fire design; IG541 gas, detection, CCTV and access control for selected project areas.">Phạm vi: thiết kế cơ sở & kỹ thuật PCCC; cung cấp hệ khí IG541, báo cháy, CCTV, access control cho một số khu vực dự án.</p></article>
+
+      <article class="proj" tabindex="0"><div class="bg" style="background-image:url('11-project-cat-linh.jpg')"></div>
+        <span class="scope" data-vi="Thiết kế hệ thống PCCC" data-en="Fire protection design">Thiết kế hệ thống PCCC</span>
+        <h4 data-vi="Đường sắt Cát Linh – Hà Đông" data-en="Cat Linh – Ha Dong Metro">Đường sắt Cát Linh – Hà Đông</h4>
+        <div class="meta">HÀ NỘI · METRO</div>
+        <p class="scope-txt" data-vi="Phạm vi: thiết kế, cung cấp & lắp đặt hệ thống báo cháy toàn tuyến; tư vấn PCCC cho các ga." data-en="Scope: design, supply & installation of the line-wide fire alarm system; fire safety consulting for stations.">Phạm vi: thiết kế, cung cấp & lắp đặt hệ thống báo cháy toàn tuyến; tư vấn PCCC cho các ga.</p></article>
+
+      <article class="proj" tabindex="0"><div class="bg" style="background-image:url('12-project-nghi-son.jpg')"></div>
+        <span class="scope" data-vi="Thiết kế & nghiệm thu" data-en="Design & acceptance">Thiết kế & nghiệm thu</span>
+        <h4 data-vi="Nhà máy Lọc hóa dầu Nghi Sơn" data-en="Nghi Son Refinery">Nhà máy Lọc hóa dầu Nghi Sơn</h4>
+        <div class="meta">THANH HÓA · FM200 / FOAM</div>
+        <p class="scope-txt" data-vi="Phạm vi: lập hồ sơ thiết kế, phương án PCCC & CNCH; cung cấp foam, hệ khí FM200; hỗ trợ nghiệm thu về PCCC." data-en="Scope: design dossier, fire & rescue plans; foam and FM200 supply; support through fire acceptance.">Phạm vi: lập hồ sơ thiết kế, phương án PCCC & CNCH; cung cấp foam, hệ khí FM200; hỗ trợ nghiệm thu về PCCC.</p></article>
+
+      <article class="proj" tabindex="0"><div class="bg" style="background-image:url('13-project-vinfast.jpg')"></div>
+        <span class="scope" data-vi="Tư vấn thiết kế PCCC" data-en="Fire protection design">Tư vấn thiết kế PCCC</span>
+        <h4 data-vi="Tổ hợp sản xuất ô tô VinFast" data-en="VinFast Automotive Complex">Tổ hợp sản xuất ô tô VinFast</h4>
+        <div class="meta">HẢI PHÒNG · INDUSTRIAL</div>
+        <p class="scope-txt" data-vi="Phạm vi: tư vấn thiết kế hệ thống PCCC cho tổ hợp sản xuất; phân khoang cháy và bảo vệ nhà xưởng quy mô lớn." data-en="Scope: fire protection design for the manufacturing complex; compartmentation and large-scale workshop protection.">Phạm vi: tư vấn thiết kế hệ thống PCCC cho tổ hợp sản xuất; phân khoang cháy và bảo vệ nhà xưởng quy mô lớn.</p></article>
+    </div>
+
+    <div class="proj-more">
+      <button class="btn-ghost" style="border-color:var(--grey-line);color:var(--ink-strong)" data-vi="Xem toàn bộ danh mục dự án" data-en="View full project list">Xem toàn bộ danh mục dự án →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STANDARDS / PARTNERS ===================== -->
+<section id="standards" class="section-grey">
+  <div class="wrap">
+    <span class="eyebrow"><span class="num">05</span> <span data-vi="Tiêu chuẩn & đối tác" data-en="Standards & partners">Tiêu chuẩn & đối tác</span></span>
+    <h2 class="sec-title" data-vi="Nền tảng kỹ thuật & hệ sinh thái hợp tác"
+        data-en="Technical foundation & partner ecosystem">
+      Nền tảng kỹ thuật & hệ sinh thái hợp tác
+      <span class="en-sub">Technical foundation & partner ecosystem</span>
+    </h2>
+
+    <div class="std-grid reveal">
+      <div class="std"><div class="code">NFPA</div><div class="nm" data-vi="Tiêu chuẩn quốc tế" data-en="International codes">Tiêu chuẩn quốc tế</div><div class="ds" data-vi="13, 14, 20, 72, 92, 101, 855, 59A…" data-en="13, 14, 20, 72, 92, 101, 855, 59A…">13, 14, 20, 72, 92, 101, 855, 59A…</div></div>
+      <div class="std"><div class="code">QCVN</div><div class="nm" data-vi="Quy chuẩn Việt Nam" data-en="National regulations">Quy chuẩn Việt Nam</div><div class="ds" data-vi="06:2022/BXD · 10:2025/BCA…" data-en="06:2022/BXD · 10:2025/BCA…">06:2022/BXD · 10:2025/BCA…</div></div>
+      <div class="std"><div class="code">TCVN</div><div class="nm" data-vi="Tiêu chuẩn Việt Nam" data-en="Vietnamese standards">Tiêu chuẩn Việt Nam</div><div class="ds" data-vi="3890 · 5738 · 7336 · 14504…" data-en="3890 · 5738 · 7336 · 14504…">3890 · 5738 · 7336 · 14504…</div></div>
+      <div class="std"><div class="code">EN</div><div class="nm" data-vi="Tiêu chuẩn châu Âu" data-en="European standards">Tiêu chuẩn châu Âu</div><div class="ds" data-vi="EN 12845 · EN 1473 (LNG)…" data-en="EN 12845 · EN 1473 (LNG)…">EN 12845 · EN 1473 (LNG)…</div></div>
+    </div>
+
+    <div class="partners">
+      <div class="lab" data-vi="Đối tác công nghệ & hãng sản xuất" data-en="Technology partners & manufacturers">Đối tác công nghệ & hãng sản xuất</div>
+      <div class="partner-row">
+        <span>Honeywell</span><span>Notifier</span><span>Viking</span><span>Tyco</span>
+        <span>Kidde-Fenwall</span><span>Siemens</span><span>Spectrex</span><span>HD Fire</span>
+        <span>SIEX</span><span>Masteco</span><span>S-TEC VINA</span><span>Cooper / Eaton</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA BAND ===================== -->
+<section class="ctaband">
+  <div class="wrap inner">
+    <div>
+      <h3 data-vi="Bạn có dự án cần tư vấn?" data-en="Have a project that needs consulting?">Bạn có dự án cần tư vấn?</h3>
+      <div class="en-sub" data-vi="Đội ngũ kỹ sư thiết kế của Vietsafe E&C sẵn sàng đồng hành từ ý tưởng đến nghiệm thu." data-en="Our design engineers are ready to support you from concept to acceptance.">Đội ngũ kỹ sư thiết kế của Vietsafe E&amp;C sẵn sàng đồng hành từ ý tưởng đến nghiệm thu.</div>
+    </div>
+    <button class="btn-white" onclick="document.getElementById('contact').scrollIntoView()" data-vi="Liên hệ tư vấn ngay" data-en="Talk to our engineers">Liên hệ tư vấn ngay</button>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow"><span class="num">06</span> <span data-vi="Liên hệ" data-en="Contact">Liên hệ</span></span>
+    <h2 class="sec-title" data-vi="Bắt đầu cuộc trao đổi kỹ thuật"
+        data-en="Start a technical conversation">
+      Bắt đầu cuộc trao đổi kỹ thuật
+      <span class="en-sub">Start a technical conversation</span>
+    </h2>
+
+    <div class="contact-grid">
+      <form class="reveal" onsubmit="return false">
+        <div class="field"><label data-vi="Họ và tên / Tên công ty" data-en="Name / Company">Họ và tên / Tên công ty</label><input type="text" placeholder=""></div>
+        <div class="field"><label>Email</label><input type="email" placeholder=""></div>
+        <div class="field"><label data-vi="Điện thoại" data-en="Phone">Điện thoại</label><input type="tel" placeholder=""></div>
+        <div class="field"><label data-vi="Nội dung dự án" data-en="Project details">Nội dung dự án</label><textarea placeholder=""></textarea></div>
+        <button class="cta-btn" type="submit" data-vi="Gửi yêu cầu tư vấn" data-en="Send request">Gửi yêu cầu tư vấn</button>
+      </form>
+
+      <div class="reveal">
+        <div class="office">
+          <b data-vi="Trụ sở chính (Hà Nội)" data-en="Head Office (Hanoi)">Trụ sở chính (Hà Nội)</b>
+          <p data-vi="Tầng 7, tòa nhà 169 Nguyễn Ngọc Vũ, P. Yên Hòa, TP. Hà Nội, Việt Nam" data-en="7th Floor, 169 Nguyen Ngoc Vu Building, Yen Hoa Ward, Hanoi, Vietnam">Tầng 7, tòa nhà 169 Nguyễn Ngọc Vũ, P. Yên Hòa, TP. Hà Nội, Việt Nam</p>
+          <div class="mono">+84 (24) 3793 1355</div>
+        </div>
+        <div class="office">
+          <b data-vi="Chi nhánh Hồ Chí Minh" data-en="Ho Chi Minh Branch">Chi nhánh Hồ Chí Minh</b>
+          <p data-vi="Số 29 đường 37, KĐT Vạn Phúc, P. Hiệp Bình Phước, TP. Thủ Đức, TP. HCM" data-en="No. 29, Street 37, Van Phuc Urban Area, Hiep Binh Phuoc Ward, Thu Duc City, HCMC">Số 29 đường 37, KĐT Vạn Phúc, P. Hiệp Bình Phước, TP. Thủ Đức, TP. HCM</p>
+          <div class="mono">+84 (28) 6275 5544</div>
+        </div>
+        <div class="office">
+          <b data-vi="Trực tuyến" data-en="Online">Trực tuyến</b>
+          <p>www.vnsec.com.vn · www.vietsafe.com.vn</p>
+          <div class="mono">info@vnsec.com.vn</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap foot-top">
+    <div class="foot-brand">
+      <a class="brand" href="#top">
+        <span class="mark"><span>V</span></span>
+        <span class="txt"><b>VIETSAFE <em>E&amp;C</em></b><small>Fire Safety Engineering &amp; Consulting</small></span>
+      </a>
+      <p data-vi="Công ty Cổ Phần VIETSAFE E&C — pháp nhân kỹ thuật chuyên trách tư vấn & thiết kế PCCC, kế thừa năng lực thiết kế của Công ty Cổ Phần Công Nghệ An Toàn Việt Nam (VIETSAFE., JSC)."
+         data-en="Vietsafe E&C JSC — a dedicated engineering entity for fire protection consulting & design, inheriting the design capability of Vietnam Safety Technology JSC (VIETSAFE., JSC).">
+         Công ty Cổ Phần VIETSAFE E&amp;C — pháp nhân kỹ thuật chuyên trách tư vấn & thiết kế PCCC, kế thừa năng lực thiết kế của Công ty Cổ Phần Công Nghệ An Toàn Việt Nam (VIETSAFE., JSC).
+      </p>
+      <div class="foot-slogan">YOUR SAFETY – OUR SUCCESS</div>
+    </div>
+
+    <div class="foot-col">
+      <h5 data-vi="Dịch vụ" data-en="Services">Dịch vụ</h5>
+      <ul>
+        <li><a href="#services" data-vi="Thiết kế hệ thống PCCC" data-en="Fire protection design">Thiết kế hệ thống PCCC</a></li>
+        <li><a href="#services" data-vi="Chiến lược FLS" data-en="FLS strategy">Chiến lược FLS</a></li>
+        <li><a href="#services" data-vi="Áp dụng tiêu chuẩn NFPA" data-en="NFPA standards">Áp dụng tiêu chuẩn NFPA</a></li>
+        <li><a href="#services" data-vi="Thẩm định & nghiệm thu" data-en="Design review & acceptance">Thẩm định & nghiệm thu</a></li>
+      </ul>
+    </div>
+
+    <div class="foot-col">
+      <h5 data-vi="Liên kết" data-en="Links">Liên kết</h5>
+      <ul>
+        <li><a href="#about" data-vi="Giới thiệu" data-en="About">Giới thiệu</a></li>
+        <li><a href="#projects" data-vi="Dự án tiêu biểu" data-en="Projects">Dự án tiêu biểu</a></li>
+        <li><a href="https://www.vietsafe.com.vn" target="_blank" rel="noopener">VIETSAFE.,JSC ↗</a></li>
+        <li><a href="#contact" data-vi="Liên hệ" data-en="Contact">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span class="mono">© 2025 <b>Công ty Cổ Phần VIETSAFE E&amp;C</b> · VIETSAFE E&amp;C Joint Stock Company</span>
+    <span class="mono" data-vi="Thành công của chúng tôi đồng hành với sự an toàn của bạn" data-en="Your safety is our success">Thành công của chúng tôi đồng hành với sự an toàn của bạn</span>
+  </div>
+</footer>
+
+<script>
+/* ---------- mobile menu ---------- */
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger&&burger.addEventListener('click',()=>menu.classList.toggle('open'));
+menu&&menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+/* ---------- sticky shadow ---------- */
+const tb=document.querySelector('.topbar');
+addEventListener('scroll',()=>tb.classList.toggle('scrolled',scrollY>10));
+
+/* ---------- scroll reveal ---------- */
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---------- stat counters ---------- */
+function animate(el){
+  const raw=el.textContent.trim();const m=raw.match(/^(\d+)/);if(!m)return;
+  const end=+m[1],suffix=raw.replace(/^\d+/,'');let cur=0,step=Math.max(1,Math.ceil(end/40));
+  el.textContent='0'+suffix;
+  const t=setInterval(()=>{cur+=step;if(cur>=end){cur=end;clearInterval(t);}el.textContent=cur+suffix;},22);
+}
+const sio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.v').forEach(v=>{if(/^\d/.test(v.textContent.trim()))animate(v);});sio.unobserve(e.target);}})},{threshold:.4});
+document.querySelectorAll('.hero-block').forEach(el=>sio.observe(el));
+
+/* ---------- VI / EN language toggle ---------- */
+const langBtns=document.querySelectorAll('.lang button');
+function setLang(lang){
+  document.documentElement.lang=lang;
+  langBtns.forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));
+  document.querySelectorAll('[data-vi]').forEach(el=>{
+    const v=el.getAttribute('data-'+lang);if(v!==null)el.textContent=v;
+  });
+  document.querySelectorAll('[data-vi-html]').forEach(el=>{
+    const v=el.getAttribute('data-'+lang+'-html');if(v!==null)el.innerHTML=v;
+  });
+}
+langBtns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>
