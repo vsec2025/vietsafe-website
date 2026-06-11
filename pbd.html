@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiết kế theo Hiệu năng PBD &amp; Mô phỏng PCCC | VIETSAFE E&amp;C</title>
+  <meta name="description" content="Dịch vụ thiết kế PCCC theo hiệu năng (PBD): mô phỏng cháy &amp; khói (FDS/PyroSim), mô phỏng thoát nạn (Pathfinder), luận chứng kỹ thuật, đánh giá rủi ro cháy. Dự án thực tế: Sân bay Phú Quốc, Nhà ga T2 Nội Bài. VIETSAFE E&amp;C — chuyên gia hàng đầu Việt Nam." />
+  <meta name="keywords" content="thiết kế PCCC theo hiệu năng, PBD fire design, mô phỏng cháy khói FDS PyroSim, mô phỏng thoát nạn Pathfinder, ASET RSET, luận chứng kỹ thuật PCCC, đánh giá rủi ro cháy, performance-based design Vietnam, fire simulation Vietnam, NFPA 5000 Vietnam" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="author" content="VIETSAFE E&amp;C Joint Stock Company" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thiết kế theo Hiệu năng PBD &amp; Mô phỏng PCCC — VIETSAFE E&amp;C" />
+  <meta property="og:description" content="Mô phỏng cháy khói (FDS), mô phỏng thoát nạn (Pathfinder), luận chứng kỹ thuật PCCC cho nhà siêu cao tầng, sân bay, metro tại Việt Nam." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.vnsec.com.vn/pbd.html" />
+  <meta property="og:image" content="https://www.vnsec.com.vn/sim-phu-quoc.jpg" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:locale:alternate" content="en_US" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Thiết kế theo Hiệu năng PBD &amp; Mô phỏng — VIETSAFE E&amp;C" />
+  
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/pbd.html" />
+  <link rel="alternate" hreflang="en" href="https://www.vnsec.com.vn/pbd.html?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://www.vnsec.com.vn/pbd.html" />
+  <link rel="canonical" href="https://www.vnsec.com.vn/pbd.html" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- GEO/AEO: JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://www.vnsec.com.vn/pbd.html#service",
+        "name": "Thiết kế theo Hiệu năng PBD & Mô phỏng PCCC",
+        "alternateName": "Performance-Based Fire Design & Fire Simulation",
+        "provider": {
+          "@type": "Organization",
+          "name": "VIETSAFE E&C",
+          "url": "https://www.vnsec.com.vn/"
+        },
+        "description": "Dịch vụ thiết kế PCCC theo hiệu năng gồm: mô phỏng cháy & khói bằng FDS/PyroSim, mô phỏng thoát nạn bằng Pathfinder/STEPS, luận chứng kỹ thuật PCCC, đánh giá rủi ro cháy (FRA/QRA) theo tiêu chuẩn NFPA, BS 7974, ISO/TR 16738 và QCVN cho công trình đặc thù tại Việt Nam.",
+        "areaServed": "Vietnam",
+        "url": "https://www.vnsec.com.vn/pbd.html",
+        "serviceType": ["Fire Simulation", "Performance-Based Design", "Evacuation Modeling", "Fire Risk Assessment"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Dịch vụ PBD & Mô phỏng",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mô phỏng cháy & khói (FDS/PyroSim)", "description": "Mô phỏng lan truyền cháy và khói trong công trình bằng phần mềm FDS/PyroSim. Kiểm chứng hệ thống hút khói, xác định ngưỡng tầm nhìn và nhiệt độ." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mô phỏng thoát nạn (Pathfinder/STEPS)", "description": "Mô phỏng di chuyển thoát nạn người theo kịch bản cháy, tính ASET và RSET để chứng minh điều kiện an toàn thoát nạn." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Luận chứng kỹ thuật PCCC", "description": "Lập hồ sơ luận chứng so sánh, xin chấp thuận áp dụng tiêu chuẩn NFPA/BS thay thế QCVN cho công trình vượt khung." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Đánh giá rủi ro cháy nổ (FRA/QRA)", "description": "Phân tích định tính và định lượng rủi ro cháy nổ theo NFPA 855, API, EN cho công trình công nghiệp, BESS, dầu khí." } }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.vnsec.com.vn/pbd.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Thiết kế PCCC theo hiệu năng PBD cần những bước nào?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Quy trình thiết kế theo hiệu năng PBD gồm: (1) Xác định mục tiêu hiệu năng và kịch bản cháy thiết kế; (2) Mô phỏng cháy & khói bằng FDS/PyroSim; (3) Mô phỏng thoát nạn bằng Pathfinder/STEPS; (4) Phân tích ASET vs RSET — xác nhận điều kiện an toàn; (5) Lập báo cáo luận chứng kỹ thuật; (6) Bảo vệ hồ sơ khi có yêu cầu của cơ quan thẩm định."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "VIETSAFE E&C đã áp dụng mô phỏng PCCC tại dự án nào?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "VIETSAFE E&C đã thực hiện mô phỏng cháy khói và thoát nạn cho Sân bay Quốc tế Phú Quốc và Nhà ga T2 mở rộng Sân bay Quốc tế Nội Bài, cùng nhiều dự án nhà cao tầng vượt 150m và dự án metro tại Việt Nam."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Khi nào cần áp dụng NFPA 5000 thay QCVN 06 cho nhà cao tầng?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NFPA 5000 được áp dụng thay thế hoặc bổ sung QCVN 06 khi công trình có chiều cao vượt phạm vi điều chỉnh của QCVN (thường trên ~150m) hoặc có đặc thù kiến trúc mà QCVN chưa có hướng dẫn cụ thể. Đơn vị thiết kế cần lập hồ sơ luận chứng kỹ thuật theo Luật PCCC 55/2024 và NĐ 105/2025 để cơ quan thẩm định xem xét chấp thuận."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://www.vnsec.com.vn/" },
+          { "@type": "ListItem", "position": 2, "name": "Thiết kế theo Hiệu năng PBD", "item": "https://www.vnsec.com.vn/pbd.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #C8102E; --dark: #1a1a1a; --grey: #f5f5f5; --text: #333; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--text); background: #fff; }
+    a { color: var(--red); }
+    
+    /* Header */
+    .site-header { background: var(--dark); padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { color: #fff; text-decoration: none; font-weight: 800; font-size: 1.2rem; letter-spacing: 0.05em; }
+    .logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .btn-cta { background: var(--red); color: #fff; padding: 0.6rem 1.4rem; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 700; white-space: nowrap; }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #1a1a1a 0%, #2d0a13 100%); color: #fff; padding: 5rem 2rem 4rem; text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(200,16,46,0.2); border: 1px solid var(--red); color: var(--red); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 20px; margin-bottom: 1.5rem; }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    .hero h1 em { color: var(--red); font-style: normal; }
+    .hero-sub { font-size: clamp(0.85rem, 1.5vw, 1rem); color: rgba(255,255,255,0.7); margin-bottom: 0.5rem; font-style: italic; }
+    .hero-desc { font-size: 1rem; color: rgba(255,255,255,0.8); max-width: 700px; margin: 1.5rem auto 2.5rem; line-height: 1.7; }
+    .hero-cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--red); color: #fff; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; }
+    .btn-secondary { background: transparent; color: #fff; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.3); }
+
+    /* Answer block - GEO optimized */
+    .answer-block { background: #fff8f8; border-left: 4px solid var(--red); padding: 1.5rem 2rem; max-width: 860px; margin: 0 auto 3rem; border-radius: 0 8px 8px 0; }
+    .answer-block p { font-size: 0.95rem; line-height: 1.8; color: #444; }
+
+    /* Section layout */
+    .section { padding: 4rem 2rem; }
+    .section-alt { background: var(--grey); }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.72rem; font-weight: 700; color: var(--red); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .section-title { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; color: var(--dark); margin-bottom: 0.5rem; }
+    .section-title-en { font-size: 0.9rem; color: #888; font-style: italic; margin-bottom: 2.5rem; }
+
+    /* Service cards */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .service-card { background: #fff; border-radius: 12px; padding: 2rem; border: 1px solid #e8e8e8; transition: box-shadow 0.2s, border-color 0.2s; }
+    .service-card:hover { box-shadow: 0 6px 24px rgba(200,16,46,0.12); border-color: var(--red); }
+    .service-num { font-size: 0.72rem; font-weight: 700; color: var(--red); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.3rem; }
+    .service-card .en { font-size: 0.8rem; color: #888; font-style: italic; margin-bottom: 1rem; }
+    .service-card p { font-size: 0.88rem; color: #555; line-height: 1.7; }
+    .service-card ul { list-style: none; padding: 0; margin-top: 0.8rem; }
+    .service-card ul li { font-size: 0.83rem; color: #555; padding: 0.25rem 0 0.25rem 1rem; border-left: 2px solid #e0e0e0; margin-bottom: 0.3rem; }
+
+    /* Simulation images */
+    .sim-section { padding: 4rem 2rem; background: var(--dark); color: #fff; }
+    .sim-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
+    .sim-card { background: rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+    .sim-card img { width: 100%; height: 260px; object-fit: cover; display: block; }
+    .sim-card-body { padding: 1.5rem; }
+    .sim-card-body h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem; }
+    .sim-card-body .en { font-size: 0.8rem; color: rgba(255,255,255,0.5); font-style: italic; margin-bottom: 0.8rem; }
+    .sim-card-body p { font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6; }
+    .sim-tag { display: inline-block; background: rgba(200,16,46,0.3); color: var(--red); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.5rem; text-transform: uppercase; }
+
+    /* Case studies */
+    .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .case-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    .case-card-header { background: var(--red); color: #fff; padding: 1.5rem; }
+    .case-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.8; margin-bottom: 0.4rem; }
+    .case-card-header h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 0.2rem; }
+    .case-card-header .loc { font-size: 0.8rem; opacity: 0.8; }
+    .case-card-body { padding: 1.5rem; }
+    .case-card-body p { font-size: 0.88rem; color: #555; line-height: 1.7; margin-bottom: 1rem; }
+    .case-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag { background: #f5f5f5; color: #555; font-size: 0.72rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 4px; }
+
+    /* Standards */
+    .standards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+    .std-card { background: #fff; border-radius: 10px; padding: 1.5rem; text-align: center; border: 1px solid #e8e8e8; }
+    .std-name { font-size: 1.2rem; font-weight: 800; color: var(--red); margin-bottom: 0.3rem; }
+    .std-desc { font-size: 0.82rem; color: #666; }
+
+    /* FAQ */
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid #e8e8e8; padding: 1.5rem 0; }
+    .faq-q { font-size: 0.95rem; font-weight: 700; color: var(--dark); margin-bottom: 0.8rem; cursor: pointer; }
+    .faq-q::before { content: "Q "; color: var(--red); font-weight: 800; }
+    .faq-a { font-size: 0.88rem; color: #555; line-height: 1.8; }
+
+    /* CTA */
+    .cta-section { background: var(--red); color: #fff; padding: 4rem 2rem; text-align: center; }
+    .cta-section h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 1rem; }
+    .cta-section p { font-size: 1rem; opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .btn-white { background: #fff; color: var(--red); padding: 0.9rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; }
+
+    /* Footer */
+    .site-footer { background: #111; color: rgba(255,255,255,0.6); padding: 2rem; text-align: center; font-size: 0.82rem; }
+    .site-footer a { color: rgba(255,255,255,0.6); }
+    .breadcrumb { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero { padding: 3rem 1.5rem; }
+      .section { padding: 3rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <a href="/" class="logo">VIETSAFE<span>E&amp;C</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="/">Trang chủ</a></li>
+        <li><a href="/#services">Dịch vụ</a></li>
+        <li><a href="/pbd.html" class="active">Thiết kế hiệu năng PBD</a></li>
+        <li><a href="/#projects">Dự án</a></li>
+        <li><a href="/#contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <a href="/#contact" class="btn-cta">Yêu cầu tư vấn</a>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div style="background:#1a1a1a;padding:0.7rem 2rem;">
+    <nav aria-label="Breadcrumb" class="breadcrumb" style="max-width:1100px;margin:0 auto;">
+      <a href="/">Trang chủ</a> &rsaquo; <span style="color:rgba(255,255,255,0.8);">Thiết kế theo Hiệu năng PBD</span>
+    </nav>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-badge">Dịch vụ chuyên sâu · Specialised Service</div>
+    <h1 id="hero-title">Thiết kế theo <em>Hiệu năng</em><br/>PBD &amp; Mô phỏng PCCC</h1>
+    <p class="hero-sub">Performance-Based Fire Design &amp; Fire/Evacuation Simulation</p>
+    <p class="hero-desc">Giải pháp kỹ thuật cho công trình vượt khung QCVN — chứng minh an toàn bằng mô phỏng thay vì áp dụng cứng nhắc từng điều khoản. Nền tảng pháp lý: Luật PCCC 55/2024, NĐ 105/2025.</p>
+    <div class="hero-cta-group">
+      <a href="/#contact" class="btn-primary">Yêu cầu tư vấn PBD</a>
+      <a href="#case-studies" class="btn-secondary">Xem dự án thực tế</a>
+    </div>
+  </section>
+
+  <!-- Direct answer block — GEO/AEO optimized -->
+  <section class="section" style="padding-top:3rem;padding-bottom:2rem;">
+    <div class="container">
+      <div class="answer-block" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text"><strong>Thiết kế PCCC theo hiệu năng (Performance-Based Design — PBD)</strong> là phương pháp thiết kế dựa trên mô phỏng khoa học và phân tích định lượng, thay vì áp dụng cứng nhắc từng điều khoản tiêu chuẩn. Phương pháp này cần thiết khi công trình có chiều cao, quy mô hoặc đặc thù kiến trúc vượt phạm vi điều chỉnh của QCVN — ví dụ: nhà cao hơn 150m, nhà ga sân bay, ga metro ngầm, kho LNG, hệ lưu trữ pin (BESS). Theo Luật PCCC 55/2024 và NĐ 105/2025, chủ đầu tư có thể áp dụng giải pháp thay thế nếu lập được <strong>luận chứng kỹ thuật</strong> chứng minh mức độ an toàn tương đương, và bảo vệ hồ sơ khi có yêu cầu của cơ quan thẩm định.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section section-alt" aria-labelledby="services-title">
+    <div class="container">
+      <p class="section-label">Năng lực chuyên sâu</p>
+      <h2 class="section-title" id="services-title">4 Dịch vụ cốt lõi</h2>
+      <p class="section-title-en">Four core PBD &amp; simulation services</p>
+      
+      <div class="services-grid">
+
+        <article class="service-card" itemscope itemtype="https://schema.org/Service">
+          <p class="service-num">PBD-01</p>
+          <h3 itemprop="name">Mô phỏng cháy &amp; khói</h3>
+          <p class="en">Fire &amp; Smoke Modeling — FDS / PyroSim</p>
+          <p itemprop="description">Mô phỏng lan truyền cháy và khói trong công trình bằng phần mềm FDS (Fire Dynamics Simulator) và PyroSim. Kết quả trực quan hóa theo thời gian thực — kiểm chứng hiệu quả hệ thống hút khói, xác định ngưỡng tầm nhìn và nhiệt độ theo kịch bản cháy thiết kế.</p>
+          <ul>
+            <li>Phần mềm: FDS, PyroSim, CFAST</li>
+            <li>Ứng dụng: atrium, tầng hầm, nhà ga sân bay, ga metro, nhà xưởng lớn</li>
+            <li>Đầu ra: báo cáo slice khói, bản đồ nhiệt, đồ thị visibility</li>
+            <li>Tiêu chuẩn: SFPE Handbook, BS 7974, NFPA 92</li>
+          </ul>
+        </article>
+
+        <article class="service-card" itemscope itemtype="https://schema.org/Service">
+          <p class="service-num">PBD-02</p>
+          <h3 itemprop="name">Mô phỏng thoát nạn</h3>
+          <p class="en">Evacuation Modeling — Pathfinder / STEPS</p>
+          <p itemprop="description">Mô phỏng di chuyển thoát nạn của người theo kịch bản cháy, tính toán ASET (Available Safe Egress Time) và RSET (Required Safe Egress Time). Đây là hai chỉ số cốt lõi để chứng minh điều kiện an toàn thoát nạn trong thiết kế theo hiệu năng.</p>
+          <ul>
+            <li>Phần mềm: Pathfinder, STEPS</li>
+            <li>Ứng dụng: nhà siêu cao tầng, sân bay, trung tâm thương mại, ga metro</li>
+            <li>Đầu ra: biểu đồ ASET/RSET, bản đồ mật độ người, video simulation</li>
+            <li>Tiêu chuẩn: NFPA 101, NFPA 130, ISO/TR 16738</li>
+          </ul>
+        </article>
+
+        <article class="service-card" itemscope itemtype="https://schema.org/Service">
+          <p class="service-num">PBD-03</p>
+          <h3 itemprop="name">Luận chứng kỹ thuật PCCC</h3>
+          <p class="en">Fire Engineering Technical Report</p>
+          <p itemprop="description">Lập hồ sơ luận chứng kỹ thuật cho công trình vượt khung QCVN hoặc cần áp dụng tiêu chuẩn quốc tế. Bao gồm so sánh tiêu chuẩn, phân tích khoảng trống (gap analysis), thuyết minh giải pháp thay thế, và chuẩn bị bảo vệ hồ sơ khi có yêu cầu của cơ quan thẩm định.</p>
+          <ul>
+            <li>NFPA 5000 / NFPA 101 cho nhà &gt;150m</li>
+            <li>BS 7974 / SFPE Handbook cho công trình đặc thù</li>
+            <li>Cơ sở pháp lý: Luật PCCC 55/2024, NĐ 105/2025</li>
+            <li>Đầu ra: báo cáo luận chứng song ngữ, hồ sơ bảo vệ</li>
+          </ul>
+        </article>
+
+        <article class="service-card" itemscope itemtype="https://schema.org/Service">
+          <p class="service-num">PBD-04</p>
+          <h3 itemprop="name">Đánh giá rủi ro cháy nổ</h3>
+          <p class="en">Fire Risk Assessment (FRA / QRA)</p>
+          <p itemprop="description">Phân tích định tính và định lượng rủi ro cháy nổ (Fire Risk Assessment và Quantitative Risk Assessment) cho công trình công nghiệp, dầu khí, BESS, LNG. Xác định xác suất sự cố, hậu quả, và đề xuất biện pháp giảm thiểu rủi ro.</p>
+          <ul>
+            <li>Tiêu chuẩn: NFPA 855 (BESS), NFPA 59A (LNG), API RP</li>
+            <li>Ứng dụng: kho LNG, trạm BESS, nhà máy lọc dầu, hóa chất</li>
+            <li>Đầu ra: ma trận rủi ro, bow-tie diagram, kế hoạch ứng phó</li>
+            <li>Tích hợp: QCVN 01/BCA, QCVN 52/BXD</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Simulation Images Section -->
+  <section class="sim-section" aria-labelledby="sim-title">
+    <div class="container">
+      <p class="section-label" style="color:rgba(200,16,46,0.9);">Hình ảnh mô phỏng thực tế</p>
+      <h2 class="section-title" style="color:#fff;" id="sim-title">Kết quả mô phỏng từ dự án</h2>
+      <p class="section-title-en">Simulation outputs from actual projects</p>
+
+      <div class="sim-grid">
+        <figure class="sim-card">
+          <img src="/sim-phu-quoc-pathfinder.jpg" 
+               alt="Mô hình Pathfinder mô phỏng thoát nạn nhà ga sân bay Phú Quốc — Thiết lập mô hình thoát nạn trên phần mềm Pathfinder"
+               loading="lazy" width="600" height="260" />
+          <div class="sim-card-body">
+            <div class="sim-tag">Pathfinder · Thoát nạn</div>
+            <h3>Mô phỏng thoát nạn — Sân bay Quốc tế Phú Quốc</h3>
+            <p class="en">Evacuation Simulation — Phu Quoc International Airport</p>
+            <p>Thiết lập mô hình Pathfinder cho nhà ga sân bay Phú Quốc. Mô hình tính toán ASET/RSET xác nhận điều kiện an toàn thoát nạn cho hành khách và nhân viên theo các kịch bản cháy thiết kế.</p>
+          </div>
+        </figure>
+
+        <figure class="sim-card">
+          <img src="/sim-phu-quoc-fds.jpg" 
+               alt="Mô phỏng cháy khói FDS — phân tích tầm nhìn (visibility slice) tại 1500 giây — Sân bay Quốc tế Phú Quốc"
+               loading="lazy" width="600" height="260" />
+          <div class="sim-card-body">
+            <div class="sim-tag">FDS / PyroSim · Khói</div>
+            <h3>Mô phỏng cháy khói — Sân bay Quốc tế Phú Quốc</h3>
+            <p class="en">Fire &amp; Smoke Simulation — Phu Quoc International Airport</p>
+            <p>Kết quả mô phỏng FDS thể hiện phân bố tầm nhìn (Visibility Slice) tại thời điểm 1,500 giây (25 phút). Bản đồ màu chứng minh hiệu quả hệ thống hút khói trong không gian nhà ga.</p>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section class="section" id="case-studies" aria-labelledby="cases-title">
+    <div class="container">
+      <p class="section-label">Dự án tiêu biểu</p>
+      <h2 class="section-title" id="cases-title">Case Study — Dự án thực tế</h2>
+      <p class="section-title-en">Real-project case studies</p>
+
+      <div class="case-grid">
+
+        <article class="case-card" itemscope itemtype="https://schema.org/Project">
+          <div class="case-card-header">
+            <p class="case-tag">Mô phỏng thoát nạn &amp; cháy khói</p>
+            <h3 itemprop="name">Sân bay Quốc tế Phú Quốc</h3>
+            <p class="loc">PHÚ QUỐC · AVIATION · PATHFINDER + FDS</p>
+          </div>
+          <div class="case-card-body">
+            <p itemprop="description">Thực hiện mô phỏng thoát nạn bằng Pathfinder và mô phỏng cháy khói bằng FDS cho nhà ga hành khách sân bay Phú Quốc. Đánh giá ASET/RSET và kiểm chứng hiệu quả hệ thống hút khói không gian lớn theo NFPA 92 và BS 7974.</p>
+            <div class="case-tags">
+              <span class="tag">Pathfinder</span>
+              <span class="tag">FDS/PyroSim</span>
+              <span class="tag">ASET/RSET</span>
+              <span class="tag">NFPA 92</span>
+              <span class="tag">BS 7974</span>
+              <span class="tag">Hút khói không gian lớn</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card" itemscope itemtype="https://schema.org/Project">
+          <div class="case-card-header">
+            <p class="case-tag">Luận chứng kỹ thuật &amp; mô phỏng</p>
+            <h3 itemprop="name">Mở rộng Nhà ga T2 — Sân bay Nội Bài</h3>
+            <p class="loc">HÀ NỘI · AVIATION · PBD + SIMULATION</p>
+          </div>
+          <div class="case-card-body">
+            <p itemprop="description">Lập luận chứng kỹ thuật và thực hiện mô phỏng PCCC cho dự án mở rộng Nhà ga T2 Sân bay Quốc tế Nội Bài. Áp dụng tiêu chuẩn quốc tế, phân tích khoảng trống với QCVN, và chuẩn bị hồ sơ bảo vệ khi có yêu cầu của cơ quan thẩm định.</p>
+            <div class="case-tags">
+              <span class="tag">Luận chứng kỹ thuật</span>
+              <span class="tag">NFPA 101</span>
+              <span class="tag">Gap Analysis</span>
+              <span class="tag">Fire Simulation</span>
+              <span class="tag">Nhà ga hành khách</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Standards & Tools -->
+  <section class="section section-alt" aria-labelledby="standards-title">
+    <div class="container">
+      <p class="section-label">Nền tảng kỹ thuật</p>
+      <h2 class="section-title" id="standards-title">Tiêu chuẩn &amp; Công cụ áp dụng</h2>
+      <p class="section-title-en">Standards &amp; tools applied</p>
+      <div class="standards-grid">
+        <div class="std-card"><p class="std-name">FDS</p><p class="std-desc">Fire Dynamics Simulator — NIST (Mô phỏng cháy khói)</p></div>
+        <div class="std-card"><p class="std-name">Pathfinder</p><p class="std-desc">Thunderhead Eng. (Mô phỏng thoát nạn)</p></div>
+        <div class="std-card"><p class="std-name">NFPA 5000</p><p class="std-desc">Building Code (nhà cao tầng, công trình đặc thù)</p></div>
+        <div class="std-card"><p class="std-name">BS 7974</p><p class="std-desc">Application of fire safety engineering (UK)</p></div>
+        <div class="std-card"><p class="std-name">SFPE Handbook</p><p class="std-desc">Society of Fire Protection Engineers</p></div>
+        <div class="std-card"><p class="std-name">ISO/TR 16738</p><p class="std-desc">Fire safety engineering — Evacuation modelling</p></div>
+        <div class="std-card"><p class="std-name">QCVN 06</p><p class="std-desc">An toàn cháy cho nhà và công trình</p></div>
+        <div class="std-card"><p class="std-name">NĐ 105/2025</p><p class="std-desc">Luật PCCC 55/2024 — Cơ chế hậu kiểm</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" aria-labelledby="faq-title">
+    <div class="container">
+      <p class="section-label">Câu hỏi thường gặp</p>
+      <h2 class="section-title" id="faq-title">FAQ — Thiết kế theo Hiệu năng PBD</h2>
+      <p class="section-title-en">Frequently asked questions</p>
+
+      <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <p class="faq-q" itemprop="name">Thiết kế PCCC theo hiệu năng PBD cần những bước nào?</p>
+          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Quy trình gồm: (1) Xác định mục tiêu hiệu năng và kịch bản cháy thiết kế; (2) Mô phỏng cháy &amp; khói (FDS/PyroSim); (3) Mô phỏng thoát nạn (Pathfinder/STEPS); (4) Phân tích ASET vs RSET — xác nhận điều kiện an toàn; (5) Lập báo cáo luận chứng kỹ thuật; (6) Bảo vệ hồ sơ khi có yêu cầu của cơ quan thẩm định.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <p class="faq-q" itemprop="name">Khi nào công trình bắt buộc phải dùng PBD và mô phỏng?</p>
+          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">PBD và mô phỏng cần áp dụng khi: (a) công trình vượt phạm vi QCVN 06 — nhà cao hơn ~150m, sân bay, ga metro ngầm, kho LNG; (b) chủ đầu tư muốn chứng minh giải pháp thay thế hoặc vượt trội hơn quy định; (c) cần tối ưu hóa thiết kế hút khói hoặc thoát nạn mà không tăng chi phí. Theo Luật PCCC 55/2024, cơ chế hậu kiểm tạo điều kiện để PBD trở thành lựa chọn chính thống.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <p class="faq-q" itemprop="name">ASET và RSET là gì? Tại sao quan trọng?</p>
+          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">ASET (Available Safe Egress Time) là thời gian từ khi bắt đầu cháy đến khi điều kiện môi trường trở nên nguy hiểm — xác định từ mô phỏng khói FDS. RSET (Required Safe Egress Time) là thời gian cần thiết để tất cả người thoát khỏi vùng nguy hiểm — xác định từ mô phỏng Pathfinder. Điều kiện an toàn được chứng minh khi ASET &gt; RSET với hệ số an toàn phù hợp.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <p class="faq-q" itemprop="name">Từ 1/7/2025, thủ tục PCCC thay đổi như thế nào ảnh hưởng đến PBD?</p>
+          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Luật PCCC 55/2024 (hiệu lực 1/7/2025) chuyển từ tiền kiểm sang hậu kiểm: chủ đầu tư tự chịu trách nhiệm tuân thủ, cơ quan PCCC kiểm tra hậu kiểm. Thuật ngữ "thẩm duyệt" không còn dùng — thay bằng cơ quan thẩm định có thể yêu cầu bảo vệ hồ sơ. Điều này tạo điều kiện tốt hơn cho PBD vì chủ đầu tư linh hoạt hơn trong lựa chọn giải pháp, nhưng cần chuẩn bị luận chứng kỹ thuật vững chắc để bảo vệ khi cần.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title">Dự án của bạn cần thiết kế theo hiệu năng?</h2>
+      <p>VIETSAFE E&amp;C có đội ngũ kỹ sư có kinh nghiệm thực tế mô phỏng PCCC cho sân bay, nhà cao tầng và metro tại Việt Nam.</p>
+      <a href="/#contact" class="btn-white">Liên hệ tư vấn ngay →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <p><strong style="color:#fff;">VIETSAFE E&amp;C</strong> — Công ty Cổ Phần VIETSAFE E&amp;C</p>
+    <p style="margin-top:0.5rem;"><a href="/">Trang chủ</a> · <a href="/#services">Dịch vụ</a> · <a href="/#projects">Dự án</a> · <a href="/#contact">Liên hệ</a> · <a href="/pbd.html">Thiết kế PBD</a></p>
+    <p style="margin-top:0.5rem;">© 2025 · VIETSAFE E&amp;C JSC · <a href="mailto:infor@vnsec.com.vn">infor@vnsec.com.vn</a></p>
+    <p style="margin-top:0.3rem; font-size:0.75rem; color:rgba(255,255,255,0.3);">YOUR SAFETY – OUR SUCCESS</p>
+  </footer>
+
+</body>
+</html>
