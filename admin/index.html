@@ -4,23 +4,49 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
-  <title>VIETSAFE CMS</title>
+  <title>VIETSAFE E&C — CMS Biên soạn</title>
+  <style>
+    body { margin: 0; background: #0a0a0a; font-family: 'Segoe UI', sans-serif; }
+    #loading {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; height: 100vh; color: #fff;
+    }
+    .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    .logo span { color: #C8102E; }
+    .sub { color: #888; font-size: 0.85rem; margin-bottom: 2rem; }
+    .spinner {
+      width: 36px; height: 36px;
+      border: 3px solid #222;
+      border-top-color: #C8102E;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <div class="logo">VIETSAFE<span>E&amp;C</span></div>
+    <div class="sub">Hệ thống quản lý nội dung · Content Management System</div>
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
-    // Initialize Netlify Identity - pointing to our Netlify site's identity endpoint
+    // Tự động detect URL từ hostname hiện tại
     if (window.netlifyIdentity) {
-      window.netlifyIdentity.init({
-        APIUrl: "https://velvety-empanada-1fa7e2.netlify.app/.netlify/identity"
-      });
-      // Redirect to admin after successful login
-      window.netlifyIdentity.on("login", function() {
-        document.location.href = "/admin/";
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
       });
     }
   </script>
+
+  <!-- Decap CMS (phiên bản mới nhất ổn định) -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-</head>
-<body>
-  <!-- Decap CMS mounts here -->
 </body>
 </html>
