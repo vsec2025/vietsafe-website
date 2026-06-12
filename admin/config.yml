@@ -5,7 +5,6 @@ backend:
   base_url: https://api.netlify.com
   auth_endpoint: auth
 
-# Editorial workflow: draft -> review -> ready
 publish_mode: editorial_workflow
 
 media_folder: "images/uploads"
@@ -24,7 +23,7 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Tiêu đề", name: "title", widget: "string" }
-      - { label: "Mô tả (SEO)", name: "description", widget: "string", hint: "Tối đa 160 ký tự" }
+      - { label: "Mô tả SEO", name: "description", widget: "string", hint: "Tối đa 160 ký tự" }
       - { label: "Danh mục", name: "category", widget: "select", options: ["PCCC & BVTV", "Thiết kế PBD", "Tiêu chuẩn quốc tế", "Thủ tục pháp lý", "Công nghệ mô phỏng"] }
       - { label: "Từ khóa SEO", name: "keywords", widget: "string" }
       - { label: "Ngày đăng", name: "date", widget: "datetime" }
