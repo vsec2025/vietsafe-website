@@ -7,12 +7,17 @@
   <title>VIETSAFE E&C – Quản trị nội dung</title>
 </head>
 <body>
-  <!-- Netlify Identity Widget - required for git-gateway auth -->
+  <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    // Trỏ Identity widget về Netlify site URL (không phải domain chính)
+    window.netlifyIdentity && window.netlifyIdentity.init({
+      APIUrl: "https://velvety-empanada-1fa7e2.netlify.app/.netlify/identity"
+    });
+  </script>
   <!-- Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
-    // Redirect to /admin after login via Netlify Identity
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", function(user) {
         if (!user) {
