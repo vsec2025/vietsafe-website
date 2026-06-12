@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>VIETSAFE E&C — Content Manager</title>
-<meta name="robots" content="noindex,nofollow"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>VIETSAFE E&C – CMS Quản trị nội dung</title>
+  <style>
+    body { margin: 0; font-family: 'Montserrat', sans-serif; }
+    #loading { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background: #0a0a0a; color: #fff; }
+    #loading img { width: 80px; margin-bottom: 20px; }
+    #loading h2 { color: #C8102E; margin: 0 0 8px; font-size: 1.4rem; }
+    #loading p { color: #888; font-size: 0.9rem; }
+    .spinner { width: 40px; height: 40px; border: 3px solid #333; border-top-color: #C8102E; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 20px auto; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
 </head>
 <body>
-<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <div id="loading">
+    <h2>VIETSAFE E&C</h2>
+    <p>Đang tải hệ thống quản trị nội dung...</p>
+    <div class="spinner"></div>
+    <p style="font-size:0.8rem;color:#555;margin-top:10px;">Decap CMS v3 – GitHub Backend</p>
+  </div>
+  <script>
+    // Hide loading when CMS is ready
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var l = document.getElementById('loading');
+        if (l) l.style.display = 'none';
+      }, 2000);
+    });
+  </script>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
