@@ -1,8 +1,11 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: vsec2025/vietsafe-website
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
-# Netlify Identity - editorial workflow
+# Editorial workflow: draft -> review -> ready
 publish_mode: editorial_workflow
 
 media_folder: "images/uploads"
@@ -19,8 +22,6 @@ collections:
     slug: "{{slug}}"
     extension: "html"
     format: "frontmatter"
-    editor:
-      preview: true
     fields:
       - { label: "Tiêu đề", name: "title", widget: "string" }
       - { label: "Mô tả (SEO)", name: "description", widget: "string", hint: "Tối đa 160 ký tự" }
