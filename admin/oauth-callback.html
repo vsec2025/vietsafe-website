@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>VIETSAFE CMS – Authenticating...</title>
+  <style>
+    body { display:flex; align-items:center; justify-content:center; height:100vh; margin:0; background:#0a0a0a; color:#fff; font-family:sans-serif; flex-direction:column; }
+    h2 { color:#C8102E; }
+    p { color:#888; }
+    .spinner { width:40px; height:40px; border:3px solid #333; border-top-color:#C8102E; border-radius:50%; animation:spin 0.8s linear infinite; margin:20px auto; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <h2>VIETSAFE E&C</h2>
+  <p>Đang xác thực tài khoản GitHub...</p>
+  <div class="spinner"></div>
+  <script src="https://unpkg.com/netlify-cms-app@^2.15.72/dist/netlify-cms-app.js"></script>
+  <script>
+    // This page handles the OAuth callback from GitHub
+    if (window.location.hash.includes('access_token') || window.location.search.includes('code=')) {
+      document.querySelector('p').textContent = 'Xác thực thành công! Đang chuyển hướng...';
+      setTimeout(function() { window.location.href = '/admin/'; }, 1500);
+    }
+  </script>
+</body>
+</html>
