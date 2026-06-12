@@ -1,0 +1,127 @@
+# Decap CMS Configuration for VIETSAFE E&C
+# Tài liệu: https://decapcms.org/docs/
+
+backend:
+  name: github
+  repo: vsec2025/vietsafe-website
+  branch: main
+  # Editorial workflow: editor tạo bản nháp, reviewer duyệt trước khi publish
+  # Cần bật "Editorial Workflow" trong GitHub repository settings
+  # Uncomment dòng dưới để bật workflow có duyệt bài:
+  # cms_label_prefix: vietsafe-cms
+
+# Bật chế độ biên tập có duyệt (editor → reviewer → publish)
+publish_mode: editorial_workflow
+
+# Thư mục chứa ảnh upload
+media_folder: "uploads"
+public_folder: "/uploads"
+
+# ============================================================
+# CÁC LOẠI NỘI DUNG (Collections)
+# ============================================================
+collections:
+
+  # ------ KIẾN THỨC ------
+  - name: "kien-thuc"
+    label: "Kiến thức PCCC"
+    label_singular: "Bài viết"
+    folder: "kien-thuc"
+    create: true
+    slug: "{{slug}}"
+    extension: "html"
+    format: "frontmatter"
+    editor:
+      preview: false
+    summary: "{{title}} — {{date}}"
+    fields:
+      - label: "Tiêu đề (VI)"
+        name: "title"
+        widget: "string"
+        hint: "Tiêu đề bài viết bằng tiếng Việt — tối đa 70 ký tự cho SEO"
+      - label: "Tiêu đề (EN)"
+        name: "title_en"
+        widget: "string"
+        required: false
+      - label: "Slug (URL)"
+        name: "slug"
+        widget: "string"
+        hint: "Dùng dấu gạch ngang, không dấu. VD: pccc-nha-cao-tang-2025"
+      - label: "Mô tả ngắn (Meta description)"
+        name: "description"
+        widget: "text"
+        hint: "Tối đa 160 ký tự — hiển thị trong kết quả Google và AI search"
+      - label: "Từ khóa (Keywords)"
+        name: "keywords"
+        widget: "string"
+        required: false
+      - label: "Chuyên mục"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Kỹ thuật & Tiêu chuẩn", value: "ky-thuat" }
+          - { label: "Pháp lý & Thủ tục", value: "phap-ly" }
+          - { label: "Mô phỏng & PBD", value: "mo-phong-pbd" }
+          - { label: "Bài học từ sự cố", value: "bai-hoc" }
+      - label: "Ngày đăng"
+        name: "date"
+        widget: "datetime"
+        format: "DD/MM/YYYY"
+      - label: "Thời gian đọc (phút)"
+        name: "read_time"
+        widget: "number"
+        default: 5
+      - label: "Tác giả"
+        name: "author"
+        widget: "string"
+        default: "VIETSAFE E&C"
+      - label: "Nội dung"
+        name: "body"
+        widget: "markdown"
+        hint: "Soạn thảo nội dung bài viết. Hỗ trợ Markdown với heading, bảng, danh sách."
+      - label: "Trạng thái"
+        name: "draft"
+        widget: "boolean"
+        default: true
+        label_singular: "Bản nháp (chưa publish)"
+
+  # ------ HOẠT ĐỘNG ------
+  - name: "hoat-dong"
+    label: "Hoạt động Công ty"
+    label_singular: "Tin hoạt động"
+    folder: "hoat-dong"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    extension: "html"
+    format: "frontmatter"
+    editor:
+      preview: false
+    fields:
+      - label: "Tiêu đề"
+        name: "title"
+        widget: "string"
+      - label: "Ngày"
+        name: "date"
+        widget: "datetime"
+        format: "DD/MM/YYYY"
+      - label: "Loại hoạt động"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Sự kiện", value: "su-kien" }
+          - { label: "Dự án", value: "du-an" }
+          - { label: "Hội viên & Đào tạo", value: "hoi-vien" }
+          - { label: "Pháp lý & Cập nhật", value: "phap-ly" }
+          - { label: "Giải thưởng", value: "giai-thuong" }
+      - label: "Tóm tắt"
+        name: "summary"
+        widget: "text"
+        hint: "Tóm tắt ngắn hiển thị ở trang Hoạt động"
+      - label: "Nội dung chi tiết"
+        name: "body"
+        widget: "markdown"
+        required: false
+      - label: "Ảnh đại diện"
+        name: "image"
+        widget: "image"
+        required: false
