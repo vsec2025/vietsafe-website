@@ -7,46 +7,20 @@
   <title>VIETSAFE CMS</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
-    // Initialize Netlify Identity with explicit API URL
+    // Initialize Netlify Identity - pointing to our Netlify site's identity endpoint
     if (window.netlifyIdentity) {
       window.netlifyIdentity.init({
         APIUrl: "https://velvety-empanada-1fa7e2.netlify.app/.netlify/identity"
       });
+      // Redirect to admin after successful login
+      window.netlifyIdentity.on("login", function() {
+        document.location.href = "/admin/";
+      });
     }
   </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>
-    // Handle all Netlify Identity tokens (invite, confirm, recovery, etc.)
-    (function() {
-      var hash = window.location.hash;
-      if (hash && hash.length > 1) {
-        if (
-          hash.indexOf('invite_token=') !== -1 ||
-          hash.indexOf('confirmation_token=') !== -1 ||
-          hash.indexOf('recovery_token=') !== -1 ||
-          hash.indexOf('email_change_token=') !== -1
-        ) {
-          // Widget will auto-detect and process these tokens
-          // Make sure widget is initialized
-          if (window.netlifyIdentity) {
-            window.netlifyIdentity.on('init', function(user) {
-              if (!user) {
-                window.netlifyIdentity.open();
-              }
-            });
-          }
-        }
-      }
-      // After login/signup redirect to CMS
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('login', function() {
-          document.location.href = '/admin/';
-        });
-      }
-    })();
-  </script>
 </head>
 <body>
-  <!-- Decap CMS will mount here -->
+  <!-- Decap CMS mounts here -->
 </body>
 </html>
