@@ -7,31 +7,10 @@
   <title>VIETSAFE E&C — CMS Biên soạn</title>
   <style>
     body { margin: 0; background: #0a0a0a; font-family: 'Segoe UI', sans-serif; }
-    #loading {
-      display: flex; flex-direction: column; align-items: center;
-      justify-content: center; height: 100vh; color: #fff;
-    }
-    .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
-    .logo span { color: #C8102E; }
-    .sub { color: #888; font-size: 0.85rem; margin-bottom: 2rem; }
-    .spinner {
-      width: 36px; height: 36px;
-      border: 3px solid #222;
-      border-top-color: #C8102E;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
   </style>
 </head>
 <body>
-  <div id="loading">
-    <div class="logo">VIETSAFE<span>E&amp;C</span></div>
-    <div class="sub">Hệ thống quản lý nội dung · Content Management System</div>
-    <div class="spinner"></div>
-  </div>
-
-  <!-- Netlify Identity Widget — trỏ đến vietsafe-enc.netlify.app -->
+  <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     if (window.netlifyIdentity) {
@@ -48,7 +27,104 @@
     }
   </script>
 
-  <!-- Decap CMS -->
+  <!-- Decap CMS với manual init — nhúng config trực tiếp, không cần load file -->
+  <script>
+    // Khai báo CMS_MANUAL_INIT trước khi load script
+    window.CMS_MANUAL_INIT = true;
+  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Khởi tạo CMS với config inline — không phụ thuộc vào file config.yml
+    CMS.init({
+      config: {
+        backend: {
+          name: "git-gateway",
+          branch: "main",
+          commit_messages: {
+            create: 'content: thêm {{collection}} "{{slug}}"',
+            update: 'content: cập nhật {{collection}} "{{slug}}"',
+            delete: 'content: xóa {{collection}} "{{slug}}"',
+            uploadMedia: 'media: upload {{path}}',
+            deleteMedia: 'media: xóa {{path}}'
+          }
+        },
+        publish_mode: "editorial_workflow",
+        media_folder: "images/uploads",
+        public_folder: "/images/uploads",
+        locale: "vi",
+        site_url: "https://www.vnsec.com.vn",
+        display_url: "https://www.vnsec.com.vn",
+        collections: [
+          {
+            name: "kien-thuc",
+            label: "📚 Kiến thức PCCC",
+            label_singular: "Bài viết",
+            description: "Bài viết kỹ thuật, pháp lý, tiêu chuẩn PCCC",
+            folder: "kien-thuc",
+            create: true,
+            delete: true,
+            slug: "{{slug}}",
+            extension: "html",
+            format: "frontmatter",
+            summary: "{{title}} — {{date}}",
+            fields: [
+              { label: "Tiêu đề (VI)", name: "title", widget: "string", hint: "Tiêu đề tiếng Việt, SEO-friendly" },
+              { label: "Tiêu đề (EN)", name: "title_en", widget: "string", required: false },
+              {
+                label: "Danh mục", name: "category", widget: "select",
+                options: [
+                  { label: "Kỹ thuật & Tiêu chuẩn", value: "Kỹ thuật & Tiêu chuẩn" },
+                  { label: "Pháp lý & Thủ tục", value: "Pháp lý & Thủ tục" },
+                  { label: "Mô phỏng & PBD", value: "Mô phỏng & PBD" },
+                  { label: "Dự án & Case Study", value: "Dự án & Case Study" },
+                  { label: "Tin tức ngành", value: "Tin tức ngành" }
+                ]
+              },
+              { label: "Mô tả SEO", name: "description", widget: "text", hint: "Tối đa 160 ký tự" },
+              { label: "Từ khóa SEO", name: "keywords", widget: "string" },
+              { label: "Tóm tắt ngắn", name: "excerpt", widget: "text", hint: "2-3 câu, hiển thị ở trang danh sách" },
+              { label: "Ngày đăng", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false },
+              { label: "Tác giả", name: "author", widget: "string", default: "VIETSAFE E&C" },
+              { label: "Thời gian đọc (phút)", name: "readtime", widget: "number", default: 5, value_type: "int", min: 1, max: 60 },
+              { label: "Ảnh đại diện", name: "thumbnail", widget: "image", required: false, hint: "Tỉ lệ 16:9, tối thiểu 800x450px" },
+              { label: "Nội dung", name: "body", widget: "markdown" },
+              { label: "Bản nháp", name: "draft", widget: "boolean", default: false }
+            ]
+          },
+          {
+            name: "hoat-dong",
+            label: "🏢 Hoạt động công ty",
+            label_singular: "Hoạt động",
+            description: "Tin tức, sự kiện, dự án mới của VIETSAFE E&C",
+            folder: "hoat-dong",
+            create: true,
+            delete: true,
+            slug: "{{year}}-{{month}}-{{slug}}",
+            extension: "html",
+            format: "frontmatter",
+            fields: [
+              { label: "Tiêu đề", name: "title", widget: "string" },
+              {
+                label: "Loại hoạt động", name: "type", widget: "select",
+                options: [
+                  { label: "🏗️ Dự án mới", value: "Dự án" },
+                  { label: "📅 Sự kiện", value: "Sự kiện" },
+                  { label: "🎓 Đào tạo", value: "Đào tạo" },
+                  { label: "🎤 Hội thảo", value: "Hội thảo" },
+                  { label: "📰 Tin tức", value: "Tin tức" },
+                  { label: "🤝 Hợp tác", value: "Hợp tác" }
+                ]
+              },
+              { label: "Ngày", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false },
+              { label: "Mô tả ngắn", name: "excerpt", widget: "text" },
+              { label: "Ảnh minh họa", name: "image", widget: "image", required: false },
+              { label: "Nội dung chi tiết", name: "body", widget: "markdown" },
+              { label: "Liên kết dự án", name: "project_url", widget: "string", required: false }
+            ]
+          }
+        ]
+      }
+    });
+  </script>
 </body>
 </html>
