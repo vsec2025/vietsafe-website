@@ -27,16 +27,17 @@
     }
   </script>
 
-  <!-- Decap CMS với manual init — nhúng config trực tiếp, không cần load file -->
+  <!-- Decap CMS với manual init — nhúng config trực tiếp, không load file config.yml -->
   <script>
     // Khai báo CMS_MANUAL_INIT trước khi load script
     window.CMS_MANUAL_INIT = true;
   </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
-    // Khởi tạo CMS với config inline — không phụ thuộc vào file config.yml
+    // Khởi tạo CMS với config inline — load_config_file: false để KHÔNG load config.yml
     CMS.init({
       config: {
+        load_config_file: false,
         backend: {
           name: "git-gateway",
           branch: "main",
