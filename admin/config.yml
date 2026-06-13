@@ -1,106 +1,15 @@
 # Decap CMS Configuration — VIETSAFE E&C
-# Site: https://www.vnsec.com.vn
-# Updated: 2026-06
+# Collections duoc quan ly inline trong admin/index.html
+# File nay chi giu cai dat backend — khong dinh nghia collections de tranh trung lap
 
 backend:
   name: git-gateway
   branch: main
-  commit_messages:
-    create: 'content: thêm {{collection}} "{{slug}}"'
-    update: 'content: cập nhật {{collection}} "{{slug}}"'
-    delete: 'content: xóa {{collection}} "{{slug}}"'
-    uploadMedia: 'media: upload {{path}}'
-    deleteMedia: 'media: xóa {{path}}'
 
-# Cho phép editorial workflow (draft → review → publish)
-publish_mode: editorial_workflow
-
-# Thư mục lưu ảnh upload
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-# Ngôn ngữ giao diện CMS
 locale: "vi"
 
-# Preview URL
 site_url: "https://www.vnsec.com.vn"
 display_url: "https://www.vnsec.com.vn"
-logo_url: "https://www.vnsec.com.vn/images/logo-vietsafe.svg"
-
-# Các bộ sưu tập nội dung
-collections:
-
-  # ─── 1. Kiến thức PCCC ───────────────────────────────────────────
-  - name: "kien-thuc"
-    label: "📚 Kiến thức PCCC"
-    label_singular: "Bài viết"
-    description: "Bài viết kỹ thuật, pháp lý, tiêu chuẩn PCCC"
-    folder: "kien-thuc"
-    create: true
-    delete: true
-    slug: "{{slug}}"
-    extension: "html"
-    format: "frontmatter"
-    summary: "{{title}} — {{date}}"
-    sortable_fields: ["date", "title", "category"]
-    view_filters:
-      - label: "Kỹ thuật & Tiêu chuẩn"
-        field: category
-        pattern: "Kỹ thuật & Tiêu chuẩn"
-      - label: "Pháp lý & Thủ tục"
-        field: category
-        pattern: "Pháp lý & Thủ tục"
-      - label: "Mô phỏng & PBD"
-        field: category
-        pattern: "Mô phỏng & PBD"
-    fields:
-      - { label: "Tiêu đề (VI)", name: "title", widget: "string", hint: "Tiêu đề tiếng Việt, SEO-friendly" }
-      - { label: "Tiêu đề (EN)", name: "title_en", widget: "string", required: false, hint: "English title (optional)" }
-      - label: "Danh mục"
-        name: "category"
-        widget: "select"
-        options:
-          - { label: "Kỹ thuật & Tiêu chuẩn", value: "Kỹ thuật & Tiêu chuẩn" }
-          - { label: "Pháp lý & Thủ tục", value: "Pháp lý & Thủ tục" }
-          - { label: "Mô phỏng & PBD", value: "Mô phỏng & PBD" }
-          - { label: "Dự án & Case Study", value: "Dự án & Case Study" }
-          - { label: "Tin tức ngành", value: "Tin tức ngành" }
-      - { label: "Mô tả SEO", name: "description", widget: "text", hint: "Tối đa 160 ký tự — hiển thị trên Google" }
-      - { label: "Từ khóa SEO", name: "keywords", widget: "string", hint: "Cách nhau bằng dấu phẩy" }
-      - { label: "Tóm tắt ngắn", name: "excerpt", widget: "text", hint: "2-3 câu, hiển thị ở trang danh sách" }
-      - { label: "Ngày đăng", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
-      - { label: "Tác giả", name: "author", widget: "string", default: "VIETSAFE E&C" }
-      - { label: "Thời gian đọc (phút)", name: "readtime", widget: "number", default: 5, value_type: "int", min: 1, max: 60 }
-      - { label: "Ảnh đại diện", name: "thumbnail", widget: "image", required: false, hint: "Tỉ lệ 16:9, tối thiểu 800x450px" }
-      - { label: "Nội dung", name: "body", widget: "markdown", buttons: ["bold", "italic", "heading", "quote", "bulleted-list", "numbered-list", "link", "code"], hint: "Hỗ trợ Markdown đầy đủ" }
-      - { label: "Trạng thái", name: "draft", widget: "boolean", default: false, label_singular: "Bản nháp (ẩn khỏi trang web)" }
-
-  # ─── 2. Hoạt động công ty ────────────────────────────────────────
-  - name: "hoat-dong"
-    label: "🏢 Hoạt động công ty"
-    label_singular: "Hoạt động"
-    description: "Tin tức, sự kiện, dự án mới của VIETSAFE E&C"
-    folder: "hoat-dong"
-    create: true
-    delete: true
-    slug: "{{year}}-{{month}}-{{slug}}"
-    extension: "html"
-    format: "frontmatter"
-    summary: "{{title}} ({{type}}) — {{date}}"
-    fields:
-      - { label: "Tiêu đề", name: "title", widget: "string" }
-      - label: "Loại hoạt động"
-        name: "type"
-        widget: "select"
-        options:
-          - { label: "🏗️ Dự án mới", value: "Dự án" }
-          - { label: "📅 Sự kiện", value: "Sự kiện" }
-          - { label: "🎓 Đào tạo", value: "Đào tạo" }
-          - { label: "🎤 Hội thảo", value: "Hội thảo" }
-          - { label: "📰 Tin tức", value: "Tin tức" }
-          - { label: "🤝 Hợp tác", value: "Hợp tác" }
-      - { label: "Ngày", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
-      - { label: "Mô tả ngắn", name: "excerpt", widget: "text", hint: "2-3 câu tóm tắt" }
-      - { label: "Ảnh minh họa", name: "image", widget: "image", required: false }
-      - { label: "Nội dung chi tiết", name: "body", widget: "markdown" }
-      - { label: "Liên kết dự án", name: "project_url", widget: "string", required: false, hint: "URL dự án liên quan (nếu có)" }
