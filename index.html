@@ -1017,7 +1017,7 @@
     </h2>
 
     <div class="contact-grid">
-      <form class="reveal" onsubmit="return false">
+              <form class="reveal" id="contactForm">
         <div class="field"><label data-vi="Họ và tên / Tên công ty" data-en="Name / Company">Họ và tên / Tên công ty</label><input type="text" placeholder=""></div>
         <div class="field"><label>Email</label><input type="email" placeholder=""></div>
         <div class="field"><label data-vi="Điện thoại" data-en="Phone">Điện thoại</label><input type="tel" placeholder=""></div>
@@ -1039,7 +1039,7 @@
         <div class="office">
           <b data-vi="Trực tuyến" data-en="Online">Trực tuyến</b>
           <p>www.vnsec.com.vn </p>
-          <div class="mono">infor@vnsec.com.vn</div>
+                    <div class="mono"><a href="mailto:infor@vnsec.com.vn">infor@vnsec.com.vn</a></div>
         </div>
       </div>
     </div>
@@ -1127,6 +1127,19 @@ function setLang(lang){
   });
 }
 langBtns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+  var CF=document.getElementById('contactForm');
+  if(CF){CF.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new URLSearchParams();
+    d.append('entry.1101000498',CF.querySelector('input[type=text]').value);
+    d.append('entry.524230796',CF.querySelector('input[type=email]').value);
+    d.append('entry.1262517711',CF.querySelector('input[type=tel]').value);
+    d.append('entry.1294663145',CF.querySelector('textarea').value);
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLSc7QtyDAMKN_zOvPKRZ7Ssc6AT4w_SzrqQATuu68SAD_r9YqA/formResponse',{method:'POST',mode:'no-cors',body:d});
+    var btn=CF.querySelector('button[type=submit]');
+    if(btn){btn.textContent='Đã gửi — Cảm ơn bạn!';btn.disabled=true;}
+    CF.reset();
+  });}
 </script>
 </body>
 </html>
