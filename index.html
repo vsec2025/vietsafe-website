@@ -1019,8 +1019,8 @@
     <div class="contact-grid">
               <form class="reveal" id="contactForm">
         <div class="field"><label data-vi="Họ và tên / Tên công ty" data-en="Name / Company">Họ và tên / Tên công ty</label><input type="text" placeholder=""></div>
-        <div class="field"><label>Email</label><input type="email" placeholder=""></div>
-        <div class="field"><label data-vi="Điện thoại" data-en="Phone">Điện thoại</label><input type="tel" placeholder=""></div>
+        <div class="field"><label>Email</label><input type="email" placeholder=""><span class="err-msg" id="errEmail" style="display:none;color:#C8102E;font-size:12px;margin-top:5px">Email không hợp lệ</span></div>
+        <div class="field"><label data-vi="Điện thoại" data-en="Phone">Điện thoại</label><span style="display:flex;align-items:center;border:1px solid #e2e2e2;border-radius:4px;overflow:hidden"><span style="padding:0 12px;background:#f0f0f0;color:#333;font-family:'IBM Plex Mono',monospace;white-space:nowrap">+84</span><input type="tel" id="cfPhone" style="border:none;border-radius:0;flex:1;min-width:0" placeholder="912 345 678"></span><span class="err-msg" id="errPhone" style="display:none;color:#C8102E;font-size:12px;margin-top:5px">Số điện thoại không hợp lệ (9 số sau +84)</span></div>
         <div class="field"><label data-vi="Nội dung dự án" data-en="Project details">Nội dung dự án</label><textarea placeholder=""></textarea></div>
         <button class="cta-btn" type="submit" data-vi="Gửi yêu cầu tư vấn" data-en="Send request">Gửi yêu cầu tư vấn</button>
       </form>
@@ -1130,10 +1130,19 @@ langBtns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
   var CF=document.getElementById('contactForm');
   if(CF){CF.addEventListener('submit',function(e){
     e.preventDefault();
+    var em=CF.querySelector('input[type=email]');
+    var ph=CF.querySelector('input[type=tel]');
+    var eErr=document.getElementById('errEmail');
+    var pErr=document.getElementById('errPhone');
+    var ok=true;
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim())){eErr.style.display='block';ok=false;}else{eErr.style.display='none';}
+    var pd=ph.value.replace(/\D/g,'').replace(/^0+/,'');
+    if(!/^[1-9]\d{8}$/.test(pd)){pErr.style.display='block';ok=false;}else{pErr.style.display='none';}
+    if(!ok)return;
     var d=new URLSearchParams();
     d.append('entry.1101000498',CF.querySelector('input[type=text]').value);
     d.append('entry.524230796',CF.querySelector('input[type=email]').value);
-    d.append('entry.1262517711',CF.querySelector('input[type=tel]').value);
+          d.append('entry.1262517711','+84'+pd);
     d.append('entry.1294663145',CF.querySelector('textarea').value);
     fetch('https://docs.google.com/forms/d/e/1FAIpQLSc7QtyDAMKN_zOvPKRZ7Ssc6AT4w_SzrqQATuu68SAD_r9YqA/formResponse',{method:'POST',mode:'no-cors',body:d});
     var btn=CF.querySelector('button[type=submit]');
