@@ -23,14 +23,14 @@
 </section>
 <main class="main">
   <div class="filter-bar">
-    <button class="fbtn active">Tất cả</button>
-    <button class="fbtn">Kỹ thuật & Tiêu chuẩn</button>
-    <button class="fbtn">Pháp lý & Thủ tục</button>
-    <button class="fbtn">Mô phỏng & PBD</button>
+    <button class="fbtn active" data-filter="all">Tất cả</button>
+    <button class="fbtn" data-filter="ky-thuat">Kỹ thuật & Tiêu chuẩn</button>
+    <button class="fbtn" data-filter="phap-ly">Pháp lý & Thủ tục</button>
+    <button class="fbtn" data-filter="mo-phong">Mô phỏng & PBD</button>
   </div>
   <div class="grid">
 
-    <article class="card">
+    <article class="card" data-category="mo-phong">
       <div class="card-top"><p class="cat-tag">Mô phỏng &amp; PBD</p><h2>Tính toán Thiết kế theo Hiệu năng (PBD) theo SFPE Handbook</h2></div>
       <div class="card-body">
         <p>Hướng dẫn tổng quan về phương pháp tính toán PBD: kịch bản cháy thiết kế, mô phỏng cháy khói, phân tích ASET/RSET, và các trường hợp công trình cần áp dụng phương pháp này.</p>
@@ -39,7 +39,7 @@
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-category="phap-ly">
       <div class="card-top" style="background:#8B0000"><p class="cat-tag">Pháp lý &amp; Thủ tục</p><h2>Chủ đầu tư không thể một mình gánh mọi trách nhiệm PCCC</h2></div>
       <div class="card-body">
         <p>Tóm tắt và bình luận từ VIETSAFE E&amp;C về đề xuất bãi bỏ thủ tục kiểm tra nghiệm thu PCCC — vì sao trách nhiệm cần được chia sẻ giữa chủ đầu tư và đơn vị tư vấn, thiết kế, thi công, kiểm định.</p>
@@ -48,7 +48,7 @@
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-category="ky-thuat">
       <div class="card-top"><p class="cat-tag">Kỹ thuật & Tiêu chuẩn</p><h2>PCCC cho Hệ thống Lưu trữ Pin BESS — Áp dụng NFPA 855 tại Việt Nam</h2></div>
       <div class="card-body">
         <p>Thermal runaway, phân loại EQ, hệ thống phát hiện sớm và suppression chuyên dụng cho BESS theo NFPA 855 — giải pháp cho khoảng trống của QCVN hiện hành.</p>
@@ -57,7 +57,7 @@
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-category="ky-thuat">
       <div class="card-top"><p class="cat-tag">Kỹ thuật & Tiêu chuẩn</p><h2>NFPA 5000 cho Nhà Siêu Cao Tầng trên 150m tại Việt Nam</h2></div>
       <div class="card-body">
         <p>Khi QCVN 06 không bao phủ đủ: hướng dẫn gap analysis, quy trình lập luận chứng kỹ thuật, tầng lánh nạn, và mô phỏng ASET/RSET theo NFPA 5000.</p>
@@ -66,7 +66,7 @@
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-category="phap-ly">
       <div class="card-top" style="background:#8B0000"><p class="cat-tag">Pháp lý & Thủ tục</p><h2>Tự Nghiệm Thu PCCC từ 1/7/2025 — Luật PCCC 55/2024 và NĐ 105/2025</h2></div>
       <div class="card-body">
         <p>Cơ chế hậu kiểm, hồ sơ tự nghiệm thu cần chuẩn bị, trách nhiệm chủ đầu tư và cách bảo vệ hồ sơ khi cơ quan thẩm định có yêu cầu kiểm tra.</p>
@@ -75,7 +75,7 @@
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-category="ky-thuat">
       <div class="card-top"><p class="cat-tag">Kỹ thuật &amp; Tiêu chuẩn</p><h2>Khí HFC-227ea (FM-200) – Hệ Thống Chữa Cháy Sạch Bảo Vệ Tài Sản Quan Trọng</h2></div>
       <div class="card-body">
         <p>Nguyên lý total flooding, ứng dụng thực tế cho phòng máy chủ và trạm điện, tính toán lượng khí theo TCVN 7161-9:2024 và các yêu cầu kỹ thuật cần biết.</p>
@@ -92,4 +92,16 @@
   </div>
 </main>
 <footer class="sf"><p><strong style="color:#fff">VIETSAFE E&amp;C</strong> — Tư vấn &amp; Thiết kế An toàn PCCC</p><p style="margin-top:0.4rem"><a href="/">Trang chủ</a> · <a href="/pbd.html">Dịch vụ PBD</a> · <a href="/kien-thuc/">Kiến thức</a> · <a href="/#contact">Liên hệ</a></p><p style="margin-top:0.3rem;font-size:0.72rem;color:rgba(255,255,255,0.25)">© 2025 VIETSAFE E&amp;C · YOUR SAFETY – OUR SUCCESS</p></footer>
+<script>
+document.querySelectorAll('.fbtn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.card').forEach(card => {
+      card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+    });
+  });
+});
+</script>
 </body></html>
