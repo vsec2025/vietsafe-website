@@ -21,7 +21,14 @@
     <loc>https://www.vnsec.com.vn/kien-thuc/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/kien-thuc/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vnsec.com.vn/kien-thuc/"/>
-    <lastmod>2026-06-11</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <lastmod>2026-06-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.vnsec.com.vn/hoat-dong/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/hoat-dong/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vnsec.com.vn/hoat-dong/"/>
+    <lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
 
   <url>
@@ -39,9 +46,30 @@
   </url>
 
   <url>
-    <loc>https://www.vnsec.com.vn/kien-thuc/tu-chung-nhan-pccc-2025.html</loc>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/kien-thuc/tu-chung-nhan-pccc-2025.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vnsec.com.vn/kien-thuc/tu-chung-nhan-pccc-2025.html"/>
+    <loc>https://www.vnsec.com.vn/kien-thuc/tu-nghiem-thu-pccc-2025.html</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/kien-thuc/tu-nghiem-thu-pccc-2025.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vnsec.com.vn/kien-thuc/tu-nghiem-thu-pccc-2025.html"/>
+    <lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.vnsec.com.vn/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vnsec.com.vn/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html"/>
+    <lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.vnsec.com.vn/kien-thuc/tinh-toan-pbd-theo-sfpe.html</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/kien-thuc/tinh-toan-pbd-theo-sfpe.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vnsec.com.vn/kien-thuc/tinh-toan-pbd-theo-sfpe.html"/>
+    <lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.vnsec.com.vn/kien-thuc/chu-dau-tu-trach-nhiem-pccc-ket-hop-tu-van.html</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/kien-thuc/chu-dau-tu-trach-nhiem-pccc-ket-hop-tu-van.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vnsec.com.vn/kien-thuc/chu-dau-tu-trach-nhiem-pccc-ket-hop-tu-van.html"/>
     <lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.75</priority>
   </url>
 

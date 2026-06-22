@@ -1,0 +1,54 @@
+# VIETSAFE E&C — Fire Safety Engineering & Consulting
+
+> Công ty Cổ Phần VIETSAFE E&C là đơn vị tư vấn và thiết kế hệ thống phòng cháy chữa cháy (PCCC) chuyên nghiệp tại Việt Nam, kế thừa năng lực thiết kế từ VIETSAFE. Website: https://www.vnsec.com.vn/
+
+## Giới thiệu
+
+VIETSAFE E&C cung cấp dịch vụ tư vấn, thiết kế, thẩm định và nghiệm thu hệ thống PCCC theo tiêu chuẩn NFPA và QCVN. Công ty áp dụng phương pháp thiết kế theo hiệu năng (Performance-Based Design – PBD) kết hợp mô phỏng cháy bằng FDS (Fire Dynamics Simulator) và mô phỏng thoát nạn bằng Pathfinder.
+
+Thành lập: 2025 | Thành viên NFPA | Trụ sở: Hà Nội & TP. Hồ Chí Minh
+
+## Dịch vụ chính
+
+- **S-01 – Luận chứng kỹ thuật PCCC**: Lập hồ sơ xin phép, thẩm duyệt thiết kế PCCC theo Luật PCCC 55/2024
+- **S-02 – Thiết kế hệ thống PCCC**: Thiết kế hệ thống báo cháy, chữa cháy, thoát nạn cho mọi loại công trình
+- **S-03 – Thiết kế theo hiệu năng (PBD)**: Áp dụng SFPE Handbook, NFPA 101, mô phỏng FDS + Pathfinder
+- **S-04 – Chiến lược An toàn Sinh mạng (FLS)**: Fire Life Safety strategy cho nhà cao tầng, sân bay, metro
+- **S-05 – Thẩm định độc lập PCCC**: Peer review hồ sơ thiết kế, kiểm tra tuân thủ tiêu chuẩn
+- **S-06 – Nghiệm thu & hỗ trợ vận hành**: Hỗ trợ nghiệm thu hệ thống, tự nghiệm thu theo Nghị định 136/2020
+
+## Lĩnh vực chuyên sâu
+
+- Nhà cao tầng (trên 50m, trên 150m theo NFPA 5000)
+- Sân bay & hàng không (Long Thành, T3 Tân Sơn Nhất)
+- Metro & giao thông ngầm (Cát Linh – Hà Đông)
+- Công nghiệp & LNG (Nghi Sơn, VinFast)
+- Lưu trữ năng lượng BESS (theo NFPA 855)
+
+## Tiêu chuẩn áp dụng
+
+NFPA 1, NFPA 13, NFPA 72, NFPA 101, NFPA 855, NFPA 5000, QCVN 06:2022/BXD, Luật PCCC 55/2024, Nghị định 136/2020/NĐ-CP
+
+## Bài viết kỹ thuật (Kiến thức)
+
+- [PCCC cho BESS theo NFPA 855](https://www.vnsec.com.vn/kien-thuc/pccc-bess-nfpa-855.html): Thiết kế PCCC cho hệ thống lưu trữ pin, phân loại EQ, phát hiện thermal runaway
+- [NFPA 5000 cho nhà trên 150m](https://www.vnsec.com.vn/kien-thuc/nfpa-5000-nha-tren-150m.html): Yêu cầu PCCC cho siêu cao tầng theo NFPA 5000
+- [Tự nghiệm thu PCCC 2025](https://www.vnsec.com.vn/kien-thuc/tu-nghiem-thu-pccc-2025.html): Quy trình tự nghiệm thu theo Nghị định 136/2020
+- [FM200/HFC227ea chữa cháy khí sạch](https://www.vnsec.com.vn/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html): Hệ thống chữa cháy khí sạch FM200
+- [Tính toán PBD theo SFPE](https://www.vnsec.com.vn/kien-thuc/tinh-toan-pbd-theo-sfpe.html): Phương pháp tính toán thiết kế theo hiệu năng
+- [Chủ đầu tư & trách nhiệm PCCC](https://www.vnsec.com.vn/kien-thuc/chu-dau-tu-trach-nhiem-pccc-ket-hop-tu-van.html): Trách nhiệm PCCC của chủ đầu tư kết hợp tư vấn
+
+## Dự án tiêu biểu
+
+- Sân bay Long Thành (giai đoạn 1)
+- Nhà ga T3 Tân Sơn Nhất
+- Lọc dầu Nghi Sơn (LNG)
+- Nhà máy VinFast Hải Phòng
+- Metro Cát Linh – Hà Đông
+
+## Liên hệ
+
+- Website: https://www.vnsec.com.vn/
+- Email: info@vnsec.com.vn
+- Hà Nội: Tầng 8, 71 Nguyễn Chí Thanh
+- TP. HCM: Tầng 14, Vincom Center Đồng Khởi
