@@ -26,9 +26,14 @@
 
 <!-- ANALYTICS: dán mã Google Analytics hoặc Vercel Analytics vào đây sau khi go-live -->
 
+<!-- Preload hero image for LCP -->
+<link rel="preload" as="image" href="01-hero.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Non-blocking Google Fonts load -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap"></noscript>
 <style>
   :root{
     --red:#C8102E;
@@ -606,7 +611,7 @@
 <body>
 
 <!-- ===================== TOP BAR ===================== -->
-<header class="topbar" id="top">
+<header class="topbar" id="top" role="banner">
   <div class="accent"></div>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Vietsafe E&C">
@@ -641,6 +646,7 @@
   </div>
 </header>
 
+<main id="main-content">
 <!-- ===================== HERO ===================== -->
 <section class="hero" style="padding-bottom:0">
   <div class="wrap">
@@ -1030,10 +1036,10 @@
 
     <div class="contact-grid">
               <form class="reveal" id="contactForm">
-        <div class="field"><label data-vi="Họ và tên / Tên công ty" data-en="Name / Company">Họ và tên / Tên công ty</label><input type="text" placeholder=""></div>
-        <div class="field"><label>Email</label><input type="email" placeholder=""><span class="err-msg" id="errEmail" style="display:none;color:#C8102E;font-size:12px;margin-top:5px">Email không hợp lệ</span></div>
-        <div class="field"><label data-vi="Điện thoại" data-en="Phone">Điện thoại</label><span style="display:flex;align-items:center;border:1px solid #e2e2e2;border-radius:4px;overflow:hidden"><span style="padding:0 12px;background:#f0f0f0;color:#333;font-family:'IBM Plex Mono',monospace;white-space:nowrap">+84</span><input type="tel" id="cfPhone" style="border:none;border-radius:0;flex:1;min-width:0" placeholder="912 345 678"></span><span class="err-msg" id="errPhone" style="display:none;color:#C8102E;font-size:12px;margin-top:5px">Số điện thoại không hợp lệ (9 số sau +84)</span></div>
-        <div class="field"><label data-vi="Nội dung dự án" data-en="Project details">Nội dung dự án</label><textarea placeholder=""></textarea></div>
+        <div class="field"><label for="cfName" data-vi="Họ và tên / Tên công ty" data-en="Name / Company">Họ và tên / Tên công ty</label><input id="cfName" type="text" placeholder="" aria-label="Họ và tên hoặc tên công ty"></div>
+        <div class="field"><label for="cfEmail">Email</label><input id="cfEmail" type="email" placeholder="" aria-label="Địa chỉ email"><span class="err-msg" id="errEmail" style="display:none;color:#C8102E;font-size:12px;margin-top:5px">Email không hợp lệ</span></div>
+        <div class="field"><label for="cfPhone" data-vi="Điện thoại" data-en="Phone">Điện thoại</label><span style="display:flex;align-items:center;border:1px solid #e2e2e2;border-radius:4px;overflow:hidden"><span style="padding:0 12px;background:#f0f0f0;color:#333;font-family:'IBM Plex Mono',monospace;white-space:nowrap">+84</span><input type="tel" id="cfPhone" style="border:none;border-radius:0;flex:1;min-width:0" placeholder="912 345 678" aria-label="Số điện thoại"></span><span class="err-msg" id="errPhone" style="display:none;color:#C8102E;font-size:12px;margin-top:5px">Số điện thoại không hợp lệ (9 số sau +84)</span></div>
+        <div class="field"><label for="cfMessage" data-vi="Nội dung dự án" data-en="Project details">Nội dung dự án</label><textarea id="cfMessage" placeholder="" aria-label="Mô tả nội dung dự án"></textarea></div>
         <button class="cta-btn" type="submit" data-vi="Gửi yêu cầu tư vấn" data-en="Send request">Gửi yêu cầu tư vấn</button>
       </form>
 
@@ -1058,8 +1064,9 @@
   </div>
 </section>
 
+</main>
 <!-- ===================== FOOTER ===================== -->
-<footer>
+<footer role="contentinfo">
   <div class="wrap foot-top">
     <div class="foot-brand">
       <a class="brand" href="#top">
