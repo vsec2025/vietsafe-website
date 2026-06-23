@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Fire Safety for Battery Energy Storage Systems (BESS) — Applying NFPA 855 in Vietnam | VIETSAFE E&C</title>
+<meta name="description" content="A technical guide to fire protection design for BESS per NFPA 855: energy quantity thresholds, thermal runaway detection, dedicated suppression, and the Vietnamese regulatory gap."/>
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
+<meta name="author" content="VIETSAFE E&amp;C"/>
+<meta property="og:title" content="Fire Safety for Battery Energy Storage Systems (BESS) — Applying NFPA 855 in Vietnam | VIETSAFE E&C"/>
+<meta property="og:description" content="A technical guide to fire protection design for BESS per NFPA 855: energy quantity thresholds, thermal runaway detection, dedicated suppression, and the Vietnamese regulatory gap."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://www.vnsec.com.vn/en/kien-thuc/pccc-bess-nfpa-855.html"/>
+<meta property="og:image" content="https://www.vnsec.com.vn/01-hero.jpg"/>
+<meta property="og:locale" content="en_US"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Fire Safety for Battery Energy Storage Systems (BESS) — Applying NFPA 855 in Vietnam | VIETSAFE E&C"/>
+<meta name="twitter:description" content="A technical guide to fire protection design for BESS per NFPA 855: energy quantity thresholds, thermal runaway detection, dedicated suppression, and the Vietnamese regulatory gap."/>
+<link rel="canonical" href="https://www.vnsec.com.vn/en/kien-thuc/pccc-bess-nfpa-855.html"/>
+<link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/kien-thuc/pccc-bess-nfpa-855.html"/>
+<link rel="alternate" hreflang="en" href="https://www.vnsec.com.vn/en/kien-thuc/pccc-bess-nfpa-855.html"/>
+<link rel="alternate" hreflang="x-default" href="https://www.vnsec.com.vn/kien-thuc/pccc-bess-nfpa-855.html"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23C8102E'/%3E%3Ctext x='32' y='46' font-family='Arial,sans-serif' font-size='42' font-weight='900' text-anchor='middle' fill='%23fff'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"/></noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6KWXGHR56C"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6KWXGHR56C');</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#C8102E;--dark:#1a1a1a;--text:#333}
+body{font-family:'Montserrat',sans-serif;color:var(--text);background:#fff;line-height:1.7}
+a{color:var(--red)}
+.site-header{background:var(--dark);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{color:#fff;text-decoration:none;font-weight:800;font-size:1.1rem}.logo span{color:var(--red)}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.82rem;font-weight:500}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.header-right{display:flex;align-items:center;gap:10px}
+.lang-link{display:inline-block;border:1px solid rgba(255,255,255,0.35);border-radius:3px;padding:4px 10px;font-size:11px;font-weight:700;color:rgba(255,255,255,0.8);text-decoration:none;transition:.2s}
+.lang-link:hover{border-color:#fff;color:#fff}
+.btn-cta{background:var(--red);color:#fff;padding:0.55rem 1.2rem;border-radius:6px;text-decoration:none;font-size:0.82rem;font-weight:700}
+.bc-bar{background:#1a1a1a;padding:0.6rem 2rem}
+.bc{font-size:0.78rem;color:rgba(255,255,255,0.5);max-width:860px;margin:0 auto}
+.bc a{color:rgba(255,255,255,0.5);text-decoration:none}
+.hero{background:linear-gradient(135deg,#1a1a1a,#2d0a13);color:#fff;padding:3.5rem 2rem 3rem;text-align:center}
+.cat-badge{display:inline-block;background:rgba(200,16,46,0.25);border:1px solid var(--red);color:var(--red);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.8rem;border-radius:20px;margin-bottom:1rem}
+.ameta{font-size:0.75rem;color:rgba(255,255,255,0.5);display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+.hero h1{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:800;line-height:1.25;max-width:800px;margin:0 auto 0.6rem}
+.abody{max-width:860px;margin:0 auto;padding:3rem 2rem}
+.abody h2{font-size:1.2rem;font-weight:800;color:var(--dark);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:2px solid var(--red)}
+.abody h3{font-size:0.97rem;font-weight:700;color:var(--dark);margin:1.8rem 0 0.6rem}
+.abody p{margin-bottom:1rem;font-size:0.92rem;color:#444;line-height:1.8}
+.abody ul,.abody ol{padding-left:1.4rem;margin-bottom:1rem}
+.abody li{font-size:0.9rem;color:#444;line-height:1.7;margin-bottom:0.5rem}
+.abody table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.84rem}
+.abody table th{background:var(--red);color:#fff;padding:0.7rem 1rem;text-align:left;font-weight:700}
+.abody table td{padding:0.65rem 1rem;border-bottom:1px solid #e8e8e8;vertical-align:top}
+.abody table tr:nth-child(even) td{background:#fafafa}
+.ctabox{background:var(--red);color:#fff;border-radius:12px;padding:2rem;text-align:center;margin:3rem 0}
+.ctabox h3{font-size:1.1rem;font-weight:800;margin-bottom:0.5rem}
+.ctabox p{font-size:0.87rem;opacity:0.9;margin-bottom:1.2rem}
+.btnw{background:#fff;color:var(--red);padding:0.65rem 1.8rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:0.87rem}
+.sfooter{background:#111;color:rgba(255,255,255,0.5);padding:2rem;text-align:center;font-size:0.8rem}
+.sfooter a{color:rgba(255,255,255,0.5)}
+@media(max-width:768px){.nav-links{display:none}.abody{padding:2rem 1.25rem}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a href="/en/" class="logo">VIETSAFE<span>E&amp;C</span></a>
+  <nav><ul class="nav-links"><li><a href="/en/">Home</a></li><li><a href="/en/#services">Services</a></li><li><a href="/en/pbd.html">PBD</a></li><li><a href="/en/kien-thuc/" class="active">Knowledge</a></li><li><a href="/en/hoat-dong/">Activities</a></li><li><a href="/en/#contact">Contact</a></li></ul></nav>
+  <div class="header-right">
+    <a href="/kien-thuc/pccc-bess-nfpa-855.html" class="lang-link">VI</a>
+    <a href="/en/#contact" class="btn-cta">Request a consultation</a>
+  </div>
+</header>
+<div class="bc-bar"><nav class="bc"><a href="/en/">Home</a> › <a href="/en/kien-thuc/">Knowledge</a> › <span style="color:rgba(255,255,255,0.8)">BESS Fire Safety — NFPA 855</span></nav></div>
+<header class="hero">
+  <div class="cat-badge">Technical &amp; Standards</div>
+  <div class="ameta">📅 11 June 2026 &nbsp;·&nbsp; ⏱ 8 min read &nbsp;·&nbsp; ✍️ VIETSAFE E&amp;C</div>
+  <h1>Fire Safety for Battery Energy Storage Systems (BESS)</h1>
+</header>
+<main class="abody">
+<h2 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;color:#1a1a1a;">Fire Safety for Battery Energy Storage Systems (BESS) — Applying NFPA 855 in Vietnam</h2>
+<p><strong>Background:</strong> Vietnam&#8217;s current technical regulations (QCVN) do not yet specifically address battery energy storage systems (BESS). NFPA 855 (Standard for the Installation of Stationary Energy Storage Systems) is therefore the primary reference standard used by VIETSAFE E&amp;C for BESS fire protection design.</p>
+<p><strong>Key concepts:</strong></p>
+<ul style="padding-left:1.5rem;margin-top:0.5rem;">
+<li><strong>Thermal runaway:</strong> An uncontrolled self-heating reaction in lithium-ion cells that can lead to fire or explosion even without an external ignition source. Early detection of off-gas (H₂, CO, HF) is critical.</li>
+<li><strong>Energy quantity (EQ) thresholds:</strong> NFPA 855 classifies BESS installations by EQ (kWh), with thresholds determining whether a system is exempt, requires a fire compartment, or must follow full compliance requirements.</li>
+<li><strong>Suppression:</strong> Water-based suppression (sprinkler or fixed deluge) remains the most widely accepted approach. Cooling to prevent thermal propagation between cells is the primary design objective — suppression of flames alone is insufficient.</li>
+<li><strong>Detection:</strong> Aspirating smoke detectors (ASD/VESDA) and combustible/toxic gas detectors (H₂, CO, HF) for very early warning, combined with conventional heat and smoke detection.</li>
+<li><strong>Compartmentation:</strong> Fire-rated separation, explosion relief venting, and controlled drainage are required for indoor BESS rooms per NFPA 855 §4.3 and Table 4.3.2.</li>
+</ul>
+<p style="margin-top:1rem;"><strong>Vietnamese regulatory gap:</strong> QCVN 06:2022/BXD covers general fire protection for buildings but does not address BESS. Applying NFPA 855 in Vietnam requires a technical justification dossier submitted to the fire authority (Cảnh sát PCCC) for approval under Art. 7 of Circular 06/2023/TT-BCA.</p>
+<p style="margin-top:1rem;font-style:italic;color:#666;">Contact VIETSAFE E&amp;C for BESS fire protection design and NFPA 855 compliance consulting: <a href="mailto:info@vnsec.com.vn" style="color:#C8102E;">info@vnsec.com.vn</a></p>
+<div class="ctabox">
+  <h3>Need specialist fire safety consulting?</h3>
+  <p>Our engineering team at VIETSAFE E&amp;C is ready to assist — from technical justification dossiers to simulation and design.</p>
+  <a href="/en/#contact" class="btnw">Contact us →</a>
+</div>
+</main>
+<footer class="sfooter">
+  <p><strong style="color:#fff">VIETSAFE E&amp;C</strong> — Fire Safety Engineering &amp; Construction</p>
+  <p style="margin-top:0.4rem">
+    <a href="/en/">Home</a> · <a href="/en/pbd.html">PBD</a> · <a href="/en/kien-thuc/">Knowledge</a> · <a href="/en/hoat-dong/">Activities</a> · <a href="/en/#contact">Contact</a>
+  </p>
+  <p style="margin-top:0.3rem;font-size:0.72rem;color:rgba(255,255,255,0.25)">© 2026 VIETSAFE E&amp;C · FIRE SAFETY ENGINEERING &amp; CONSTRUCTION</p>
+</footer>
+</body>
+</html>

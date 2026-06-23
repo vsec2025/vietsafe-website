@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Performance-Based Design (PBD) &amp; Fire Simulation | VIETSAFE E&amp;C</title>
+<meta name="description" content="VIETSAFE E&C delivers PBD fire engineering: FDS/PyroSim fire and smoke simulation, Pathfinder egress modelling, ASET/RSET analysis, and technical justification dossiers for super high-rise, airport, metro, and industrial projects in Vietnam."/>
+<meta name="keywords" content="performance-based design Vietnam, PBD fire engineering, FDS fire simulation, Pathfinder egress modelling, ASET RSET analysis, fire engineering technical report, NFPA 5000 Vietnam"/>
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
+<meta name="author" content="VIETSAFE E&amp;C Joint Stock Company"/>
+<meta property="og:title" content="Performance-Based Fire Design &amp; Simulation — VIETSAFE E&amp;C"/>
+<meta property="og:description" content="FDS fire simulation, Pathfinder egress modelling, ASET/RSET analysis, and technical justification for super high-rise, airport, metro, and petrochemical projects in Vietnam."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.vnsec.com.vn/en/pbd.html"/>
+<meta property="og:image" content="https://www.vnsec.com.vn/sim-phu-quoc-fds.webp"/>
+<meta property="og:locale" content="en_US"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Performance-Based Fire Design &amp; Simulation — VIETSAFE E&amp;C"/>
+<link rel="canonical" href="https://www.vnsec.com.vn/en/pbd.html"/>
+<link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/pbd.html"/>
+<link rel="alternate" hreflang="en" href="https://www.vnsec.com.vn/en/pbd.html"/>
+<link rel="alternate" hreflang="x-default" href="https://www.vnsec.com.vn/pbd.html"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"/></noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6KWXGHR56C"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6KWXGHR56C');</script>
+<style>
+.lang-link{border:1px solid rgba(255,255,255,0.35);border-radius:3px;padding:4px 10px;font-size:11px;font-weight:700;color:rgba(255,255,255,0.8);text-decoration:none}
+.header-right{display:flex;align-items:center;gap:10px}
+
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #C8102E; --dark: #1a1a1a; --grey: #f5f5f5; --text: #333; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--text); background: #fff; }
+    a { color: var(--red); }
+    
+    /* Header */
+    .site-header { background: var(--dark); padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { color: #fff; text-decoration: none; font-weight: 800; font-size: 1.2rem; letter-spacing: 0.05em; }
+    .logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .btn-cta { background: var(--red); color: #fff; padding: 0.6rem 1.4rem; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 700; white-space: nowrap; }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #1a1a1a 0%, #2d0a13 100%); color: #fff; padding: 5rem 2rem 4rem; text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(200,16,46,0.2); border: 1px solid var(--red); color: var(--red); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 20px; margin-bottom: 1.5rem; }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    .hero h1 em { color: var(--red); font-style: normal; }
+    .hero-sub { font-size: clamp(0.85rem, 1.5vw, 1rem); color: rgba(255,255,255,0.7); margin-bottom: 0.5rem; font-style: italic; }
+    .hero-desc { font-size: 1rem; color: rgba(255,255,255,0.8); max-width: 700px; margin: 1.5rem auto 2.5rem; line-height: 1.7; }
+    .hero-cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--red); color: #fff; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; }
+    .btn-secondary { background: transparent; color: #fff; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.3); }
+
+    /* Answer block - GEO optimized */
+    .answer-block { background: #fff8f8; border-left: 4px solid var(--red); padding: 1.5rem 2rem; max-width: 860px; margin: 0 auto 3rem; border-radius: 0 8px 8px 0; }
+    .answer-block p { font-size: 0.95rem; line-height: 1.8; color: #444; }
+
+    /* Section layout */
+    .section { padding: 4rem 2rem; }
+    .section-alt { background: var(--grey); }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.72rem; font-weight: 700; color: var(--red); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .section-title { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; color: var(--dark); margin-bottom: 0.5rem; }
+    .section-title-en { font-size: 0.9rem; color: #888; font-style: italic; margin-bottom: 2.5rem; }
+
+    /* Service cards */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .service-card { background: #fff; border-radius: 12px; padding: 2rem; border: 1px solid #e8e8e8; transition: box-shadow 0.2s, border-color 0.2s; }
+    .service-card:hover { box-shadow: 0 6px 24px rgba(200,16,46,0.12); border-color: var(--red); }
+    .service-num { font-size: 0.72rem; font-weight: 700; color: var(--red); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.3rem; }
+    .service-card .en { font-size: 0.8rem; color: #888; font-style: italic; margin-bottom: 1rem; }
+    .service-card p { font-size: 0.88rem; color: #555; line-height: 1.7; }
+    .service-card ul { list-style: none; padding: 0; margin-top: 0.8rem; }
+    .service-card ul li { font-size: 0.83rem; color: #555; padding: 0.25rem 0 0.25rem 1rem; border-left: 2px solid #e0e0e0; margin-bottom: 0.3rem; }
+
+    /* Simulation images */
+    .sim-section { padding: 4rem 2rem; background: var(--dark); color: #fff; }
+    .sim-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
+    .sim-card { background: rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+    .sim-card img { width: 100%; height: 260px; object-fit: cover; display: block; }
+    .sim-card-body { padding: 1.5rem; }
+    .sim-card-body h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem; }
+    .sim-card-body .en { font-size: 0.8rem; color: rgba(255,255,255,0.5); font-style: italic; margin-bottom: 0.8rem; }
+    .sim-card-body p { font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6; }
+    .sim-tag { display: inline-block; background: rgba(200,16,46,0.3); color: var(--red); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.5rem; text-transform: uppercase; }
+
+    /* Case studies */
+    .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .case-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    .case-card-header { background: var(--red); color: #fff; padding: 1.5rem; }
+    .case-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.8; margin-bottom: 0.4rem; }
+    .case-card-header h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 0.2rem; }
+    .case-card-header .loc { font-size: 0.8rem; opacity: 0.8; }
+    .case-card-body { padding: 1.5rem; }
+    .case-card-body p { font-size: 0.88rem; color: #555; line-height: 1.7; margin-bottom: 1rem; }
+    .case-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag { background: #f5f5f5; color: #555; font-size: 0.72rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 4px; }
+
+    /* Standards */
+    .standards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+    .std-card { background: #fff; border-radius: 10px; padding: 1.5rem; text-align: center; border: 1px solid #e8e8e8; }
+    .std-name { font-size: 1.2rem; font-weight: 800; color: var(--red); margin-bottom: 0.3rem; }
+    .std-desc { font-size: 0.82rem; color: #666; }
+
+    /* FAQ */
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid #e8e8e8; padding: 1.5rem 0; }
+    .faq-q { font-size: 0.95rem; font-weight: 700; color: var(--dark); margin-bottom: 0.8rem; cursor: pointer; }
+    .faq-q::before { content: "Q "; color: var(--red); font-weight: 800; }
+    .faq-a { font-size: 0.88rem; color: #555; line-height: 1.8; }
+
+    /* CTA */
+    .cta-section { background: var(--red); color: #fff; padding: 4rem 2rem; text-align: center; }
+    .cta-section h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 1rem; }
+    .cta-section p { font-size: 1rem; opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .btn-white { background: #fff; color: var(--red); padding: 0.9rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; }
+
+    /* Footer */
+    .site-footer { background: #111; color: rgba(255,255,255,0.6); padding: 2rem; text-align: center; font-size: 0.82rem; }
+    .site-footer a { color: rgba(255,255,255,0.6); }
+    .breadcrumb { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero { padding: 3rem 1.5rem; }
+      .section { padding: 3rem 1.5rem; }
+    }
+  
+</style>
+</head>
+<body>
+<header class="site-header" role="banner">
+  <a href="/en/" class="logo">VIETSAFE<span>E&amp;C</span></a>
+  <nav aria-label="Main navigation">
+    <ul class="nav-links">
+      <li><a href="/en/">Home</a></li>
+      <li><a href="/en/#services">Services</a></li>
+      <li><a href="/en/pbd.html" class="active">Performance-Based Design</a></li>
+      <li><a href="/en/kien-thuc/">Knowledge</a></li>
+      <li><a href="/en/#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header-right">
+    <a href="/pbd.html" class="lang-link">VI</a>
+    <a href="/en/#contact" class="btn-cta">Request a consultation</a>
+  </div>
+</header>
+
+<div style="background:#1a1a1a;padding:0.7rem 2rem;">
+  <nav aria-label="Breadcrumb" class="breadcrumb" style="max-width:1100px;margin:0 auto;">
+    <a href="/en/">Home</a> &rsaquo; <span style="color:rgba(255,255,255,0.8);">Performance-Based Design (PBD)</span>
+  </nav>
+</div>
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-badge">Specialised Service · Engineering</div>
+  <h1 id="hero-title">Performance-Based <em>Fire Design</em><br/>PBD &amp; Fire Simulation</h1>
+  <p class="hero-sub">Fire dynamics simulation · Egress modelling · ASET/RSET · Technical justification</p>
+  <p class="hero-desc">Engineering solutions for projects beyond the scope of prescriptive codes — demonstrating fire safety through simulation rather than rigid code compliance. Legal basis: Fire Safety Law 55/2024, Decree 105/2025.</p>
+  <div class="hero-cta-group">
+    <a href="/en/#contact" class="btn-primary">Request PBD consulting</a>
+    <a href="#case-studies" class="btn-secondary">View case studies</a>
+  </div>
+</section>
+
+<section class="section" style="padding-top:3rem;padding-bottom:2rem;">
+  <div class="container">
+    <div class="answer-block">
+      <p><strong>Performance-Based Fire Design (PBD)</strong> is a fire engineering methodology based on scientific simulation and quantitative analysis, rather than rigid application of each prescriptive code clause. It is required when a project's height, scale, or architectural features exceed the scope of QCVN — for example: towers above 150 m, airport terminals, underground metro stations, LNG storage, or battery energy storage systems (BESS). Under Fire Safety Law 55/2024 and Decree 105/2025, project owners may apply alternative solutions provided they prepare a <strong>technical justification dossier</strong> demonstrating equivalent safety, and defend the dossier when the competent authority requests a review.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="services-title">
+  <div class="container">
+    <p class="section-label">Core capabilities</p>
+    <h2 class="section-title" id="services-title">4 Core PBD Services</h2>
+    <p class="section-title-en">Four core PBD &amp; simulation services</p>
+    <div class="services-grid">
+      <article class="service-card">
+        <p class="service-num">PBD-01</p>
+        <h3>Fire &amp; Smoke Simulation</h3>
+        <p class="en">Fire &amp; Smoke Modeling — FDS / PyroSim</p>
+        <p>Fire and smoke propagation modelling using FDS (Fire Dynamics Simulator) and PyroSim. Results visualised in real time — verifying smoke control system effectiveness, identifying visibility and temperature thresholds against design fire scenarios.</p>
+        <ul>
+          <li>Software: FDS, PyroSim, CFAST</li>
+          <li>Applications: atria, basements, airport terminals, metro stations, large industrial buildings</li>
+          <li>Outputs: smoke slice reports, heat maps, visibility graphs</li>
+          <li>Standards: SFPE Handbook, BS 7974, NFPA 92</li>
+        </ul>
+      </article>
+      <article class="service-card">
+        <p class="service-num">PBD-02</p>
+        <h3>Evacuation Modelling</h3>
+        <p class="en">Evacuation Modeling — Pathfinder / STEPS</p>
+        <p>Agent-based occupant movement modelling per design fire scenario, calculating ASET (Available Safe Egress Time) and RSET (Required Safe Egress Time) — the two core metrics for demonstrating safe egress conditions in performance-based design.</p>
+        <ul>
+          <li>Software: Pathfinder, STEPS</li>
+          <li>Applications: super high-rise towers, airports, shopping centres, metro stations</li>
+          <li>Outputs: ASET/RSET charts, crowd density maps, simulation videos</li>
+          <li>Standards: NFPA 101, NFPA 130, ISO/TR 16738</li>
+        </ul>
+      </article>
+      <article class="service-card">
+        <p class="service-num">PBD-03</p>
+        <h3>Technical Justification Dossier</h3>
+        <p class="en">Fire Engineering Technical Report</p>
+        <p>Preparing technical justification dossiers for projects beyond the QCVN scope or requiring international code application. Includes code-equivalency comparison, gap analysis, alternative solution justification, and preparation for dossier defence when the competent authority requests a review.</p>
+        <ul>
+          <li>NFPA 5000 / NFPA 101 for buildings &gt;150 m</li>
+          <li>BS 7974 / SFPE Handbook for special-category projects</li>
+          <li>Legal basis: Fire Safety Law 55/2024, Decree 105/2025</li>
+          <li>Output: bilingual technical report, defence dossier</li>
+        </ul>
+      </article>
+      <article class="service-card">
+        <p class="service-num">PBD-04</p>
+        <h3>Fire Risk Assessment</h3>
+        <p class="en">Fire Risk Assessment (FRA / QRA)</p>
+        <p>Qualitative and quantitative fire and explosion risk analysis for industrial, oil &amp; gas, BESS, and LNG facilities. Identifies event probability, consequences, and proposes risk-reduction measures.</p>
+        <ul>
+          <li>Standards: NFPA 855 (BESS), NFPA 59A (LNG), API RP</li>
+          <li>Applications: LNG storage, BESS stations, refineries, chemical plants</li>
+          <li>Outputs: risk matrix, bow-tie diagrams, emergency response plan</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sim-section" aria-labelledby="sim-title">
+  <div class="container">
+    <p class="section-label" style="color:rgba(200,16,46,0.9);">Real simulation outputs</p>
+    <h2 class="section-title" style="color:#fff;" id="sim-title">Simulation Results from Actual Projects</h2>
+    <p class="section-title-en">Simulation outputs from actual projects</p>
+    <div class="sim-grid">
+      <figure class="sim-card">
+        <img src="/sim-phu-quoc-pathfinder.jpg" alt="Pathfinder egress simulation model — Phu Quoc International Airport terminal" loading="lazy" width="600" height="260"/>
+        <div class="sim-card-body">
+          <div class="sim-tag">Pathfinder · Egress</div>
+          <h3>Evacuation Simulation — Phu Quoc International Airport</h3>
+          <p class="en">Evacuation Simulation — Phu Quoc International Airport</p>
+          <p>Pathfinder model for the Phu Quoc airport terminal. The ASET/RSET calculation confirms safe egress conditions for passengers and staff under all design fire scenarios.</p>
+        </div>
+      </figure>
+      <figure class="sim-card">
+        <img src="/sim-phu-quoc-fds.jpg" alt="FDS fire and smoke simulation — visibility slice at 1500 seconds — Phu Quoc International Airport" loading="lazy" width="600" height="260"/>
+        <div class="sim-card-body">
+          <div class="sim-tag">FDS / PyroSim · Smoke</div>
+          <h3>Fire &amp; Smoke Simulation — Phu Quoc International Airport</h3>
+          <p class="en">Fire &amp; Smoke Simulation — Phu Quoc International Airport</p>
+          <p>FDS simulation results showing visibility distribution at 1,500 seconds (25 minutes). The colour map demonstrates the effectiveness of the smoke control system in the large terminal space.</p>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="case-studies" aria-labelledby="cases-title">
+  <div class="container">
+    <p class="section-label">Featured projects</p>
+    <h2 class="section-title" id="cases-title">Case Studies — Real Projects</h2>
+    <p class="section-title-en">Real-project case studies</p>
+    <div class="case-grid">
+      <article class="case-card">
+        <div class="case-card-header">
+          <p class="case-tag">Egress &amp; fire simulation</p>
+          <h3>Phu Quoc International Airport</h3>
+          <p class="loc">PHU QUOC · AVIATION · PATHFINDER + FDS</p>
+        </div>
+        <div class="case-card-body">
+          <p>Pathfinder egress modelling and FDS fire simulation for the passenger terminal. ASET/RSET assessment and verification of large-volume smoke control system performance per NFPA 92 and BS 7974.</p>
+          <div class="case-tags"><span class="tag">Pathfinder</span><span class="tag">FDS/PyroSim</span><span class="tag">ASET/RSET</span><span class="tag">NFPA 92</span><span class="tag">BS 7974</span></div>
+        </div>
+      </article>
+      <article class="case-card">
+        <div class="case-card-header">
+          <p class="case-tag">Technical justification &amp; simulation</p>
+          <h3>T2 Terminal Extension — Noi Bai Airport</h3>
+          <p class="loc">HANOI · AVIATION · PBD + SIMULATION</p>
+        </div>
+        <div class="case-card-body">
+          <p>Technical justification dossier and fire simulation for the Noi Bai T2 expansion. International code application, QCVN gap analysis, and dossier preparation for regulatory review.</p>
+          <div class="case-tags"><span class="tag">Technical Justification</span><span class="tag">NFPA 101</span><span class="tag">Gap Analysis</span><span class="tag">Fire Simulation</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="standards-title">
+  <div class="container">
+    <p class="section-label">Technical foundation</p>
+    <h2 class="section-title" id="standards-title">Standards &amp; Tools Applied</h2>
+    <p class="section-title-en">Standards &amp; tools applied</p>
+    <div class="standards-grid">
+      <div class="std-card"><p class="std-name">FDS</p><p class="std-desc">Fire Dynamics Simulator — NIST (fire &amp; smoke modelling)</p></div>
+      <div class="std-card"><p class="std-name">Pathfinder</p><p class="std-desc">Thunderhead Engineering (egress modelling)</p></div>
+      <div class="std-card"><p class="std-name">NFPA 5000</p><p class="std-desc">Building Construction and Safety Code</p></div>
+      <div class="std-card"><p class="std-name">BS 7974</p><p class="std-desc">Application of fire safety engineering (UK)</p></div>
+      <div class="std-card"><p class="std-name">SFPE Handbook</p><p class="std-desc">Society of Fire Protection Engineers</p></div>
+      <div class="std-card"><p class="std-name">ISO/TR 16738</p><p class="std-desc">Fire safety engineering — Evacuation modelling</p></div>
+      <div class="std-card"><p class="std-name">QCVN 06</p><p class="std-desc">National technical regulation on fire safety</p></div>
+      <div class="std-card"><p class="std-name">Decree 105/2025</p><p class="std-desc">Fire Safety Law 55/2024 — Post-inspection regime</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-title">
+  <div class="container">
+    <p class="section-label">FAQ</p>
+    <h2 class="section-title" id="faq-title">FAQ — Performance-Based Fire Design</h2>
+    <p class="section-title-en">Frequently asked questions</p>
+    <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <p class="faq-q" itemprop="name">What are the steps in a performance-based fire design process?</p>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">The PBD process comprises: (1) Define performance objectives and design fire scenarios; (2) Fire &amp; smoke simulation (FDS/PyroSim); (3) Egress simulation (Pathfinder/STEPS); (4) ASET vs RSET analysis — confirm safe egress conditions; (5) Prepare the technical justification report; (6) Defend the dossier when the competent authority requests a review.</p>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <p class="faq-q" itemprop="name">When is PBD required for a project?</p>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">PBD and simulation are required when: (a) the project exceeds the QCVN 06 scope — towers above ~150 m, airport terminals, underground metro stations, LNG storage; (b) the owner wishes to demonstrate an alternative or superior solution; (c) smoke control or egress design optimisation is needed without additional cost. Fire Safety Law 55/2024 makes PBD a fully legitimate design approach within the post-inspection regulatory framework.</p>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <p class="faq-q" itemprop="name">What are ASET and RSET and why do they matter?</p>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">ASET (Available Safe Egress Time) is the time from ignition until conditions become untenable — derived from FDS smoke simulation. RSET (Required Safe Egress Time) is the time needed for all occupants to reach safety — derived from Pathfinder modelling. Safe egress is demonstrated when ASET exceeds RSET by an appropriate safety factor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" aria-labelledby="cta-title">
+  <div class="container">
+    <h2 id="cta-title">Does your project require performance-based design?</h2>
+    <p>VIETSAFE E&amp;C has a team of engineers with real-world fire simulation experience on airport, high-rise, and metro projects in Vietnam.</p>
+    <a href="/en/#contact" class="btn-white">Contact us now →</a>
+  </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+  <p><strong style="color:#fff;">VIETSAFE E&amp;C</strong> — Fire Safety Engineering &amp; Construction</p>
+  <p style="margin-top:0.5rem;"><a href="/en/">Home</a> · <a href="/en/#services">Services</a> · <a href="/en/kien-thuc/">Knowledge</a> · <a href="/en/#contact">Contact</a> · <a href="/en/pbd.html">PBD</a></p>
+  <p style="margin-top:0.5rem;">© 2026 · VIETSAFE E&amp;C JSC · <a href="mailto:info@vnsec.com.vn">info@vnsec.com.vn</a></p>
+</footer>
+</body>
+</html>

@@ -144,7 +144,7 @@
     transition:.2s;
   }
   .lang button.on{background:var(--red);color:#fff}
-  .cta-btn{
+  .lang-link{display:inline-block;border:1px solid var(--grey-line);border-radius:3px;padding:5px 11px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:var(--caption);text-decoration:none;transition:.2s;}.lang-link:hover{border-color:var(--red);color:var(--red)}.cta-btn{
     background:var(--red);color:#fff;font-weight:700;font-size:13px;
     text-transform:uppercase;letter-spacing:.04em;
     padding:11px 20px;border-radius:3px;border:0;cursor:pointer;
@@ -619,7 +619,7 @@
       </ul>
     </nav>
 
-    <div class="nav-right">
+    <div class="nav-right"><a href="/en/" class="lang-link">EN</a>
       <div class="lang" role="group" aria-label="Language">
         <button class="on" data-lang="vi">VI</button>
         <button data-lang="en">EN</button>
