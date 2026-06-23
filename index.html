@@ -113,31 +113,10 @@
     display:flex;align-items:center;justify-content:space-between;
     height:74px;
   }
-  .brand{display:flex;align-items:center;gap:13px}
-  .brand .mark{
-    width:42px;height:42px;flex:none;position:relative;
-    background:var(--red);border-radius:3px;
-    display:grid;place-items:center;
-  }
-  .brand .mark span{
-    color:#fff;font-weight:900;font-size:20px;line-height:1;
-    font-family:'Montserrat',sans-serif;
-  }
-  .brand .mark::after{
-    content:"";position:absolute;right:-1px;bottom:-1px;
-    width:13px;height:13px;background:var(--ink-strong);
-    clip-path:polygon(100% 0,100% 100%,0 100%);
-  }
-  .brand .txt b{
-    display:block;font-weight:800;font-size:18px;color:var(--ink-strong);
-    letter-spacing:.02em;line-height:1;
-  }
-  .brand .txt b em{color:var(--red);font-style:normal}
-  .brand .txt small{
-    display:block;font-family:'IBM Plex Mono',monospace;
-    font-size:9.5px;letter-spacing:.16em;color:var(--caption);
-    text-transform:uppercase;margin-top:4px;
-  }
+  .brand{display:flex;align-items:center;gap:0}
+  .brand .mark{flex:none;display:flex;align-items:center;}
+  .brand .mark img{height:44px;width:auto;display:block;}
+  .brand .txt{display:none;}
   .menu{display:flex;align-items:center;gap:30px;list-style:none}
   .menu a{
     font-weight:600;font-size:13.5px;letter-spacing:.04em;
@@ -615,10 +594,11 @@
   <div class="accent"></div>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Vietsafe E&C">
-      <span class="mark"><span>V</span></span>
-      <span class="txt">
-        <b>VIETSAFE <em>E&amp;C</em></b>
-        <small>Fire Safety Engineering &amp; Consulting</small>
+      <span class="mark">
+        <picture>
+          <source srcset="/vnsec_logo.webp" type="image/webp">
+          <img src="/vnsec_logo.png" alt="VIETSAFE E&C – Fire Safety Engineering & Construction" height="44">
+        </picture>
       </span>
     </a>
 
@@ -1077,7 +1057,7 @@
          data-en="Vietsafe E&C JSC — a dedicated engineering entity for fire protection consulting & design, inheriting the design capability of Vietnam Safety Technology JSC (VIETSAFE., JSC).">
          Công ty Cổ Phần VIETSAFE E&amp;C — pháp nhân kỹ thuật chuyên trách tư vấn & thiết kế PCCC, kế thừa năng lực thiết kế của Công ty Cổ Phần Công Nghệ An Toàn Việt Nam (VIETSAFE., JSC).
       </p>
-      <div class="foot-slogan">YOUR SAFETY – OUR SUCCESS</div>
+      <div class="foot-slogan">FIRE SAFETY ENGINEERING &amp; CONSTRUCTION</div>
     </div>
 
     <div class="foot-col">
