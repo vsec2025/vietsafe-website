@@ -201,5 +201,21 @@ body{font-family:'Montserrat',sans-serif;color:#333;background:#fff}
   </p>
   <p style="margin-top:0.3rem;font-size:0.72rem;color:rgba(255,255,255,0.25)">&#169; 2026 VIETSAFE E&amp;C &middot; FIRE SAFETY ENGINEERING &amp; CONSTRUCTION</p>
 </footer>
+<script>
+document.querySelectorAll('.fbtn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const filter = this.dataset.filter;
+    document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    document.querySelectorAll('.card').forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
