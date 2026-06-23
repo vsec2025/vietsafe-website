@@ -1,0 +1,20 @@
+<header class="site-header">
+  <a href="{% if lang == 'vi' %}/{% else %}/en/{% endif %}" class="logo">VIETSAFE<span>E&C</span></a>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="{% if lang == 'vi' %}/{% else %}/en/{% endif %}">{% if lang == 'vi' %}Trang chủ{% else %}Home{% endif %}</a></li>
+      <li><a href="{% if lang == 'vi' %}/#services{% else %}/en/#services{% endif %}">{% if lang == 'vi' %}Dịch vụ{% else %}Services{% endif %}</a></li>
+      <li><a href="{% if lang == 'vi' %}/pbd.html{% else %}/en/pbd.html{% endif %}">PBD</a></li>
+      <li><a href="{% if lang == 'vi' %}/kien-thuc/{% else %}/en/kien-thuc/{% endif %}" class="active">{% if lang == 'vi' %}Kiến thức{% else %}Knowledge{% endif %}</a></li>
+      <li><a href="{% if lang == 'vi' %}/#contact{% else %}/en/#contact{% endif %}">{% if lang == 'vi' %}Liên hệ{% else %}Contact{% endif %}</a></li>
+    </ul>
+  </nav>
+  <div class="header-right">
+    <a href="{% if lang == 'vi' %}/en{{ url | replace('/', '', 1) }}.html{% else %}{{ url | replace('/en/', '/') | replace('.html', '') }}.html{% endif %}" class="lang-link">
+      {% if lang == 'vi' %}EN{% else %}VI{% endif %}
+    </a>
+    <a href="{% if lang == 'vi' %}/#contact{% else %}/en/#contact{% endif %}" class="btn-cta">
+      {% if lang == 'vi' %}Yêu cầu tư vấn{% else %}Request a consultation{% endif %}
+    </a>
+  </div>
+</header>

@@ -1,0 +1,21 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#C8102E;--dark:#1a1a1a;--text:#333}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--red);text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.site-header{background:var(--dark);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{color:#fff;text-decoration:none;font-weight:800;font-size:1.1rem}
+.logo span{color:var(--red)}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.82rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.header-right{display:flex;align-items:center;gap:10px}
+.lang-link{display:inline-block;border:1px solid rgba(255,255,255,0.35);border-radius:3px;padding:4px 10px;font-size:11px;font-weight:700;color:rgba(255,255,255,0.8);text-decoration:none;transition:.2s}
+.lang-link:hover{border-color:#fff;color:#fff}
+.btn-cta{background:var(--red);color:#fff;padding:0.55rem 1.2rem;border-radius:6px;text-decoration:none;font-size:0.82rem;font-weight:700}
+.site-footer{background:#111;color:rgba(255,255,255,0.5);padding:2rem;text-align:center;font-size:0.8rem}
+.site-footer a{color:rgba(255,255,255,0.5)}
+main{padding:2rem 0}
+@media(max-width:768px){.nav-links{display:none}}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>{{ title }} | VIETSAFE E&C</title>
+<meta name="description" content="{{ description }}"/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:title" content="{{ title }}"/>
+<meta property="og:description" content="{{ description }}"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://www.vnsec.com.vn{{ url }}"/>
+<meta property="article:published_time" content="{{ date }}T00:00:00+07:00"/>
+<link rel="canonical" href="https://www.vnsec.com.vn{{ url }}"/>
+{% if lang == 'vi' %}
+<link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn{{ url }}"/>
+<link rel="alternate" hreflang="en" href="https://www.vnsec.com.vn/en{{ url | replace('/kien-thuc/', '/kien-thuc/') }}"/>
+{% else %}
+<link rel="alternate" hreflang="en" href="https://www.vnsec.com.vn{{ url }}"/>
+<link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn{{ url | replace('/en/kien-thuc/', '/kien-thuc/') }}"/>
+{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"/></noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6KWXGHR56C"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6KWXGHR56C');</script>
+<style>
+{% include "css-bundle.njk" %}
+.abody{max-width:860px;margin:0 auto;padding:3rem 2rem}
+.abody h2{font-size:1.2rem;font-weight:800;color:#1a1a1a;margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:2px solid var(--red)}
+.abody p{margin-bottom:1rem;font-size:0.92rem;color:#444;line-height:1.8}
+.abody table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.84rem}
+.abody table th{background:var(--red);color:#fff;padding:0.7rem 1rem;text-align:left}
+.abody table td{padding:0.65rem 1rem;border-bottom:1px solid #e8e8e8}
+</style>
+</head>
+<body>
+{% include "components/header.njk" %}
+<main class="abody">
+{{ content | safe }}
+</main>
+{% include "components/footer.njk" %}
+</body>
+</html>
