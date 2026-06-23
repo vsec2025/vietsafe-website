@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -108,6 +108,12 @@
   </script>
 
   <style>
+html.en .vi-only{display:none!important}
+html.vi .en-only{display:none!important}
+.lang-sw{display:flex;border:1px solid rgba(255,255,255,0.3);border-radius:3px;overflow:hidden;font-size:11px;font-weight:700}
+.lang-sw button{border:0;background:none;padding:5px 10px;cursor:pointer;color:rgba(255,255,255,0.6);transition:.2s}
+.lang-sw button.on{background:#C8102E;color:#fff}
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --red: #C8102E; --dark: #1a1a1a; --grey: #f5f5f5; --text: #333; }
     body { font-family: 'Montserrat', sans-serif; color: var(--text); background: #fff; }
@@ -234,7 +240,9 @@
         <li><a href="/#contact">Liên hệ</a></li>
       </ul>
     </nav>
-    <a href="/#contact" class="btn-cta">Yêu cầu tư vấn</a>
+    
+<div class="lang-sw" style="margin-right:10px"><button class="on" data-lang="vi">VI</button><button data-lang="en">EN</button></div>
+<a href="/#contact" class="btn-cta">Yêu cầu tư vấn</a>
   </header>
 
   <!-- Breadcrumb -->
@@ -248,6 +256,37 @@
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-badge">Dịch vụ chuyên sâu · Specialised Service</div>
     <h1 id="hero-title">Thiết kế theo <em>Hiệu năng</em><br/>PBD &amp; Mô phỏng PCCC</h1>
+<div class="en-only" style="background:#f8f8f8;border-left:4px solid #C8102E;padding:1.5rem 2rem;margin:1.5rem 0 2rem;font-family:sans-serif;font-size:0.92rem;line-height:1.8;color:#333;">
+<h2 style="font-size:1.15rem;font-weight:700;margin-bottom:0.8rem;color:#1a1a1a;">Performance-Based Design (PBD) &amp; Fire Simulation</h2>
+<p>When prescriptive codes (QCVN 06, TCVN, NFPA) are inapplicable or overly conservative, Performance-Based Design provides a rigorous engineering alternative. VIETSAFE E&amp;C delivers PBD analyses that satisfy Vietnam&#8217;s fire authority dossier requirements and international standards (SFPE Handbook, NFPA 101 Annex B, ISO/TR 13387).</p>
+<h3 style="font-size:1rem;font-weight:700;margin:1rem 0 0.4rem;">Core services</h3>
+<ul style="padding-left:1.5rem;margin:0;">
+<li><strong>Fire dynamics simulation (FDS/PyroSim):</strong> Heat release rate curves, smoke layer descent, visibility, CO concentration, radiation — for design fire scenarios covering flaming and smouldering growth rates (t² fast / medium / slow).</li>
+<li><strong>Egress simulation (Pathfinder):</strong> Agent-based occupant movement modelling. RSET (Required Safe Egress Time) calculated per floor, with bottleneck identification and stairwell capacity verification.</li>
+<li><strong>ASET/RSET analysis:</strong> Formal comparison of Available Safe Egress Time vs. Required Safe Egress Time with safety factor documentation for the fire authority dossier.</li>
+<li><strong>Smoke control design:</strong> Stairwell and lobby pressurisation sizing; corridor mechanical exhaust; atrium smoke exhaust — per NFPA 92 and BS EN 12101.</li>
+<li><strong>Alternative solution dossier (hồ sơ phương án thay thế):</strong> Full technical justification package including design fire selection, scenario matrix, simulation results, and acceptance criteria — formatted for submission under Art. 7 of Circular 06/2023/TT-BCA.</li>
+</ul>
+<h3 style="font-size:1rem;font-weight:700;margin:1rem 0 0.4rem;">Applicable projects</h3>
+<ul style="padding-left:1.5rem;margin:0;">
+<li>Super high-rise towers (&gt;150 m) beyond QCVN 06 scope</li>
+<li>Large atria and open-plan spaces (&gt;12 m high)</li>
+<li>Airport terminals and transport interchanges</li>
+<li>Underground metro stations and tunnels</li>
+<li>LNG / petrochemical facilities</li>
+<li>Historic and heritage buildings</li>
+<li>Any project where the prescriptive code is silent or cannot practicably be met</li>
+</ul>
+<h3 style="font-size:1rem;font-weight:700;margin:1rem 0 0.4rem;">Standards &amp; tools</h3>
+<p style="margin:0;">SFPE Handbook of Fire Protection Engineering · NFPA 101 · NFPA 92 · ISO/TR 13387 · BS PD 7974 · FDS (NIST) · PyroSim · Pathfinder (Thunderhead) · CFAST · Smokeview</p>
+<h3 style="font-size:1rem;font-weight:700;margin:1rem 0 0.4rem;">Case studies</h3>
+<ul style="padding-left:1.5rem;margin:0;">
+<li><strong>Long Thanh International Airport (Phase 1):</strong> PBD fire strategy for terminal building; FDS simulation of 40 MW design fire; Pathfinder egress analysis for 25 million pax/year capacity.</li>
+<li><strong>T3 Terminal, Tan Son Nhat Airport:</strong> Smoke control design for 45 m atrium; ASET/RSET analysis; pressurisation sizing for 12 evacuation stairwells.</li>
+<li><strong>Nghi Son LNG:</strong> Explosion consequence analysis; vapour cloud dispersion modelling; fire suppression system sizing for jetty and storage tanks.</li>
+</ul>
+<p style="margin-top:1rem;font-style:italic;color:#666;">Contact VIETSAFE E&amp;C to discuss your project&#8217;s PBD requirements: <a href="/#contact" style="color:#C8102E;">Request a consultation</a> or email <a href="mailto:info@vnsec.com.vn" style="color:#C8102E;">info@vnsec.com.vn</a></p>
+</div>
     <p class="hero-sub">Performance-Based Fire Design &amp; Fire/Evacuation Simulation</p>
     <p class="hero-desc">Giải pháp kỹ thuật cho công trình vượt khung QCVN — chứng minh an toàn bằng mô phỏng thay vì áp dụng cứng nhắc từng điều khoản. Nền tảng pháp lý: Luật PCCC 55/2024, NĐ 105/2025.</p>
     <div class="hero-cta-group">
@@ -492,5 +531,25 @@
     <p style="margin-top:0.3rem; font-size:0.75rem; color:rgba(255,255,255,0.3);">YOUR SAFETY – OUR SUCCESS</p>
   </footer>
 
+
+<script>
+(function(){
+  var lang=localStorage.getItem('lang')||'vi';
+  document.documentElement.className=lang;
+  document.documentElement.lang=lang;
+  document.querySelectorAll('.lang-sw button').forEach(function(b){
+    b.classList.toggle('on',b.dataset.lang===lang);
+    b.onclick=function(){
+      lang=b.dataset.lang;
+      localStorage.setItem('lang',lang);
+      document.documentElement.className=lang;
+      document.documentElement.lang=lang;
+      document.querySelectorAll('.lang-sw button').forEach(function(x){x.classList.toggle('on',x.dataset.lang===lang);});
+      document.querySelectorAll('[data-vi]').forEach(function(el){el.textContent=lang==='en'?el.dataset.en:el.dataset.vi;});
+    };
+  });
+  if(lang==='en') document.querySelectorAll('[data-vi]').forEach(function(el){el.textContent=el.dataset.en;});
+})();
+</script>
 </body>
 </html>
