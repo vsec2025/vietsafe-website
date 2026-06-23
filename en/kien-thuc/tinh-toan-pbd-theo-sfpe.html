@@ -3,29 +3,27 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Performance-Based Design (PBD) per the SFPE Handbook | VIETSAFE E&C</title>
-<meta name="description" content="An overview of the PBD methodology: design fire scenarios, fire and smoke simulation, ASET/RSET analysis, and the building types for which this approach is required."/>
+<title>Performance-Based Fire Design (PBD) — Methodology and Calculations per the SFPE Handbook | VIETSAFE E&C</title>
+<meta name="description" content="A technical overview of Performance-Based Fire Design (PBD) methodology: ASET/RSET framework, design fire characterisation, FDS simulation, Pathfinder egress modelling, and tenability criteria per the SFPE Handbook."/>
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
 <meta name="author" content="VIETSAFE E&amp;C"/>
-<meta property="og:title" content="Performance-Based Design (PBD) per the SFPE Handbook | VIETSAFE E&C"/>
-<meta property="og:description" content="An overview of the PBD methodology: design fire scenarios, fire and smoke simulation, ASET/RSET analysis, and the building types for which this approach is required."/>
+<meta property="og:title" content="Performance-Based Fire Design (PBD) — Methodology and Calculations per the SFPE Handbook | VIETSAFE E&C"/>
+<meta property="og:description" content="A technical overview of Performance-Based Fire Design (PBD) methodology: ASET/RSET framework, design fire characterisation, FDS simulation, Pathfinder egress modelling, and tenability criteria per the SFPE Handbook."/>
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="https://www.vnsec.com.vn/en/kien-thuc/tinh-toan-pbd-theo-sfpe.html"/>
 <meta property="og:image" content="https://www.vnsec.com.vn/01-hero.jpg"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Performance-Based Design (PBD) per the SFPE Handbook | VIETSAFE E&C"/>
-<meta name="twitter:description" content="An overview of the PBD methodology: design fire scenarios, fire and smoke simulation, ASET/RSET analysis, and the building types for which this approach is required."/>
+<meta property="article:published_time" content="2026-05-28T00:00:00+07:00"/>
+<meta property="article:author" content="VIETSAFE E&amp;C"/>
 <link rel="canonical" href="https://www.vnsec.com.vn/en/kien-thuc/tinh-toan-pbd-theo-sfpe.html"/>
-<link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/kien-thuc/tinh-toan-pbd-theo-sfpe.html"/>
 <link rel="alternate" hreflang="en" href="https://www.vnsec.com.vn/en/kien-thuc/tinh-toan-pbd-theo-sfpe.html"/>
+<link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/kien-thuc/tinh-toan-pbd-theo-sfpe.html"/>
 <link rel="alternate" hreflang="x-default" href="https://www.vnsec.com.vn/kien-thuc/tinh-toan-pbd-theo-sfpe.html"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23C8102E'/%3E%3Ctext x='32' y='46' font-family='Arial,sans-serif' font-size='42' font-weight='900' text-anchor='middle' fill='%23fff'%3EV%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"/></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap"/></noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KWXGHR56C"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6KWXGHR56C');</script>
 <style>
@@ -49,72 +47,137 @@ a{color:var(--red)}
 .cat-badge{display:inline-block;background:rgba(200,16,46,0.25);border:1px solid var(--red);color:var(--red);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.8rem;border-radius:20px;margin-bottom:1rem}
 .ameta{font-size:0.75rem;color:rgba(255,255,255,0.5);display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
 .hero h1{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:800;line-height:1.25;max-width:800px;margin:0 auto 0.6rem}
+.hero .sub{font-size:0.83rem;color:rgba(255,255,255,0.55);font-style:italic}
+.abox{background:#fff8f8;border-left:4px solid var(--red);padding:1.25rem 1.75rem;border-radius:0 8px 8px 0;margin:2rem 0}
+.abox p{font-size:0.93rem;line-height:1.8;color:#444}
 .abody{max-width:860px;margin:0 auto;padding:3rem 2rem}
 .abody h2{font-size:1.2rem;font-weight:800;color:var(--dark);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:2px solid var(--red)}
 .abody h3{font-size:0.97rem;font-weight:700;color:var(--dark);margin:1.8rem 0 0.6rem}
 .abody p{margin-bottom:1rem;font-size:0.92rem;color:#444;line-height:1.8}
 .abody ul,.abody ol{padding-left:1.4rem;margin-bottom:1rem}
-.abody li{font-size:0.9rem;color:#444;line-height:1.7;margin-bottom:0.5rem}
-.abody table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.84rem}
-.abody table th{background:var(--red);color:#fff;padding:0.7rem 1rem;text-align:left;font-weight:700}
-.abody table td{padding:0.65rem 1rem;border-bottom:1px solid #e8e8e8;vertical-align:top}
-.abody table tr:nth-child(even) td{background:#fafafa}
+.abody li{font-size:0.9rem;color:#444;line-height:1.7;margin-bottom:0.3rem}
+.ibox{background:#f5f5f5;border-radius:8px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.ibox strong{display:block;margin-bottom:0.4rem;color:var(--dark);font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em}
+.ctb{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.84rem}
+.ctb th{background:var(--red);color:#fff;padding:0.7rem 1rem;text-align:left;font-weight:700}
+.ctb td{padding:0.65rem 1rem;border-bottom:1px solid #e8e8e8;vertical-align:top}
+.ctb tr:nth-child(even) td{background:#fafafa}
+.fqs{margin-top:2.5rem}
+.fqi{border-bottom:1px solid #e8e8e8;padding:1.25rem 0}
+.fqq{font-size:0.92rem;font-weight:700;color:var(--dark);margin-bottom:0.6rem}
+.fqq::before{content:"Q ";color:var(--red);font-weight:800}
+.fqa{font-size:0.87rem;color:#555;line-height:1.8}
 .ctabox{background:var(--red);color:#fff;border-radius:12px;padding:2rem;text-align:center;margin:3rem 0}
 .ctabox h3{font-size:1.1rem;font-weight:800;margin-bottom:0.5rem}
 .ctabox p{font-size:0.87rem;opacity:0.9;margin-bottom:1.2rem}
 .btnw{background:#fff;color:var(--red);padding:0.65rem 1.8rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:0.87rem}
+.trow{display:flex;flex-wrap:wrap;gap:0.4rem;margin:1.5rem 0}
+.tag{background:#f0f0f0;color:#555;font-size:0.72rem;font-weight:600;padding:0.2rem 0.65rem;border-radius:4px}
 .sfooter{background:#111;color:rgba(255,255,255,0.5);padding:2rem;text-align:center;font-size:0.8rem}
 .sfooter a{color:rgba(255,255,255,0.5)}
+.calc-box{background:#f9f0f2;border:1px solid #e8c0c8;border-radius:8px;padding:1.5rem;margin:1.5rem 0;font-family:monospace}
+.calc-box .formula{font-size:1rem;font-weight:700;color:#1a1a1a;margin-bottom:0.75rem;letter-spacing:0.02em}
+.calc-box ul{list-style:none;padding:0;margin:0}
+.calc-box li{font-size:0.87rem;color:#444;margin-bottom:0.3rem;padding-left:1.2rem;position:relative}
+.calc-box li::before{content:"→";position:absolute;left:0;color:var(--red)}
+.step-box{background:#f5f5f5;border-left:3px solid var(--red);padding:1rem 1.25rem;margin:1rem 0;border-radius:0 6px 6px 0}
+.step-box strong{font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--red)}
+.srcbox{margin:1.5rem 0;padding:1rem 1.2rem;border-left:3px solid #c0392b;background:#faf6f6;font-size:0.9rem;line-height:1.6}
 @media(max-width:768px){.nav-links{display:none}.abody{padding:2rem 1.25rem}}
 </style>
 </head>
 <body>
 <header class="site-header">
   <a href="/en/" class="logo">VIETSAFE<span>E&amp;C</span></a>
-  <nav><ul class="nav-links"><li><a href="/en/">Home</a></li><li><a href="/en/#services">Services</a></li><li><a href="/en/pbd.html">PBD</a></li><li><a href="/en/kien-thuc/" class="active">Knowledge</a></li><li><a href="/en/hoat-dong/">Activities</a></li><li><a href="/en/#contact">Contact</a></li></ul></nav>
+  <nav><ul class="nav-links">
+    <li><a href="/en/">Home</a></li>
+    <li><a href="/en/#services">Services</a></li>
+    <li><a href="/en/pbd.html">PBD</a></li>
+    <li><a href="/en/kien-thuc/" class="active">Knowledge</a></li>
+    <li><a href="/en/hoat-dong/">Activities</a></li>
+    <li><a href="/en/#contact">Contact</a></li>
+  </ul></nav>
   <div class="header-right">
-    <a href="/kien-thuc/tinh-toan-pbd-theo-sfpe.html" class="lang-link">VI</a>
+    <a href="https://www.vnsec.com.vn/kien-thuc/tinh-toan-pbd-theo-sfpe.html" class="lang-link">VI</a>
     <a href="/en/#contact" class="btn-cta">Request a consultation</a>
   </div>
 </header>
-<div class="bc-bar"><nav class="bc"><a href="/en/">Home</a> › <a href="/en/kien-thuc/">Knowledge</a> › <span style="color:rgba(255,255,255,0.8)">Performance-Based Design — SFPE</span></nav></div>
+<div class="bc-bar"><nav class="bc"><a href="/en/">Home</a> › <a href="/en/kien-thuc/">Knowledge</a> › <span style="color:rgba(255,255,255,0.8)">PBD Methodology — SFPE Handbook</span></nav></div>
 <header class="hero">
-  <div class="cat-badge">Simulation &amp; PBD</div>
-  <div class="ameta">📅 15 June 2026 &nbsp;·&nbsp; ⏱ 8 min read &nbsp;·&nbsp; ✍️ VIETSAFE E&amp;C</div>
-  <h1>Performance-Based Fire Design (PBD) per the SFPE Handbook</h1>
+  <div class="cat-badge">Technical &amp; Engineering</div>
+  <div class="ameta" style="margin-top:0.75rem"><span>📅 28 May 2026</span><span>⏱ 10 min read</span><span>✍️ VIETSAFE E&amp;C</span></div>
+  <h1>Performance-Based Fire Design (PBD) — Methodology and Calculations per the SFPE Handbook</h1>
+  <p class="sub">SFPE Handbook — ASET/RSET framework and engineering simulation in PBD</p>
 </header>
 <main class="abody">
-<h2 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;color:#1a1a1a;">Performance-Based Design (PBD) per the SFPE Handbook</h2>
-<p><strong>What is PBD?</strong> Performance-based fire safety design (PBD) is an engineering methodology in which the design is evaluated against quantitative fire safety objectives (life safety, structural integrity, property protection, continuity of operations) rather than prescriptive compliance with a code. It is defined and practised per the SFPE Handbook of Fire Protection Engineering and NFPA 101 Annex B.</p>
-<p><strong>When is PBD required or appropriate?</strong></p>
-<ul style="padding-left:1.5rem;margin-top:0.5rem;">
-<li>Buildings exceeding the scope of prescriptive codes (e.g., towers &gt;150 m, atria &gt;12 m, tunnels, historic buildings)</li>
-<li>Alternative solution proposals where prescriptive requirements cannot practically be met</li>
-<li>Optimisation of fire protection systems to reduce cost while maintaining or improving safety</li>
-<li>Verification of evacuation times for high-occupancy or complex-geometry buildings</li>
+<div class="abox"><p><strong>Performance-Based Design (PBD)</strong> is a fire engineering methodology in which compliance with fire safety objectives is demonstrated through calculation and simulation — rather than prescriptive compliance with fixed dimensional parameters in a code. This article presents the methodological framework as set out in the <strong>SFPE Handbook of Fire Protection Engineering</strong> — the most widely referenced technical reference in the fire engineering field — and the key calculation steps when applying PBD to a project.</p></div>
+<div class="trow"><span class="tag">SFPE Handbook</span><span class="tag">Performance-Based Design</span><span class="tag">ASET/RSET</span><span class="tag">Fire Simulation</span><span class="tag">Egress Modelling</span></div>
+
+<h2>1. PBD vs prescriptive design — the fundamental difference</h2>
+<p>Prescriptive design applies fixed quantitative requirements from a code — for example, minimum egress corridor width, maximum travel distance to a final exit, or minimum stair count — based on occupancy type and building scale. This approach is straightforward to check, but the parameters embedded in the code are calibrated for typical cases and may not suit buildings with unusual geometry, occupancy, or scale.</p>
+<p>PBD is an alternative or complementary method applied when a building cannot meet one or more prescriptive requirements, or when a different design solution needs to be shown to achieve an equivalent level of safety. Rather than checking "does the building satisfy parameter X?", PBD answers the question: <em>"In the identified fire scenario, do occupants have sufficient time to reach safety before conditions in the building become untenable?"</em> The answer is demonstrated by engineering calculation — not by reference to a table of numbers.</p>
+<p>In Vietnam, PBD is a permitted design method under QCVN where prescriptive requirements cannot be met, provided the design documentation includes a separate technical justification report and, typically, the endorsement of a panel of experts or the competent authority.</p>
+
+<h2>2. The role of the SFPE Handbook</h2>
+<p>The <em>SFPE Handbook of Fire Protection Engineering</em>, published by the Society of Fire Protection Engineers (SFPE), is the comprehensive technical reference for fire engineering calculation methods. It is not a mandatory code or standard, but an engineering reference document — analogous to a structural engineering design manual. The SFPE Handbook content most commonly used in PBD calculations includes:</p>
+<ul>
+<li>Methods for identifying and characterising design fire scenarios</li>
+<li>Calculation models for heat release rate (HRR) by material type and fuel array</li>
+<li>Methods for predicting smoke movement, temperature rise and visibility reduction within building spaces</li>
+<li>Methods for calculating evacuation time, including detection time, occupant response time and travel time</li>
+<li>Tenability criteria (threshold limits for human exposure to heat, toxic gas concentrations and smoke obscuration)</li>
 </ul>
-<p><strong>PBD process:</strong></p>
-<ol style="padding-left:1.5rem;margin-top:0.5rem;">
-<li><strong>Define fire safety objectives:</strong> Life safety, structural fire resistance, property protection, environmental protection.</li>
-<li><strong>Select design fire scenarios:</strong> Based on occupancy, fuel load, ignition sources, and fire growth rates (e.g., t² fast, medium, slow).</li>
-<li><strong>Fire and smoke simulation:</strong> Using FDS (Fire Dynamics Simulator) or PyroSim to model fire growth, smoke spread, temperatures, and visibility.</li>
-<li><strong>Egress simulation:</strong> Using Pathfinder to calculate Required Safe Egress Time (RSET) for all occupants.</li>
-<li><strong>ASET/RSET comparison:</strong> Available Safe Egress Time (ASET, from fire simulation) must exceed RSET with an appropriate safety factor.</li>
-<li><strong>Design decision register:</strong> Documenting all design assumptions, scenario selections, and acceptance criteria for the fire authority dossier.</li>
-</ol>
-<p style="margin-top:1rem;font-style:italic;color:#666;">VIETSAFE E&amp;C performs PBD analyses and fire/egress simulations for super high-rise, airport, metro, and industrial projects. Contact: <a href="mailto:info@vnsec.com.vn" style="color:#C8102E;">info@vnsec.com.vn</a></p>
-<div class="ctabox">
-  <h3>Need specialist fire safety consulting?</h3>
-  <p>Our engineering team at VIETSAFE E&amp;C is ready to assist — from technical justification dossiers to simulation and design.</p>
-  <a href="/en/#contact" class="btnw">Contact us →</a>
+<p>In practice, these methods are applied through simulation software — primarily FDS (Fire Dynamics Simulator, developed by NIST) for fire and smoke modelling, and Pathfinder (developed by Thunderhead Engineering) for egress modelling.</p>
+
+<h2>3. The ASET / RSET framework</h2>
+<p>The central criterion of PBD is the demonstration that <strong>ASET &gt; RSET</strong> for all design fire scenarios:</p>
+<ul>
+<li><strong>ASET — Available Safe Egress Time:</strong> the time from ignition until conditions in the building become untenable for occupants — defined by tenability thresholds for temperature, toxic gas concentration and visibility.</li>
+<li><strong>RSET — Required Safe Egress Time:</strong> the total time required for all occupants to reach a place of safety — the sum of detection time, alert time, pre-movement time and travel time.</li>
+</ul>
+<div class="ibox"><strong>Safety margin requirement</strong><p style="font-size:0.85rem;margin:0;color:#555">It is not sufficient to show ASET = RSET. Engineering practice requires a margin of safety — typically ASET ≥ 1.5 × RSET, or ASET − RSET ≥ a defined minimum duration (often 60–120 seconds), depending on the methodology adopted and the authority's requirements.</p></div>
+
+<h2>4. Key calculation steps — PBD methodology</h2>
+<h3>4.1 Design fire characterisation</h3>
+<p>The design fire is the quantitative description of the fire that the building systems must be able to manage. Key parameters: heat release rate curve (growth phase, steady-state HRR, suppression or decay phase), fuel type and geometry, fire location and initial area. The SFPE Handbook provides HRR data for common materials and occupancies; the design fire is selected conservatively for the specific scenario being evaluated.</p>
+
+<h3>4.2 Fire and smoke simulation (FDS / PyroSim)</h3>
+<p>FDS (Fire Dynamics Simulator), developed by the US National Institute of Standards and Technology (NIST), solves the governing equations of fluid dynamics and combustion to simulate smoke movement, temperature distribution and visibility within the building geometry. PyroSim is the most widely used graphical pre-processor for FDS. Outputs are compared against tenability thresholds to determine ASET for each scenario.</p>
+
+<h3>4.3 Egress modelling (Pathfinder)</h3>
+<p>Pathfinder models occupant movement — accounting for occupant density, walking speed, door flow capacity and decision-making behaviour — to calculate the total time required for all occupants to reach a safe location. Occupant characteristics (age, mobility, familiarity with the building) are defined in accordance with SFPE guidance. The result is RSET for each scenario.</p>
+
+<h3>4.4 Tenability criteria</h3>
+<table class="ctb"><thead><tr><th>Parameter</th><th>Tenability threshold</th><th>Reference</th></tr></thead><tbody>
+<tr><td>Air temperature</td><td>≤ 60°C (at 2 m above floor)</td><td>SFPE Handbook / ISO 13571</td></tr>
+<tr><td>Radiant heat flux</td><td>≤ 2.5 kW/m²</td><td>ISO 13571</td></tr>
+<tr><td>CO concentration</td><td>≤ 1,400 ppm (for short exposure)</td><td>ISO 13571</td></tr>
+<tr><td>Visibility in smoke</td><td>≥ 10 m (large spaces) / ≥ 5 m (corridors)</td><td>SFPE / NFPA 92</td></tr>
+<tr><td>O₂ concentration</td><td>≥ 15%</td><td>ISO 13571</td></tr>
+</tbody></table>
+
+<div class="fqs" itemscope itemtype="https://schema.org/FAQPage">
+<h2>Frequently Asked Questions</h2>
+<div class="fqi" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<p class="fqq" itemprop="name">When is PBD required in Vietnam, versus prescriptive design?</p>
+<div class="fqa" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">PBD is used when a building cannot satisfy one or more prescriptive requirements of QCVN — for example, a super high-rise that exceeds QCVN 06's height limits, a building with unusually large atria, or an irregular floor plan where prescriptive travel distances cannot be met. PBD is also used when a project proposes an alternative design solution (e.g. a different suppression system type) and must demonstrate equivalent safety. The dossier requires a technical justification report and expert panel endorsement or authority approval.</p></div>
 </div>
-</main>
+<div class="fqi" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<p class="fqq" itemprop="name">What is the difference between FDS and CFD smoke modelling?</p>
+<div class="fqa" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">FDS (Fire Dynamics Simulator) is a specialist CFD (computational fluid dynamics) code developed specifically for fire and smoke scenarios — it includes combustion sub-models, soot generation and radiation heat transfer. General-purpose CFD tools (Fluent, OpenFOAM) can be used for smoke modelling but require more specialist calibration for fire applications. FDS is the internationally recognised standard tool for fire engineering simulation and is accepted by fire authorities in most jurisdictions where PBD is permitted.</p></div>
+</div>
+</div>
+<div class="ctabox"><h3>Need PBD analysis and fire simulation for your project?</h3><p>VIETSAFE E&amp;C provides FDS fire simulation, Pathfinder egress modelling, ASET/RSET analysis, and complete technical justification dossiers for complex and non-standard projects.</p><a href="/en/pbd.html" class="btnw">Learn more about our PBD services →</a></div>
 <footer class="sfooter">
-  <p><strong style="color:#fff">VIETSAFE E&amp;C</strong> — Fire Safety Engineering &amp; Construction</p>
+  <p><strong style="color:#fff">VIETSAFE E&amp;C</strong> — Fire Safety Engineering &amp; Consulting</p>
   <p style="margin-top:0.4rem">
-    <a href="/en/">Home</a> · <a href="/en/pbd.html">PBD</a> · <a href="/en/kien-thuc/">Knowledge</a> · <a href="/en/hoat-dong/">Activities</a> · <a href="/en/#contact">Contact</a>
+    <a href="/en/">Home</a> ·
+    <a href="/en/pbd.html">PBD Services</a> ·
+    <a href="/en/kien-thuc/">Knowledge</a> ·
+    <a href="/en/#contact">Contact</a>
   </p>
-  <p style="margin-top:0.3rem;font-size:0.72rem;color:rgba(255,255,255,0.25)">© 2026 VIETSAFE E&amp;C · FIRE SAFETY ENGINEERING &amp; CONSTRUCTION</p>
+  <p style="margin-top:0.3rem;font-size:0.72rem;color:rgba(255,255,255,0.25)">© 2025 VIETSAFE E&amp;C · FIRE SAFETY ENGINEERING &amp; CONSTRUCTION</p>
 </footer>
+</main>
 </body>
 </html>

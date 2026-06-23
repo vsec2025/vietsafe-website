@@ -3,29 +3,27 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>HFC-227ea (FM-200) Clean Agent Fire Suppression for Critical Assets | VIETSAFE E&C</title>
-<meta name="description" content="Total-flooding principles, practical applications for server rooms and electrical substations, agent quantity calculations per TCVN 7161-9:2024, and key technical requirements."/>
+<title>HFC-227ea (FM-200) Clean Agent Fire Suppression — System Design and TCVN 7161-9:2024 | VIETSAFE E&C</title>
+<meta name="description" content="Complete technical guide to HFC-227ea (FM-200) clean agent fire suppression: applications, agent quantity calculation per TCVN 7161-9:2024, design requirements, hold time, room integrity, and safety criteria."/>
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
 <meta name="author" content="VIETSAFE E&amp;C"/>
-<meta property="og:title" content="HFC-227ea (FM-200) Clean Agent Fire Suppression for Critical Assets | VIETSAFE E&C"/>
-<meta property="og:description" content="Total-flooding principles, practical applications for server rooms and electrical substations, agent quantity calculations per TCVN 7161-9:2024, and key technical requirements."/>
+<meta property="og:title" content="HFC-227ea (FM-200) Clean Agent Fire Suppression — System Design and TCVN 7161-9:2024 | VIETSAFE E&C"/>
+<meta property="og:description" content="Complete technical guide to HFC-227ea (FM-200) clean agent fire suppression: applications, agent quantity calculation per TCVN 7161-9:2024, design requirements, hold time, room integrity, and safety criteria."/>
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="https://www.vnsec.com.vn/en/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html"/>
 <meta property="og:image" content="https://www.vnsec.com.vn/01-hero.jpg"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="HFC-227ea (FM-200) Clean Agent Fire Suppression for Critical Assets | VIETSAFE E&C"/>
-<meta name="twitter:description" content="Total-flooding principles, practical applications for server rooms and electrical substations, agent quantity calculations per TCVN 7161-9:2024, and key technical requirements."/>
+<meta property="article:published_time" content="2026-05-20T00:00:00+07:00"/>
+<meta property="article:author" content="VIETSAFE E&amp;C"/>
 <link rel="canonical" href="https://www.vnsec.com.vn/en/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html"/>
-<link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html"/>
 <link rel="alternate" hreflang="en" href="https://www.vnsec.com.vn/en/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html"/>
+<link rel="alternate" hreflang="vi" href="https://www.vnsec.com.vn/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html"/>
 <link rel="alternate" hreflang="x-default" href="https://www.vnsec.com.vn/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23C8102E'/%3E%3Ctext x='32' y='46' font-family='Arial,sans-serif' font-size='42' font-weight='900' text-anchor='middle' fill='%23fff'%3EV%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"/></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap"/></noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KWXGHR56C"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6KWXGHR56C');</script>
 <style>
@@ -49,72 +47,154 @@ a{color:var(--red)}
 .cat-badge{display:inline-block;background:rgba(200,16,46,0.25);border:1px solid var(--red);color:var(--red);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.8rem;border-radius:20px;margin-bottom:1rem}
 .ameta{font-size:0.75rem;color:rgba(255,255,255,0.5);display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
 .hero h1{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:800;line-height:1.25;max-width:800px;margin:0 auto 0.6rem}
+.hero .sub{font-size:0.83rem;color:rgba(255,255,255,0.55);font-style:italic}
+.abox{background:#fff8f8;border-left:4px solid var(--red);padding:1.25rem 1.75rem;border-radius:0 8px 8px 0;margin:2rem 0}
+.abox p{font-size:0.93rem;line-height:1.8;color:#444}
 .abody{max-width:860px;margin:0 auto;padding:3rem 2rem}
 .abody h2{font-size:1.2rem;font-weight:800;color:var(--dark);margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:2px solid var(--red)}
 .abody h3{font-size:0.97rem;font-weight:700;color:var(--dark);margin:1.8rem 0 0.6rem}
 .abody p{margin-bottom:1rem;font-size:0.92rem;color:#444;line-height:1.8}
 .abody ul,.abody ol{padding-left:1.4rem;margin-bottom:1rem}
-.abody li{font-size:0.9rem;color:#444;line-height:1.7;margin-bottom:0.5rem}
-.abody table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.84rem}
-.abody table th{background:var(--red);color:#fff;padding:0.7rem 1rem;text-align:left;font-weight:700}
-.abody table td{padding:0.65rem 1rem;border-bottom:1px solid #e8e8e8;vertical-align:top}
-.abody table tr:nth-child(even) td{background:#fafafa}
+.abody li{font-size:0.9rem;color:#444;line-height:1.7;margin-bottom:0.3rem}
+.ibox{background:#f5f5f5;border-radius:8px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.ibox strong{display:block;margin-bottom:0.4rem;color:var(--dark);font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em}
+.ctb{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.84rem}
+.ctb th{background:var(--red);color:#fff;padding:0.7rem 1rem;text-align:left;font-weight:700}
+.ctb td{padding:0.65rem 1rem;border-bottom:1px solid #e8e8e8;vertical-align:top}
+.ctb tr:nth-child(even) td{background:#fafafa}
+.fqs{margin-top:2.5rem}
+.fqi{border-bottom:1px solid #e8e8e8;padding:1.25rem 0}
+.fqq{font-size:0.92rem;font-weight:700;color:var(--dark);margin-bottom:0.6rem}
+.fqq::before{content:"Q ";color:var(--red);font-weight:800}
+.fqa{font-size:0.87rem;color:#555;line-height:1.8}
 .ctabox{background:var(--red);color:#fff;border-radius:12px;padding:2rem;text-align:center;margin:3rem 0}
 .ctabox h3{font-size:1.1rem;font-weight:800;margin-bottom:0.5rem}
 .ctabox p{font-size:0.87rem;opacity:0.9;margin-bottom:1.2rem}
 .btnw{background:#fff;color:var(--red);padding:0.65rem 1.8rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:0.87rem}
+.trow{display:flex;flex-wrap:wrap;gap:0.4rem;margin:1.5rem 0}
+.tag{background:#f0f0f0;color:#555;font-size:0.72rem;font-weight:600;padding:0.2rem 0.65rem;border-radius:4px}
 .sfooter{background:#111;color:rgba(255,255,255,0.5);padding:2rem;text-align:center;font-size:0.8rem}
 .sfooter a{color:rgba(255,255,255,0.5)}
+.calc-box{background:#f9f0f2;border:1px solid #e8c0c8;border-radius:8px;padding:1.5rem;margin:1.5rem 0;font-family:monospace}
+.calc-box .formula{font-size:1rem;font-weight:700;color:#1a1a1a;margin-bottom:0.75rem;letter-spacing:0.02em}
+.calc-box ul{list-style:none;padding:0;margin:0}
+.calc-box li{font-size:0.87rem;color:#444;margin-bottom:0.3rem;padding-left:1.2rem;position:relative}
+.calc-box li::before{content:"→";position:absolute;left:0;color:var(--red)}
+.step-box{background:#f5f5f5;border-left:3px solid var(--red);padding:1rem 1.25rem;margin:1rem 0;border-radius:0 6px 6px 0}
+.step-box strong{font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--red)}
+.srcbox{margin:1.5rem 0;padding:1rem 1.2rem;border-left:3px solid #c0392b;background:#faf6f6;font-size:0.9rem;line-height:1.6}
 @media(max-width:768px){.nav-links{display:none}.abody{padding:2rem 1.25rem}}
 </style>
 </head>
 <body>
 <header class="site-header">
   <a href="/en/" class="logo">VIETSAFE<span>E&amp;C</span></a>
-  <nav><ul class="nav-links"><li><a href="/en/">Home</a></li><li><a href="/en/#services">Services</a></li><li><a href="/en/pbd.html">PBD</a></li><li><a href="/en/kien-thuc/" class="active">Knowledge</a></li><li><a href="/en/hoat-dong/">Activities</a></li><li><a href="/en/#contact">Contact</a></li></ul></nav>
+  <nav><ul class="nav-links">
+    <li><a href="/en/">Home</a></li>
+    <li><a href="/en/#services">Services</a></li>
+    <li><a href="/en/pbd.html">PBD</a></li>
+    <li><a href="/en/kien-thuc/" class="active">Knowledge</a></li>
+    <li><a href="/en/hoat-dong/">Activities</a></li>
+    <li><a href="/en/#contact">Contact</a></li>
+  </ul></nav>
   <div class="header-right">
-    <a href="/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html" class="lang-link">VI</a>
+    <a href="https://www.vnsec.com.vn/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html" class="lang-link">VI</a>
     <a href="/en/#contact" class="btn-cta">Request a consultation</a>
   </div>
 </header>
-<div class="bc-bar"><nav class="bc"><a href="/en/">Home</a> › <a href="/en/kien-thuc/">Knowledge</a> › <span style="color:rgba(255,255,255,0.8)">FM-200 Clean Agent Suppression</span></nav></div>
+<div class="bc-bar"><nav class="bc"><a href="/en/">Home</a> › <a href="/en/kien-thuc/">Knowledge</a> › <span style="color:rgba(255,255,255,0.8)">FM-200 / HFC-227ea Clean Agent</span></nav></div>
 <header class="hero">
-  <div class="cat-badge">Technical &amp; Standards</div>
-  <div class="ameta">📅 17 June 2026 &nbsp;·&nbsp; ⏱ 7 min read &nbsp;·&nbsp; ✍️ VIETSAFE E&amp;C</div>
-  <h1>HFC-227ea (FM-200) Clean Agent Fire Suppression for Critical Assets</h1>
+  <div class="cat-badge">Technical &amp; Systems</div>
+  <div class="ameta" style="margin-top:0.75rem"><span>📅 20 May 2026</span><span>⏱ 9 min read</span><span>✍️ VIETSAFE E&amp;C</span></div>
+  <h1>HFC-227ea (FM-200) Clean Agent Fire Suppression — System Design and TCVN 7161-9:2024</h1>
+  <p class="sub">Clean agent suppression for server rooms, switchrooms and high-value assets</p>
 </header>
 <main class="abody">
-<h2 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;color:#1a1a1a;">HFC-227ea (FM-200) Clean Agent Fire Suppression for Critical Assets</h2>
-<p><strong>What is FM-200?</strong> FM-200 (HFC-227ea, heptafluoropropane) is a clean gaseous suppression agent that extinguishes fires primarily through heat absorption. It leaves no residue, is electrically non-conductive, and is safe for occupied spaces at design concentrations — making it the standard choice for server rooms, electrical switchrooms, UPS rooms, and data centres.</p>
-<p><strong>Suppression mechanism — total flooding:</strong> FM-200 is discharged into a sealed enclosure (total flooding) to achieve a minimum design concentration of 7.0% by volume (Class A) or 8.7% (Class B/C) within 10 seconds. The agent absorbs heat from the flame reaction and interrupts the combustion chain.</p>
-<p><strong>Design standard in Vietnam:</strong> TCVN 7161-9:2024 (equivalent to ISO 14520-9) governs FM-200 system design. Key design parameters:</p>
-<ul style="padding-left:1.5rem;margin-top:0.5rem;">
-<li>Minimum design concentration: 7.0% (Class A), 8.7% (Class B/C), verified by enclosure integrity testing (door fan test)</li>
-<li>Discharge time: ≤10 seconds</li>
-<li>Enclosure integrity: leakage must be low enough to maintain design concentration for a minimum of 10 minutes (hold time)</li>
-<li>Agent quantity: calculated from the net protected volume, design concentration, and temperature correction factor</li>
+<div class="abox"><p><strong>HFC-227ea (FM-200)</strong> — chemical name Heptafluoropropane — is a clean agent fire suppressant: colourless, odourless, non-conductive, and leaves no residue after discharge. Unlike water or dry powder suppression, which can cause catastrophic damage to electronic equipment, FM-200 extinguishes fires through rapid heat absorption without affecting machinery or assets — making it the system of choice for thousands of organisations protecting server rooms, switchrooms, archives and irreplaceable assets.</p></div>
+<div class="trow"><span class="tag">HFC-227ea</span><span class="tag">FM-200</span><span class="tag">TCVN 7161-9:2024</span><span class="tag">Clean Agent</span><span class="tag">Server Room</span><span class="tag">Transformer Room</span></div>
+
+<h2>1. What is HFC-227ea (FM-200) and why is it needed?</h2>
+<p>In many modern facilities — particularly data centres, control rooms, dry-type transformer rooms, document archives and museums — the discharge of water to suppress a fire can cause damage far greater than the fire itself. A flooded server room can mean total data loss; a medium-voltage switchroom exposed to water can trigger a more serious incident than the original fire.</p>
+<p>HFC-227ea (FM-200) solves this problem. The system operates on the <strong>total flooding</strong> principle: when sensors detect a fire, agent is discharged rapidly, distributing uniformly throughout the protected space, reaching design concentration within 10 seconds, and extinguishing the fire before it can spread.</p>
+
+<h2>2. Typical applications of HFC-227ea (FM-200)</h2>
+<table class="ctb"><thead><tr><th>Facility type</th><th>Reason HFC-227ea (FM-200) is preferred</th></tr></thead><tbody>
+<tr><td>Server rooms, Data Centres</td><td>No wetting of equipment; no data interruption; extinguishes before hardware damage occurs</td></tr>
+<tr><td>Transformer rooms, medium-voltage switchrooms</td><td>Non-conductive; no secondary short-circuit on discharge into live equipment</td></tr>
+<tr><td>Control rooms, PLC/SCADA cabinets</td><td>Protects plant control systems and continuous production lines</td></tr>
+<tr><td>Telecommunications rooms, central exchanges</td><td>Maintains telecom infrastructure without service interruption</td></tr>
+<tr><td>Document archives, museums</td><td>Protects legal records, artworks and irreplaceable artefacts</td></tr>
+<tr><td>Generator rooms, UPS and battery rooms</td><td>Controls electrical fires rapidly; prevents cascading failure in power systems</td></tr>
+</tbody></table>
+
+<h2>3. Agent quantity calculation — TCVN 7161-9:2024</h2>
+<p>Under TCVN 7161-9:2024 (equivalent to ISO 14520-9:2019), the required HFC-227ea charge for each protected space is calculated individually, based on room volume, fire hazard class and ambient temperature. The core formula is:</p>
+<div class="calc-box">
+<div class="formula">Q = ( c / (100 − c) ) × ( V / v )</div>
+<ul>
+<li><strong>Q</strong> — required HFC-227ea charge (kg)</li>
+<li><strong>c</strong> — design concentration (% v/v); typically 8.5% for server rooms</li>
+<li><strong>V</strong> — net protected volume (m³), excluding fixed non-permeable objects</li>
+<li><strong>v</strong> — specific volume of HFC-227ea vapour (m³/kg) = 0.1269 + 0.000513 × T (where T = room temperature °C)</li>
 </ul>
-<p><strong>Practical requirements:</strong></p>
-<ul style="padding-left:1.5rem;margin-top:0.5rem;">
-<li>Pre-discharge alarm (audible + visual) with a minimum 30-second time delay before discharge in occupied spaces</li>
-<li>Manual abort switch (hold-off) at each exit</li>
-<li>Enclosure integrity test (door fan test) required before system commissioning and after any enclosure modification</li>
-<li>Automatic HVAC shutdown and damper closure prior to discharge</li>
-</ul>
-<p><strong>Environmental note:</strong> FM-200 has a GWP of 3,220 and is not an ozone-depleting substance. It is permitted in Vietnam and widely available. For projects requiring zero GWP agents, IG-541 (Inergen) or FK-5-1-12 (Novec 1230) are alternatives.</p>
-<p style="margin-top:1rem;font-style:italic;color:#666;">VIETSAFE E&amp;C designs and specifies FM-200, IG-541, and Novec 1230 clean agent systems. Contact: <a href="mailto:info@vnsec.com.vn" style="color:#C8102E;">info@vnsec.com.vn</a></p>
-<div class="ctabox">
-  <h3>Need specialist fire safety consulting?</h3>
-  <p>Our engineering team at VIETSAFE E&amp;C is ready to assist — from technical justification dossiers to simulation and design.</p>
-  <a href="/en/#contact" class="btnw">Contact us →</a>
 </div>
-</main>
+
+<h3>Design concentration by fire hazard class</h3>
+<table class="ctb"><thead><tr><th>Hazard class</th><th>Minimum design concentration</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Class B — Heptane (flammable liquids)</td><td>9.0%</td><td>Safety factor 1.3 × extinguishing concentration</td></tr>
+<tr><td>Class A surface — Plastics, wood, paper</td><td>7.9%</td><td>Safety factor 1.3 × extinguishing concentration</td></tr>
+<tr><td>Class A high-hazard — Cables, electronic equipment</td><td>8.5%</td><td>Server rooms, switchrooms, PLCs</td></tr>
+</tbody></table>
+<p style="font-size:0.8rem;color:#666">Source: Table 4, TCVN 7161-9:2024 (ISO 14520-9:2019)</p>
+
+<div class="ibox"><strong>📐 Worked calculation example</strong>
+<p style="font-size:0.87rem;margin:0.5rem 0 0;color:#444">Problem: Server room 6 × 5 × 3 m, temperature 20°C, containing 5 equipment racks (total volume 2.5 m³), design concentration 8.5%.</p>
+<p style="font-size:0.87rem;margin:0.5rem 0 0;color:#444">Step 1 — Net volume: V = 6 × 5 × 3 = 90.0 m³</p>
+<p style="font-size:0.87rem;margin:0.5rem 0 0;color:#444">Step 2 — Specific vapour volume at 20°C: v = 0.1269 + 0.000513 × 20 = 0.1372 m³/kg</p>
+<p style="font-size:0.87rem;margin:0.5rem 0 0;color:#444">Step 3 — Required charge: Q = (8.5 / 91.5) × (90.0 / 0.1372) ≈ <strong>61.0 kg</strong></p>
+<p style="font-size:0.87rem;margin:0.5rem 0 0;color:#888">Result: One cylinder of 82.5 litres / 42 bar, filled at ~740 kg/m³ (≤ 1,150 kg/m³ per TCVN 7161-9:2024)</p>
+</div>
+
+<h2>4. Key technical requirements</h2>
+<ul>
+<li><strong>Discharge time:</strong> The system must reach 95% of design concentration within 10 seconds (TCVN 7161-1:2022, Art. 7.9.1.1)</li>
+<li><strong>Hold time:</strong> Design concentration must be maintained for a minimum of 10 minutes after discharge to ensure complete extinguishment</li>
+<li><strong>Room integrity:</strong> All penetrations, floor/wall openings and HVAC openings must be sealed to prevent agent loss before the hold time has elapsed</li>
+<li><strong>Automatic HVAC shutdown:</strong> All AHU and exhaust fans must shut down automatically on system activation (TCVN 7161-1:2022, Art. 7.4.3)</li>
+<li><strong>Pre-discharge warning:</strong> Flashing lights and alarm sounders must operate throughout the delay period to allow occupant evacuation</li>
+<li><strong>Occupant safety:</strong> NOAEL = 9.0% — the standard design concentration is within the safe limit for human exposure (TCVN 7161-9:2024, Table 7)</li>
+</ul>
+
+<div class="fqs" itemscope itemtype="https://schema.org/FAQPage">
+<h2>Frequently Asked Questions</h2>
+<div class="fqi" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<p class="fqq" itemprop="name">Is HFC-227ea (FM-200) safe for people when the system discharges?</p>
+<div class="fqa" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">At the standard design concentration (≤ 9.0% v/v), HFC-227ea causes no observable adverse effects — this is the NOAEL (No Observable Adverse Effect Level) recognised by TCVN 7161-9:2024. However, the system must include audible and visual alarms and a time delay (typically 30–60 seconds) before discharge, to allow occupants to evacuate before agent is released.</p></div>
+</div>
+<div class="fqi" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<p class="fqq" itemprop="name">Why must the room be airtight when using HFC-227ea (FM-200)?</p>
+<div class="fqa" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">HFC-227ea must maintain its design concentration throughout the entire hold period (≥ 10 minutes) to fully extinguish the fire. If the room has significant leakage — under doors, through cable penetrations, or through unsealed HVAC openings — agent will escape and concentration will fall below the extinguishing level before the fire is fully controlled. A door fan test (enclosure integrity test) after installation is mandatory.</p></div>
+</div>
+<div class="fqi" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<p class="fqq" itemprop="name">How is HFC-227ea (FM-200) different from CO₂ suppression?</p>
+<div class="fqa" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">CO₂ suppresses fires by reducing the oxygen concentration to a level that cannot sustain combustion — at design concentration (35–40%), CO₂ is immediately life-threatening. HFC-227ea suppresses by heat absorption; at design concentration (≤ 9%) it is safe for brief human exposure. HFC-227ea is therefore used in occupied spaces or spaces with regular human access; CO₂ systems require strict interlocks against accidental discharge and appropriate safety measures if used where people may be present.</p></div>
+</div>
+<div class="fqi" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<p class="fqq" itemprop="name">What periodic maintenance does an HFC-227ea system require?</p>
+<div class="fqa" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Under TCVN 7161-1:2022, HFC-227ea systems must be inspected every 6 months: cylinder weight verification (against the charged weight), pressure check, alarm and interlock functional test. If the agent mass has decreased by more than 5% from the design charge, the cylinder must be recharged.</p></div>
+</div>
+</div>
+<div class="ctabox"><h3>Need HFC-227ea (FM-200) system design and consulting?</h3><p>VIETSAFE E&amp;C engineers provide FM-200 system design, agent quantity calculations, and complete fire safety dossier preparation for submission to the fire authority.</p><a href="/en/#contact" class="btnw">Contact us →</a></div>
 <footer class="sfooter">
-  <p><strong style="color:#fff">VIETSAFE E&amp;C</strong> — Fire Safety Engineering &amp; Construction</p>
+  <p><strong style="color:#fff">VIETSAFE E&amp;C</strong> — Fire Safety Engineering &amp; Consulting</p>
   <p style="margin-top:0.4rem">
-    <a href="/en/">Home</a> · <a href="/en/pbd.html">PBD</a> · <a href="/en/kien-thuc/">Knowledge</a> · <a href="/en/hoat-dong/">Activities</a> · <a href="/en/#contact">Contact</a>
+    <a href="/en/">Home</a> ·
+    <a href="/en/pbd.html">PBD Services</a> ·
+    <a href="/en/kien-thuc/">Knowledge</a> ·
+    <a href="/en/#contact">Contact</a>
   </p>
-  <p style="margin-top:0.3rem;font-size:0.72rem;color:rgba(255,255,255,0.25)">© 2026 VIETSAFE E&amp;C · FIRE SAFETY ENGINEERING &amp; CONSTRUCTION</p>
+  <p style="margin-top:0.3rem;font-size:0.72rem;color:rgba(255,255,255,0.25)">© 2025 VIETSAFE E&amp;C · FIRE SAFETY ENGINEERING &amp; CONSTRUCTION</p>
 </footer>
+</main>
 </body>
 </html>
