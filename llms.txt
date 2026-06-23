@@ -37,6 +37,7 @@ NFPA 1, NFPA 13, NFPA 72, NFPA 101, NFPA 855, NFPA 5000, QCVN 06:2022/BXD, Luậ
 - [FM200/HFC227ea chữa cháy khí sạch](https://www.vnsec.com.vn/kien-thuc/fm200-hfc227ea-chua-chay-khi-sach.html): Hệ thống chữa cháy khí sạch FM200
 - [Tính toán PBD theo SFPE](https://www.vnsec.com.vn/kien-thuc/tinh-toan-pbd-theo-sfpe.html): Phương pháp tính toán thiết kế theo hiệu năng
 - [Chủ đầu tư & trách nhiệm PCCC](https://www.vnsec.com.vn/kien-thuc/chu-dau-tu-trach-nhiem-pccc-ket-hop-tu-van.html): Trách nhiệm PCCC của chủ đầu tư kết hợp tư vấn
+- [PCCC xe điện – So sánh 3 khu vực theo Sửa đổi 01:2026 QCVN 04](https://www.vnsec.com.vn/kien-thuc/xe-dien-khu-sac-doi-pin-qcvn04-2026.html): Bảng so sánh khu để xe điện / khu sạc / khu đổi pin theo Thông tư 31/2026/TT-BXD – khoang cháy, chữa cháy tự động, giới hạn diện tích, dung lượng pin
 
 ## Dự án tiêu biểu
 
